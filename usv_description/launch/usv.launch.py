@@ -7,12 +7,15 @@ def generate_launch_description():
     pkg_share = launch_ros.substitutions.FindPackageShare(package='usv_description').find('usv_description')
     default_model_path = os.path.join(pkg_share, 'urdf/usv.urdf')
     default_rviz_config_path = os.path.join(pkg_share, 'rviz/urdf_config.rviz')
+    use_sim_time = LaunchConfiguration('use_sim_time', default='false')
 
     robot_state_publisher_node = launch_ros.actions.Node(
         package='robot_state_publisher',
         executable='robot_state_publisher',
-        parameters=[{'robot_description': Command(['xacro ', LaunchConfiguration('model')])}]
-    )
+        parameters=[{'use_sim_time': use_sim_time, 'robot_description': Command(['xacro ', default_model_path])}],
+        arguments=[default_model_path])
+        
+    
     joint_state_publisher_node = launch_ros.actions.Node(
         package='joint_state_publisher',
         executable='joint_state_publisher',
