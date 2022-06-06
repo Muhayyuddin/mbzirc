@@ -44,10 +44,10 @@ from numpy import sqrt, pi, arccos, radians
 # Vessel-G: -28 -10 0.3 0 0.0 -1.0
 
 # USV:  -10, 28, 0.3, 0, 0, 0
-class MinimalPublisher(Node):
+class Navigator(Node):
 
     def __init__(self):
-        super().__init__('minimal_publisher')
+        super().__init__('navigator')
         #global circle
         #object1 = Twist()
 
@@ -61,11 +61,14 @@ class MinimalPublisher(Node):
 
         self.usv = [-30.0, 38.0, 0.3]
 
-        self.publisher_ = self.create_publisher(Float64, '/usv/left/thrust/cmd_thrust', 10)
-        self.publisher2_ = self.create_publisher(Float64, '/usv/right/thrust/cmd_thrust', 10)
-
-        self.publisher3_ = self.create_publisher(Float64, '/usv/left/thrust/joint/cmd_pos', 10)
-        self.publisher4_ = self.create_publisher(Float64, 'usv/right/thrust/joint/cmd_pos', 10)
+        self.right_pub = self.create_publisher(Float64, '/usv/right/thrust/cmd_thrust', 10)
+        self.left_pub  = self.create_publisher(Float64,'/usv/left/thrust/cmd_thrust', 10)
+        self.left_pub_angle = self.create_publisher(Float64, '/usv/left/thrust/joint/cmd_pos', 10)
+        self.right_pub_angle = self.create_publisher(Float64, 'usv/right/thrust/joint/cmd_pos', 10)
+        self.left_msg = Float64()
+        self.right_msg = Float64()
+        self.left_pub_angle_msg = Float64()
+        self.right_pub_angle_msg = Float64()
 
         self.distA = sqrt((self.vesselA[0] - self.usv[0])**2 + (self.vesselA[1] - self.usv[1])**2 + (self.vesselA[2] - self.usv[2])**2)
         self.distB = sqrt((self.vesselB[0] - self.usv[0])**2 + (self.vesselB[1] - self.usv[1])**2 + (self.vesselB[2] - self.usv[2])**2)
@@ -85,20 +88,22 @@ class MinimalPublisher(Node):
 
         print('Slope: ', self.m)
 
-        #self.publisher_ = self.create_publisher("/cmd_vel", Twist, 10)
+        #self.left_pub = self.create_publisher("/cmd_vel", Twist, 10)
 
-        #self.subscription = self.create_subscription(
-        #    "/scan",
-        #    LaserScan,
-        #    self.listener_callback)
+        self.subscription = self.create_subscription(
+            LaserScan,
+            "/usv/slot0/scan",
+            self.listener_callback,
+            10)
 
-        #self.subscription = self.create_subscription(
-        #    "/odom",
-        #    Odometry,
-        #    self.odometry)
+        self.subscription = self.create_subscription(
+            Odometry,
+           "/usv/odom",
+           self.odometry, 
+           10)
 
         timer_period = 2.0  # seconds
-        self.timer = self.create_timer(timer_period, self.timer_callback)
+        #self.timer = self.create_timer(timer_period, self.timer_callback)
         self.i = 0
         self.angleChanged = False
         self.finalThrust = False
@@ -162,13 +167,13 @@ class MinimalPublisher(Node):
                 msg4.data = -1.0 * y
 
                 if self.angleChanged == True:
-                    self.publisher2_.publish(msg3)
-                    self.publisher4_.publish(msg4)
+                    self.right_pub.publish(msg3)
+                    self.right_pub_angle.publish(msg4)
                     self.angleChanged = False
                 else:
                     #msg2.data = y+radians(-1)
-                    self.publisher_.publish(msg)
-                    self.publisher3_.publish(msg2)
+                    self.left_pub.publish(msg)
+                    self.left_pub_angle.publish(msg2)
 
                     self.angleChanged = True
             else:
@@ -178,10 +183,10 @@ class MinimalPublisher(Node):
                 msg3.data = 0.0
                 msg4.data = 0.0
 
-                self.publisher_.publish(msg)
-                self.publisher3_.publish(msg2)
-                self.publisher2_.publish(msg3)
-                self.publisher4_.publish(msg4)
+                self.left_pub.publish(msg)
+                self.left_pub_angle.publish(msg2)
+                self.right_pub.publish(msg3)
+                self.right_pub_angle.publish(msg4)
 
         elif self.distA < th:
             print('Too close to A: ', self.distA)
@@ -221,37 +226,77 @@ class MinimalPublisher(Node):
                 msg3.data = 0.0
                 msg4.data = -yaw
 
-            self.publisher_.publish(msg)
-            self.publisher3_.publish(msg2)
-            self.publisher2_.publish(msg3)
-            self.publisher4_.publish(msg4)
+            self.left_pub.publish(msg)
+            self.left_pub_angle.publish(msg2)
+            self.right_pub.publish(msg3)
+            self.right_pub_angle.publish(msg4)
 
 
         #if self.i % 2 == 0:
         #    msg.data = 150.0#'Hello World: %d' % self.i
         #    msg2.data = -1.0
-        #    self.publisher_.publish(msg)
-        #    self.publisher3_.publish(msg2)
+        #    self.left_pub.publish(msg)
+        #    self.left_pub_angle.publish(msg2)
         #else:
         #    msg.data = 150.0#'Hello World: %d' % self.i
         #    msg2.data = 1.0
-        #    self.publisher2_.publish(msg)
-        #    self.publisher4_.publish(msg2)
+        #    self.right_pub.publish(msg)
+        #    self.right_pub_angle.publish(msg2)
 
         #self.get_logger().info('Publishing: "%s"' % str(msg.data))
         self.i += 1
 
     def listener_callback(self, msg):
-        print('Front: ',msg[0])
-        print('Left: ', msg[90])
-        print('Right: ', msg[270])
-        print('Back: ', msg[180])
-        #self.get_logger().info('I heard: "%s"' % msg.data)
+        print ('-------RECEIVING LIDAR SENSOR DATA-------')
+        print ('Obstacle distance from Front: {}'.format(msg.ranges[360])) #lidar data for front side
+        print ('Obstacle distance from Left:  {}'.format(msg.ranges[540])) #lidar data for left side
+        print ('Obstacle distance from Right: {}'.format(msg.ranges[180])) #lidar data for right side
+        #print ('Back: {}'.format(msg.ranges[180])) #lidar data for back side
+        print("--------------------")
+        #Obstacle Avoidance
+        self.front_threshold = 15.0
+        self.sides_threshold = 8.0
+        if msg.ranges[360] > self.front_threshold and msg.ranges[365] > self.front_threshold and msg.ranges[355] > self.front_threshold: 
+        #when no any obstacle near detected
+            print("MOVING STREIGHT")
+            self.left_msg.data = 15.0 # go (linear velocity)
+            self.right_msg.data  = 15.0 
+            # rotate (angular velocity)
+            self.left_pub_angle_msg.data = 0.0
+            self.right_pub_angle_msg.data = 0.0
+            if msg.ranges[175] < self.sides_threshold and msg.ranges[180] < self.sides_threshold and msg.ranges[185] < self.sides_threshold:
+                print("MOVING LEFT")
+                self.left_pub_angle_msg.data = 1.57
+                self.right_pub_angle_msg.data = 1.57  
+            elif msg.ranges[535] < self.sides_threshold and msg.ranges[540] < self.sides_threshold and msg.ranges[545] < self.sides_threshold:
+                self.left_pub_angle_msg.data = -1.57
+                self.right_pub_angle_msg.data = -1.57 
+        else: #when an obstacle near detected
+            print("TURNING LEFT")
+
+            self.left_msg.data = 0.0 # go (linear velocity)
+            self.right_msg.data  = 12.0 
+            # rotate (angular velocity)
+            self.left_pub_angle_msg.data = 0.0#1.57
+            self.right_pub_angle_msg.data = 0.0#1.57            
+            # if msg.ranges[0] > self.distance and msg.ranges[15] > self.distance and msg.ranges[345] > self.distance and msg.ranges[45] > self.distance and msg.ranges[315] > self.distance:
+            #     #when no any obstacle near detected after rotation
+            #     self.left_msg.data = 15.0 # go (linear velocity)
+            #     self.right_msg.data  = 15.0 
+            #     # rotate (angular velocity)
+            #     self.left_pub_angle_msg.data = 45.0
+            #     self.right_pub_angle_msg.data = 45.0
+
+        self.left_pub.publish(self.left_msg)
+        self.right_pub.publish(self.right_msg)
+        self.left_pub_angle.publish(self.left_pub_angle_msg)
+        self.right_pub_angle.publish(self.right_pub_angle_msg)
+
 
 def main(args=None):
     rclpy.init(args=args)
 
-    minimal_publisher = MinimalPublisher()
+    minimal_publisher = Navigator()
 
     rclpy.spin(minimal_publisher)
 

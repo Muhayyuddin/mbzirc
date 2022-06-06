@@ -1,34 +1,35 @@
 <?xml version="1.0" ?>
-<robot name="usv">
-   <joint name="usv/left_chassis_engine_joint" type="revolute">
-    <parent link="usv/base_link"/>
+<robot name="usv_robot">
+
+  <!-- <joint name="usv/left_chassis_engine_joint" type="revolute">
+    <parent link="usv"/>
     <child link="usv/left_engine_link"/>
     <origin xyz="0     1.348 -0.546" rpy="0      0      1.57079"/>
     <axis xyz="0 0 1"/>
     <limit lower="-1.57079" upper="1.57079" effort="10.0" velocity="10.0"/>
   </joint>
   <joint name="usv/left_engine_propeller_joint" type="continuous">
-    <parent link="usv/left_engine_link"/>
+    <parent link="usv"/>
     <child link="usv/left_propeller_link"/>
     <origin xyz="0     0.151 -0.17" rpy="0 0 0"/>
     <axis xyz="0 -1  0"/>
     <limit lower="0.0" upper="0.0" effort="100.0" velocity="100.0"/>
   </joint>
   <joint name="usv/right_chassis_engine_joint" type="revolute">
-    <parent link="usv/base_link"/>
+    <parent link="usv"/>
     <child link="usv/right_engine_link"/>
     <origin xyz="0    -1.348 -0.546" rpy="0      0      1.57079"/>
     <axis xyz="0 0 1"/>
     <limit lower="-1.57079" upper="1.57079" effort="10.0" velocity="10.0"/>
   </joint>
   <joint name="usv/right_engine_propeller_joint" type="continuous">
-    <parent link="usv/right_engine_link"/>
+    <parent link="usv"/>
     <child link="usv/right_propeller_link"/>
     <origin xyz="0     0.151 -0.17" rpy="0 0 0"/>
     <axis xyz="0 -1  0"/>
     <limit lower="0.0" upper="0.0" effort="100.0" velocity="100.0"/>
-  </joint>
-  <link name="usv/base_link">
+  </joint> !-->
+  <link name="usv">
     <inertial>
       <mass value="727.247"/>
       <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -209,7 +210,7 @@
       </geometry>
     </visual>
   </link>
-  <link name="usv/left_engine_link">
+ <!-- <link name="usv/left_engine_link">
     <inertial>
       <mass value="15.0"/>
       <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -260,5 +261,5 @@
               <mesh filename="package://two_wheeled_robot/meshes/propeller.dae" scale="0.01 0.01 0.01"/>
       </geometry>
     </visual>
-  </link>
+  </link> -->
 </robot>

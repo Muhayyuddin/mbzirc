@@ -13,6 +13,7 @@ Welcome to usv_navigation_docs's documentation!
    :maxdepth: 2
    :caption: Basic Setup:
 
+   navigation_theory
    simulation_setup
    package_description
    simulation_tools

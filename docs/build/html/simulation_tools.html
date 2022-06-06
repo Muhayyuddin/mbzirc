@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Simulation Setup &mdash; usv_navigation_docs 0.1 documentation</title>
+  <title>Simulation Tools &mdash; usv_navigation_docs 0.1 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -18,7 +18,8 @@
         <script src="_static/doctools.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Packages description" href="package_description.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -36,11 +37,17 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <!-- Local TOC -->
-              <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">Simulation Setup</a></li>
+              <p class="caption" role="heading"><span class="caption-text">Basic Setup:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="simulation_setup.html">Simulation Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="package_description.html">Packages description</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Simulation Tools</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#cartographer">Cartographer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#navigation2">Navigation2</a></li>
 </ul>
-</div>
+</li>
+</ul>
+
         </div>
       </div>
     </nav>
@@ -55,7 +62,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Simulation Setup</li>
+      <li>Simulation Tools</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/simulation_tools.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -65,15 +72,38 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="simulation-setup">
-<h1>Simulation Setup<a class="headerlink" href="#simulation-setup" title="Permalink to this heading"></a></h1>
-<p>This document will explain all the necessary nodes and the launch files and other commands that must be run in terminals inorder to launch the simulator for USV navigation.</p>
+  <section id="simulation-tools">
+<h1>Simulation Tools<a class="headerlink" href="#simulation-tools" title="Permalink to this heading"></a></h1>
+<p>Below is the list of tools (ros2 packages) that are used.</p>
+<section id="cartographer">
+<h2>Cartographer<a class="headerlink" href="#cartographer" title="Permalink to this heading"></a></h2>
+<p>Cartographer is used to build the map using lidar and IMU.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To run the cartographer turtlebot3 example, source the following in the terminal.</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">ros</span><span class="o">/</span><span class="n">galactic</span><span class="o">/</span><span class="n">setup</span><span class="o">.</span><span class="n">bash</span>
+<span class="n">source</span> <span class="n">install</span><span class="o">/</span><span class="n">setup</span><span class="o">.</span><span class="n">bash</span>
+<span class="n">source</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">colcon_cd</span><span class="o">/</span><span class="n">function</span><span class="o">/</span><span class="n">colcon_cd</span><span class="o">.</span><span class="n">sh</span>
+<span class="n">export</span> <span class="n">_colcon_cd_root</span><span class="o">=~/</span><span class="n">mbzirc_ws</span>
+<span class="n">source</span> <span class="o">~/</span><span class="n">mbzirc_ws</span><span class="o">/</span><span class="n">install</span><span class="o">/</span><span class="n">setup</span><span class="o">.</span><span class="n">bash</span>
+<span class="n">export</span> <span class="n">TURTLEBOT3_MODEL</span><span class="o">=</span><span class="n">burger</span>
+<span class="n">export</span> <span class="n">GAZEBO_MODEL_PATH</span><span class="o">=~/</span><span class="n">mbzirc_ws</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">ros2_explorer</span><span class="o">/</span><span class="n">explorer_gazebo</span><span class="o">/</span><span class="n">models</span>
+</pre></div>
+</div>
+</section>
+<section id="navigation2">
+<h2>Navigation2<a class="headerlink" href="#navigation2" title="Permalink to this heading"></a></h2>
+<p>Navigation2 is used for autonomous navigation</p>
+</section>
 </section>
 
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="package_description.html" class="btn btn-neutral float-left" title="Packages description" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
 
   <hr/>
 

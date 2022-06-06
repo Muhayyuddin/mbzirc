@@ -1,6 +1,6 @@
 from setuptools import setup
 
-package_name = 'py_pubsub'
+package_name = 'navigation'
 
 setup(
     name=package_name,
@@ -20,7 +20,7 @@ setup(
     tests_require=['pytest'],
   entry_points={
         'console_scripts': [
-                'talker = py_pubsub.publisher_member_function:main',
+                'navigate = navigation.navigator:main',
                 'listener = py_pubsub.subscriber_member_function:main',
         ],
 },
