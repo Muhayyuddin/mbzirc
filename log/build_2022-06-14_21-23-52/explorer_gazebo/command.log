@@ -1,4 +1,0 @@
-Invoking command in '/home/muhayy/mbzirc_ws/src/build/explorer_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/muhayy/mbzirc_ws/src/build/explorer_gazebo -- -j12 -l12
-Invoked command in '/home/muhayy/mbzirc_ws/src/build/explorer_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/muhayy/mbzirc_ws/src/build/explorer_gazebo -- -j12 -l12
-Invoking command in '/home/muhayy/mbzirc_ws/src/build/explorer_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --install /home/muhayy/mbzirc_ws/src/build/explorer_gazebo
-Invoked command in '/home/muhayy/mbzirc_ws/src/build/explorer_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --install /home/muhayy/mbzirc_ws/src/build/explorer_gazebo
