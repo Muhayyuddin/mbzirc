@@ -1,9 +1,0 @@
-/home/muhayy/mbzirc_ws/src/build/mbzirc_simple_arm/CMakeFiles/install/strip.dir
-/home/muhayy/mbzirc_ws/src/build/mbzirc_simple_arm/CMakeFiles/install/local.dir
-/home/muhayy/mbzirc_ws/src/build/mbzirc_simple_arm/CMakeFiles/install.dir
-/home/muhayy/mbzirc_ws/src/build/mbzirc_simple_arm/CMakeFiles/list_install_components.dir
-/home/muhayy/mbzirc_ws/src/build/mbzirc_simple_arm/CMakeFiles/rebuild_cache.dir
-/home/muhayy/mbzirc_ws/src/build/mbzirc_simple_arm/CMakeFiles/edit_cache.dir
-/home/muhayy/mbzirc_ws/src/build/mbzirc_simple_arm/CMakeFiles/test.dir
-/home/muhayy/mbzirc_ws/src/build/mbzirc_simple_arm/CMakeFiles/mbzirc_simple_arm_uninstall.dir
-/home/muhayy/mbzirc_ws/src/build/mbzirc_simple_arm/CMakeFiles/uninstall.dir

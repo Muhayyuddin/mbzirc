@@ -1,3 +1,0 @@
-[console_scripts]
-publish_odometry_and_tf = custom_tf_broadcaster.custom_tf_broadcaster:main
-
