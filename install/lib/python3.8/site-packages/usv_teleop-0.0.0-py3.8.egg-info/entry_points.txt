@@ -1,3 +1,0 @@
-[console_scripts]
-teleop = usv_teleop.teleop:main
-

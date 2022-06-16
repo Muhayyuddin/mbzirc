@@ -1,4 +1,0 @@
-source;share/mbzirc_naive_spinning_radar/environment/ament_prefix_path.sh
-source;share/mbzirc_naive_spinning_radar/environment/path.sh
-source;share/mbzirc_naive_spinning_radar/environment/resource_paths.sh
-source;share/mbzirc_naive_spinning_radar/environment/resource_paths.dsv

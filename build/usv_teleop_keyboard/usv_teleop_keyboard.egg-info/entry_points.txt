@@ -1,3 +1,0 @@
-[console_scripts]
-compute_thrust = usv_teleop_keyboard.compute_thrust:main
-
