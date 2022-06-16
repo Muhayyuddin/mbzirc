@@ -1,0 +1,50 @@
+[0.018s] Invoking command in '/home/muhayy/mbzirc_ws/src/build/turtlebot3_bringup': AMENT_PREFIX_PATH=/home/muhayy/mbzirc_ws/src/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/muhayy/mbzirc_ws/src/install:/home/muhayy/mbzirc_ws/install:/opt/ros/galactic LD_LIBRARY_PATH=/home/muhayy/mbzirc_ws/src/install/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake /home/muhayy/mbzirc_ws/src/turtlebot3/turtlebot3_bringup -DCMAKE_INSTALL_PREFIX=/home/muhayy/mbzirc_ws/src/install
+[0.083s] -- The C compiler identification is GNU 9.4.0
+[0.152s] -- The CXX compiler identification is GNU 9.4.0
+[0.157s] -- Check for working C compiler: /usr/bin/cc
+[0.242s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.243s] -- Detecting C compiler ABI info
+[0.322s] -- Detecting C compiler ABI info - done
+[0.335s] -- Detecting C compile features
+[0.335s] -- Detecting C compile features - done
+[0.339s] -- Check for working CXX compiler: /usr/bin/c++
+[0.440s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.441s] -- Detecting CXX compiler ABI info
+[0.552s] -- Detecting CXX compiler ABI info - done
+[0.569s] -- Detecting CXX compile features
+[0.569s] -- Detecting CXX compile features - done
+[0.572s] -- Found ament_cmake: 1.1.5 (/opt/ros/galactic/share/ament_cmake/cmake)
+[0.602s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.602s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.779s] -- Configuring done
+[0.782s] -- Generating done
+[0.783s] -- Build files have been written to: /home/muhayy/mbzirc_ws/src/build/turtlebot3_bringup
+[0.788s] Invoked command in '/home/muhayy/mbzirc_ws/src/build/turtlebot3_bringup' returned '0': AMENT_PREFIX_PATH=/home/muhayy/mbzirc_ws/src/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/muhayy/mbzirc_ws/src/install:/home/muhayy/mbzirc_ws/install:/opt/ros/galactic LD_LIBRARY_PATH=/home/muhayy/mbzirc_ws/src/install/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake /home/muhayy/mbzirc_ws/src/turtlebot3/turtlebot3_bringup -DCMAKE_INSTALL_PREFIX=/home/muhayy/mbzirc_ws/src/install
+[0.792s] Invoking command in '/home/muhayy/mbzirc_ws/src/build/turtlebot3_bringup': AMENT_PREFIX_PATH=/home/muhayy/mbzirc_ws/src/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/muhayy/mbzirc_ws/src/install:/home/muhayy/mbzirc_ws/install:/opt/ros/galactic LD_LIBRARY_PATH=/home/muhayy/mbzirc_ws/src/install/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/muhayy/mbzirc_ws/src/build/turtlebot3_bringup -- -j12 -l12
+[0.843s] Invoked command in '/home/muhayy/mbzirc_ws/src/build/turtlebot3_bringup' returned '0': AMENT_PREFIX_PATH=/home/muhayy/mbzirc_ws/src/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/muhayy/mbzirc_ws/src/install:/home/muhayy/mbzirc_ws/install:/opt/ros/galactic LD_LIBRARY_PATH=/home/muhayy/mbzirc_ws/src/install/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/muhayy/mbzirc_ws/src/build/turtlebot3_bringup -- -j12 -l12
+[0.874s] Invoking command in '/home/muhayy/mbzirc_ws/src/build/turtlebot3_bringup': AMENT_PREFIX_PATH=/home/muhayy/mbzirc_ws/src/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/muhayy/mbzirc_ws/src/install:/home/muhayy/mbzirc_ws/install:/opt/ros/galactic LD_LIBRARY_PATH=/home/muhayy/mbzirc_ws/src/install/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/muhayy/mbzirc_ws/src/build/turtlebot3_bringup
+[0.884s] -- Install configuration: ""
+[0.884s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/turtlebot3_bringup/launch
+[0.884s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/turtlebot3_bringup/launch/rviz2.launch.py
+[0.884s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/turtlebot3_bringup/launch/robot.launch.py
+[0.884s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/turtlebot3_bringup/launch/turtlebot3_state_publisher.launch.py
+[0.884s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/turtlebot3_bringup/param
+[0.885s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/turtlebot3_bringup/param/waffle_pi.yaml
+[0.887s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/turtlebot3_bringup/param/burger.yaml
+[0.887s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/turtlebot3_bringup/param/waffle.yaml
+[0.887s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/ament_index/resource_index/package_run_dependencies/turtlebot3_bringup
+[0.888s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/ament_index/resource_index/parent_prefix_path/turtlebot3_bringup
+[0.888s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/turtlebot3_bringup/environment/ament_prefix_path.sh
+[0.889s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/turtlebot3_bringup/environment/ament_prefix_path.dsv
+[0.889s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/turtlebot3_bringup/environment/path.sh
+[0.889s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/turtlebot3_bringup/environment/path.dsv
+[0.890s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/turtlebot3_bringup/local_setup.bash
+[0.890s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/turtlebot3_bringup/local_setup.sh
+[0.890s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/turtlebot3_bringup/local_setup.zsh
+[0.890s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/turtlebot3_bringup/local_setup.dsv
+[0.890s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/turtlebot3_bringup/package.dsv
+[0.890s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/ament_index/resource_index/packages/turtlebot3_bringup
+[0.891s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/turtlebot3_bringup/cmake/turtlebot3_bringupConfig.cmake
+[0.891s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/turtlebot3_bringup/cmake/turtlebot3_bringupConfig-version.cmake
+[0.891s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/turtlebot3_bringup/package.xml
+[0.895s] Invoked command in '/home/muhayy/mbzirc_ws/src/build/turtlebot3_bringup' returned '0': AMENT_PREFIX_PATH=/home/muhayy/mbzirc_ws/src/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/muhayy/mbzirc_ws/src/install:/home/muhayy/mbzirc_ws/install:/opt/ros/galactic LD_LIBRARY_PATH=/home/muhayy/mbzirc_ws/src/install/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/muhayy/mbzirc_ws/src/build/turtlebot3_bringup

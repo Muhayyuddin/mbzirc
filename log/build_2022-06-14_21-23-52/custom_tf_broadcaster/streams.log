@@ -1,0 +1,21 @@
+[2.067s] Invoking command in '/home/muhayy/mbzirc_ws/src/custom_tf_broadcaster': PYTHONPATH=/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/custom_tf_broadcaster build --build-base /home/muhayy/mbzirc_ws/src/build/custom_tf_broadcaster/build install --prefix /home/muhayy/mbzirc_ws/src/install --record /home/muhayy/mbzirc_ws/src/build/custom_tf_broadcaster/install.log --single-version-externally-managed
+[2.313s] running egg_info
+[2.313s] writing ../build/custom_tf_broadcaster/custom_tf_broadcaster.egg-info/PKG-INFO
+[2.314s] writing dependency_links to ../build/custom_tf_broadcaster/custom_tf_broadcaster.egg-info/dependency_links.txt
+[2.315s] writing entry points to ../build/custom_tf_broadcaster/custom_tf_broadcaster.egg-info/entry_points.txt
+[2.315s] writing requirements to ../build/custom_tf_broadcaster/custom_tf_broadcaster.egg-info/requires.txt
+[2.315s] writing top-level names to ../build/custom_tf_broadcaster/custom_tf_broadcaster.egg-info/top_level.txt
+[2.362s] reading manifest file '../build/custom_tf_broadcaster/custom_tf_broadcaster.egg-info/SOURCES.txt'
+[2.363s] writing manifest file '../build/custom_tf_broadcaster/custom_tf_broadcaster.egg-info/SOURCES.txt'
+[2.364s] running build
+[2.364s] running build_py
+[2.365s] running install
+[2.365s] running install_lib
+[2.368s] running install_data
+[2.368s] running install_egg_info
+[2.368s] removing '/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages/custom_tf_broadcaster-0.0.0-py3.8.egg-info' (and everything under it)
+[2.368s] Copying ../build/custom_tf_broadcaster/custom_tf_broadcaster.egg-info to /home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages/custom_tf_broadcaster-0.0.0-py3.8.egg-info
+[2.368s] running install_scripts
+[2.376s] Installing publish_odometry_and_tf script to /home/muhayy/mbzirc_ws/src/install/lib/custom_tf_broadcaster
+[2.376s] writing list of installed files to '/home/muhayy/mbzirc_ws/src/build/custom_tf_broadcaster/install.log'
+[2.445s] Invoked command in '/home/muhayy/mbzirc_ws/src/custom_tf_broadcaster' returned '0': PYTHONPATH=/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/custom_tf_broadcaster build --build-base /home/muhayy/mbzirc_ws/src/build/custom_tf_broadcaster/build install --prefix /home/muhayy/mbzirc_ws/src/install --record /home/muhayy/mbzirc_ws/src/build/custom_tf_broadcaster/install.log --single-version-externally-managed

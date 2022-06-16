@@ -1,0 +1,80 @@
+[0.134s] Invoking command in '/home/muhayy/mbzirc_ws/src/build/rf2o_laser_odometry': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake /home/muhayy/mbzirc_ws/src/rf2o_laser_odometry -DCMAKE_INSTALL_PREFIX=/home/muhayy/mbzirc_ws/src/install
+[0.605s] -- The C compiler identification is GNU 9.4.0
+[0.925s] -- The CXX compiler identification is GNU 9.4.0
+[0.932s] -- Check for working C compiler: /usr/bin/cc
+[1.445s] -- Check for working C compiler: /usr/bin/cc -- works
+[1.447s] -- Detecting C compiler ABI info
+[2.029s] -- Detecting C compiler ABI info - done
+[2.073s] -- Detecting C compile features
+[2.073s] -- Detecting C compile features - done
+[2.081s] -- Check for working CXX compiler: /usr/bin/c++
+[2.688s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[2.690s] -- Detecting CXX compiler ABI info
+[3.332s] -- Detecting CXX compiler ABI info - done
+[3.400s] -- Detecting CXX compile features
+[3.401s] -- Detecting CXX compile features - done
+[3.422s] -- Found ament_cmake: 1.1.5 (/opt/ros/galactic/share/ament_cmake/cmake)
+[3.555s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[3.558s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[4.095s] -- Found rclcpp: 9.2.1 (/opt/ros/galactic/share/rclcpp/cmake)
+[4.348s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[4.372s] -- Found rosidl_adapter: 2.2.2 (/opt/ros/galactic/share/rosidl_adapter/cmake)
+[5.036s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[5.288s] -- Found FastRTPS: /opt/ros/galactic/include  
+[5.929s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[6.460s] -- Found rmw_implementation_cmake: 3.3.1 (/opt/ros/galactic/share/rmw_implementation_cmake/cmake)
+[6.484s] -- Found rmw_cyclonedds_cpp: 0.22.5 (/opt/ros/galactic/share/rmw_cyclonedds_cpp/cmake)
+[6.651s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[6.652s] -- Looking for pthread.h
+[7.258s] -- Looking for pthread.h - found
+[7.264s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[7.811s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[7.813s] -- Looking for pthread_create in pthreads
+[8.181s] -- Looking for pthread_create in pthreads - not found
+[8.182s] -- Looking for pthread_create in pthread
+[8.729s] -- Looking for pthread_create in pthread - found
+[8.730s] -- Found Threads: TRUE  
+[9.582s] -- Found geometry_msgs: 2.2.4 (/opt/ros/galactic/share/geometry_msgs/cmake)
+[9.767s] -- Found tf2_geometry_msgs: 0.17.3 (/opt/ros/galactic/share/tf2_geometry_msgs/cmake)
+[9.794s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/galactic/share/eigen3_cmake_module/cmake)
+[9.815s] -- Found Eigen3: TRUE (found version "3.3.7") 
+[12.157s] -- Found sensor_msgs: 2.2.4 (/opt/ros/galactic/share/sensor_msgs/cmake)
+[12.608s] -- Found nav_msgs: 2.2.4 (/opt/ros/galactic/share/nav_msgs/cmake)
+[13.035s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.71.0/BoostConfig.cmake (found version "1.71.0")  
+[13.273s] -- Configuring done
+[13.372s] -- Generating done
+[13.398s] -- Build files have been written to: /home/muhayy/mbzirc_ws/src/build/rf2o_laser_odometry
+[13.440s] Invoked command in '/home/muhayy/mbzirc_ws/src/build/rf2o_laser_odometry' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake /home/muhayy/mbzirc_ws/src/rf2o_laser_odometry -DCMAKE_INSTALL_PREFIX=/home/muhayy/mbzirc_ws/src/install
+[13.442s] Invoking command in '/home/muhayy/mbzirc_ws/src/build/rf2o_laser_odometry': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/muhayy/mbzirc_ws/src/build/rf2o_laser_odometry -- -j12 -l12
+[13.627s] [35m[1mScanning dependencies of target rf2o_laser_odometry[0m
+[13.869s] [ 20%] [32mBuilding CXX object CMakeFiles/rf2o_laser_odometry.dir/src/CLaserOdometry2D.cpp.o[0m
+[46.107s] [ 40%] [32m[1mLinking CXX static library librf2o_laser_odometry.a[0m
+[46.320s] [ 40%] Built target rf2o_laser_odometry
+[46.331s] [35m[1mScanning dependencies of target rf2o_laser_odometry_node[0m
+[46.408s] [ 60%] [32mBuilding CXX object CMakeFiles/rf2o_laser_odometry_node.dir/src/CLaserOdometry2DNode.cpp.o[0m
+[61.800s] [ 80%] [32mBuilding CXX object CMakeFiles/rf2o_laser_odometry_node.dir/src/CLaserOdometry2D.cpp.o[0m
+[84.792s] [100%] [32m[1mLinking CXX executable rf2o_laser_odometry_node[0m
+[86.392s] [100%] Built target rf2o_laser_odometry_node
+[86.405s] Invoked command in '/home/muhayy/mbzirc_ws/src/build/rf2o_laser_odometry' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/muhayy/mbzirc_ws/src/build/rf2o_laser_odometry -- -j12 -l12
+[86.432s] Invoking command in '/home/muhayy/mbzirc_ws/src/build/rf2o_laser_odometry': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --install /home/muhayy/mbzirc_ws/src/build/rf2o_laser_odometry
+[86.443s] -- Install configuration: ""
+[86.444s] -- Installing: /home/muhayy/mbzirc_ws/src/install/lib/rf2o_laser_odometry/rf2o_laser_odometry_node
+[86.454s] -- Set runtime path of "/home/muhayy/mbzirc_ws/src/install/lib/rf2o_laser_odometry/rf2o_laser_odometry_node" to ""
+[86.454s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/rf2o_laser_odometry/launch
+[86.455s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/rf2o_laser_odometry/launch/rf2o_laser_odometry.launch.py
+[86.455s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/ament_index/resource_index/package_run_dependencies/rf2o_laser_odometry
+[86.455s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/ament_index/resource_index/parent_prefix_path/rf2o_laser_odometry
+[86.455s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/rf2o_laser_odometry/environment/ament_prefix_path.sh
+[86.455s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/rf2o_laser_odometry/environment/ament_prefix_path.dsv
+[86.455s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/rf2o_laser_odometry/environment/path.sh
+[86.455s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/rf2o_laser_odometry/environment/path.dsv
+[86.455s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/rf2o_laser_odometry/local_setup.bash
+[86.456s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/rf2o_laser_odometry/local_setup.sh
+[86.456s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/rf2o_laser_odometry/local_setup.zsh
+[86.456s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/rf2o_laser_odometry/local_setup.dsv
+[86.456s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/rf2o_laser_odometry/package.dsv
+[86.456s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/ament_index/resource_index/packages/rf2o_laser_odometry
+[86.456s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/rf2o_laser_odometry/cmake/rf2o_laser_odometryConfig.cmake
+[86.456s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/rf2o_laser_odometry/cmake/rf2o_laser_odometryConfig-version.cmake
+[86.456s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/rf2o_laser_odometry/package.xml
+[86.460s] Invoked command in '/home/muhayy/mbzirc_ws/src/build/rf2o_laser_odometry' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --install /home/muhayy/mbzirc_ws/src/build/rf2o_laser_odometry

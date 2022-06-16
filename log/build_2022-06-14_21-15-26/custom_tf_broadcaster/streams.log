@@ -1,0 +1,34 @@
+[1.444s] Invoking command in '/home/muhayy/mbzirc_ws/src/custom_tf_broadcaster': PYTHONPATH=/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/custom_tf_broadcaster build --build-base /home/muhayy/mbzirc_ws/src/build/custom_tf_broadcaster/build install --prefix /home/muhayy/mbzirc_ws/src/install --record /home/muhayy/mbzirc_ws/src/build/custom_tf_broadcaster/install.log --single-version-externally-managed
+[1.812s] running egg_info
+[1.813s] creating ../build/custom_tf_broadcaster/custom_tf_broadcaster.egg-info
+[1.813s] writing ../build/custom_tf_broadcaster/custom_tf_broadcaster.egg-info/PKG-INFO
+[1.814s] writing dependency_links to ../build/custom_tf_broadcaster/custom_tf_broadcaster.egg-info/dependency_links.txt
+[1.814s] writing entry points to ../build/custom_tf_broadcaster/custom_tf_broadcaster.egg-info/entry_points.txt
+[1.814s] writing requirements to ../build/custom_tf_broadcaster/custom_tf_broadcaster.egg-info/requires.txt
+[1.814s] writing top-level names to ../build/custom_tf_broadcaster/custom_tf_broadcaster.egg-info/top_level.txt
+[1.816s] writing manifest file '../build/custom_tf_broadcaster/custom_tf_broadcaster.egg-info/SOURCES.txt'
+[1.881s] reading manifest file '../build/custom_tf_broadcaster/custom_tf_broadcaster.egg-info/SOURCES.txt'
+[1.882s] writing manifest file '../build/custom_tf_broadcaster/custom_tf_broadcaster.egg-info/SOURCES.txt'
+[1.883s] running build
+[1.883s] running build_py
+[1.883s] creating /home/muhayy/mbzirc_ws/src/build/custom_tf_broadcaster/build
+[1.883s] creating /home/muhayy/mbzirc_ws/src/build/custom_tf_broadcaster/build/lib
+[1.884s] creating /home/muhayy/mbzirc_ws/src/build/custom_tf_broadcaster/build/lib/custom_tf_broadcaster
+[1.884s] copying custom_tf_broadcaster/__init__.py -> /home/muhayy/mbzirc_ws/src/build/custom_tf_broadcaster/build/lib/custom_tf_broadcaster
+[1.884s] copying custom_tf_broadcaster/custom_tf_broadcaster.py -> /home/muhayy/mbzirc_ws/src/build/custom_tf_broadcaster/build/lib/custom_tf_broadcaster
+[1.884s] running install
+[1.885s] running install_lib
+[1.887s] creating /home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages/custom_tf_broadcaster
+[1.887s] copying /home/muhayy/mbzirc_ws/src/build/custom_tf_broadcaster/build/lib/custom_tf_broadcaster/__init__.py -> /home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages/custom_tf_broadcaster
+[1.888s] copying /home/muhayy/mbzirc_ws/src/build/custom_tf_broadcaster/build/lib/custom_tf_broadcaster/custom_tf_broadcaster.py -> /home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages/custom_tf_broadcaster
+[1.889s] byte-compiling /home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages/custom_tf_broadcaster/__init__.py to __init__.cpython-38.pyc
+[1.891s] byte-compiling /home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages/custom_tf_broadcaster/custom_tf_broadcaster.py to custom_tf_broadcaster.cpython-38.pyc
+[1.892s] running install_data
+[1.893s] copying resource/custom_tf_broadcaster -> /home/muhayy/mbzirc_ws/src/install/share/ament_index/resource_index/packages
+[1.894s] copying package.xml -> /home/muhayy/mbzirc_ws/src/install/share/custom_tf_broadcaster
+[1.894s] running install_egg_info
+[1.897s] Copying ../build/custom_tf_broadcaster/custom_tf_broadcaster.egg-info to /home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages/custom_tf_broadcaster-0.0.0-py3.8.egg-info
+[1.899s] running install_scripts
+[1.926s] Installing publish_odometry_and_tf script to /home/muhayy/mbzirc_ws/src/install/lib/custom_tf_broadcaster
+[1.927s] writing list of installed files to '/home/muhayy/mbzirc_ws/src/build/custom_tf_broadcaster/install.log'
+[1.973s] Invoked command in '/home/muhayy/mbzirc_ws/src/custom_tf_broadcaster' returned '0': PYTHONPATH=/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/custom_tf_broadcaster build --build-base /home/muhayy/mbzirc_ws/src/build/custom_tf_broadcaster/build install --prefix /home/muhayy/mbzirc_ws/src/install --record /home/muhayy/mbzirc_ws/src/build/custom_tf_broadcaster/install.log --single-version-externally-managed

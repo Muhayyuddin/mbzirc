@@ -95,7 +95,7 @@ class FrameListener(Node):
       # set the position
       self.odom.pose.pose.position.x = msg.transforms[8].transform.translation.x
       self.odom.pose.pose.position.y = msg.transforms[8].transform.translation.y
-      self.odom.pose.pose.position.z = msg.transforms[8].transform.translation.z
+      self.odom.pose.pose.position.z = 0.0
       self.odom.pose.pose.orientation.x = msg.transforms[8].transform.rotation.x
       self.odom.pose.pose.orientation.y = msg.transforms[8].transform.rotation.y
       self.odom.pose.pose.orientation.z = msg.transforms[8].transform.rotation.z

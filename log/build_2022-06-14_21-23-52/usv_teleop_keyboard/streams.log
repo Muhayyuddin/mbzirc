@@ -1,0 +1,21 @@
+[0.935s] Invoking command in '/home/muhayy/mbzirc_ws/src/usv_teleop_keyboard': AMENT_PREFIX_PATH=/home/muhayy/mbzirc_ws/src/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/muhayy/mbzirc_ws/src/install:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/muhayy/mbzirc_ws/src/install/lib:${LD_LIBRARY_PATH} PATH=/home/muhayy/mbzirc_ws/src/install/bin:${PATH} PYTHONPATH=/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages:/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/usv_teleop_keyboard build --build-base /home/muhayy/mbzirc_ws/src/build/usv_teleop_keyboard/build install --prefix /home/muhayy/mbzirc_ws/src/install --record /home/muhayy/mbzirc_ws/src/build/usv_teleop_keyboard/install.log --single-version-externally-managed
+[1.155s] running egg_info
+[1.155s] writing ../build/usv_teleop_keyboard/usv_teleop_keyboard.egg-info/PKG-INFO
+[1.155s] writing dependency_links to ../build/usv_teleop_keyboard/usv_teleop_keyboard.egg-info/dependency_links.txt
+[1.156s] writing entry points to ../build/usv_teleop_keyboard/usv_teleop_keyboard.egg-info/entry_points.txt
+[1.156s] writing requirements to ../build/usv_teleop_keyboard/usv_teleop_keyboard.egg-info/requires.txt
+[1.156s] writing top-level names to ../build/usv_teleop_keyboard/usv_teleop_keyboard.egg-info/top_level.txt
+[1.200s] reading manifest file '../build/usv_teleop_keyboard/usv_teleop_keyboard.egg-info/SOURCES.txt'
+[1.200s] writing manifest file '../build/usv_teleop_keyboard/usv_teleop_keyboard.egg-info/SOURCES.txt'
+[1.200s] running build
+[1.200s] running build_py
+[1.200s] running install
+[1.201s] running install_lib
+[1.201s] running install_data
+[1.201s] running install_egg_info
+[1.201s] removing '/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages/usv_teleop_keyboard-0.0.0-py3.8.egg-info' (and everything under it)
+[1.201s] Copying ../build/usv_teleop_keyboard/usv_teleop_keyboard.egg-info to /home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages/usv_teleop_keyboard-0.0.0-py3.8.egg-info
+[1.201s] running install_scripts
+[1.211s] Installing compute_thrust script to /home/muhayy/mbzirc_ws/src/install/lib/usv_teleop_keyboard
+[1.212s] writing list of installed files to '/home/muhayy/mbzirc_ws/src/build/usv_teleop_keyboard/install.log'
+[1.233s] Invoked command in '/home/muhayy/mbzirc_ws/src/usv_teleop_keyboard' returned '0': AMENT_PREFIX_PATH=/home/muhayy/mbzirc_ws/src/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/muhayy/mbzirc_ws/src/install:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/muhayy/mbzirc_ws/src/install/lib:${LD_LIBRARY_PATH} PATH=/home/muhayy/mbzirc_ws/src/install/bin:${PATH} PYTHONPATH=/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages:/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/usv_teleop_keyboard build --build-base /home/muhayy/mbzirc_ws/src/build/usv_teleop_keyboard/build install --prefix /home/muhayy/mbzirc_ws/src/install --record /home/muhayy/mbzirc_ws/src/build/usv_teleop_keyboard/install.log --single-version-externally-managed

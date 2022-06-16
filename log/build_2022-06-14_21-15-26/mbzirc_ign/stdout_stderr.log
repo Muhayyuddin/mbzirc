@@ -1,0 +1,557 @@
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.1.5 (/opt/ros/galactic/share/ament_cmake/cmake)
+-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Looking for ignition-gazebo6 -- found version 6.9.0
+-- Searching for dependencies of ignition-gazebo6
+-- Looking for sdformat12 -- found version 12.5.0
+-- Searching for dependencies of sdformat12
+-- Checking for module 'tinyxml2'
+--   Found tinyxml2, version 6.2.0
+-- Looking for ignition-math6 -- found version 6.11.0
+-- Searching for dependencies of ignition-math6
+-- Looking for ignition-utils1 -- found version 1.4.0
+-- Searching for dependencies of ignition-utils1
+-- Looking for ignition-plugin1 -- found version 1.2.1
+-- Searching for dependencies of ignition-plugin1
+-- Searching for <ignition-plugin1> component [loader]
+-- Looking for ignition-plugin1-loader -- found version 1.2.1
+-- Searching for dependencies of ignition-plugin1-loader
+-- Searching for <ignition-plugin1> component [register]
+-- Looking for ignition-plugin1-register -- found version 1.2.1
+-- Searching for dependencies of ignition-plugin1-register
+-- Looking for ignition-transport11 -- found version 11.0.0
+-- Searching for dependencies of ignition-transport11
+-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so;-lpthread (found suitable version "3.6.1", minimum required is "3") 
+-- Config-file not installed for ZeroMQ -- checking for pkg-config
+-- Checking for module 'libzmq >= 4'
+--   Found libzmq , version 4.3.2
+-- Found ZeroMQ: TRUE (Required is at least version "4") 
+-- Checking for module 'uuid'
+--   Found uuid, version 2.34.0
+-- Found UUID: TRUE  
+-- Looking for ignition-utils1 -- found version 1.4.0
+-- Searching for dependencies of ignition-utils1
+-- Searching for <ignition-utils1> component [cli]
+-- Looking for ignition-utils1-cli -- found version 1.4.0
+-- Searching for dependencies of ignition-utils1-cli
+-- Looking for ignition-msgs8 -- found version 8.4.0
+-- Searching for dependencies of ignition-msgs8
+-- Looking for ignition-math6 -- found version 6.11.0
+-- Searching for <ignition-transport11> component [log]
+-- Looking for ignition-transport11-log -- found version 11.0.0
+-- Searching for dependencies of ignition-transport11-log
+-- Looking for ignition-msgs8 -- found version 8.4.0
+-- Looking for ignition-common4 -- found version 4.5.0
+-- Searching for dependencies of ignition-common4
+-- Looking for dlfcn.h - found
+-- Looking for libdl - found
+-- Found DL: TRUE  
+-- Searching for <ignition-common4> component [profiler]
+-- Looking for ignition-common4-profiler -- found version 4.5.0
+-- Searching for dependencies of ignition-common4-profiler
+-- Searching for <ignition-common4> component [events]
+-- Looking for ignition-common4-events -- found version 4.5.0
+-- Searching for dependencies of ignition-common4-events
+-- Looking for ignition-math6 -- found version 6.11.0
+-- Searching for <ignition-common4> component [av]
+-- Looking for ignition-common4-av -- found version 4.5.0
+-- Searching for dependencies of ignition-common4-av
+-- Checking for module 'libswscale'
+--   Found libswscale, version 5.5.100
+-- Found SWSCALE: TRUE  
+-- Checking for module 'libavdevice >= 56.4.100'
+--   Found libavdevice , version 58.8.100
+-- Found AVDEVICE: TRUE (Required is at least version "56.4.100") 
+-- Checking for module 'libavformat'
+--   Found libavformat, version 58.29.100
+-- Found AVFORMAT: TRUE  
+-- Checking for module 'libavcodec'
+--   Found libavcodec, version 58.54.100
+-- Found AVCODEC: TRUE  
+-- Checking for module 'libavutil'
+--   Found libavutil, version 56.31.100
+-- Found AVUTIL: TRUE  
+-- Looking for ignition-fuel_tools7 -- found version 7.0.0
+-- Searching for dependencies of ignition-fuel_tools7
+-- Found CURL: /usr/lib/x86_64-linux-gnu/libcurl.so (found version "7.68.0")  
+-- Checking for module 'jsoncpp'
+--   Found jsoncpp, version 1.7.4
+-- Found JSONCPP: TRUE  
+-- Checking for module 'libzip'
+--   Found libzip, version 1.5.1
+-- Found ZIP: TRUE  
+-- Looking for ignition-common4 -- found version 4.5.0
+-- Looking for ignition-math6 -- found version 6.11.0
+-- Looking for ignition-msgs8 -- found version 8.4.0
+-- Looking for ignition-gui6 -- found version 6.4.0
+-- Searching for dependencies of ignition-gui6
+-- Looking for ignition-math6 -- found version 6.11.0
+-- Looking for ignition-common4 -- found version 4.5.0
+-- Looking for ignition-plugin1 -- found version 1.2.1
+-- Looking for ignition-transport11 -- found version 11.0.0
+-- Looking for ignition-rendering6 -- found version 6.4.0
+-- Searching for dependencies of ignition-rendering6
+-- Looking for ignition-math6 -- found version 6.11.0
+-- Searching for dependencies of ignition-math6
+-- Searching for <ignition-math6> component [eigen3]
+-- Looking for ignition-math6-eigen3 -- found version 6.11.0
+-- Searching for dependencies of ignition-math6-eigen3
+-- Looking for ignition-common4 -- found version 4.5.0
+-- Searching for dependencies of ignition-common4
+-- Looking for dlfcn.h - found
+-- Looking for libdl - found
+-- Searching for <ignition-common4> component [graphics]
+-- Looking for ignition-common4-graphics -- found version 4.5.0
+-- Searching for dependencies of ignition-common4-graphics
+-- Looking for ignition-math6 -- found version 6.11.0
+-- Looking for ignition-utils1 -- found version 1.4.0
+-- Searching for <ignition-common4> component [events]
+-- Looking for ignition-plugin1 -- found version 1.2.1
+-- Searching for dependencies of ignition-plugin1
+-- Searching for <ignition-plugin1> component [all]
+-- Looking for all libraries of ignition-plugin1 -- found version 1.2.1
+-- Looking for ignition-plugin1 -- found version 1.2.1
+-- Looking for ignition-msgs8 -- found version 8.4.0
+-- Looking for ignition-physics5 -- found version 5.1.0
+-- Searching for dependencies of ignition-physics5
+-- Looking for ignition-math6 -- found version 6.11.0
+-- Looking for ignition-plugin1 -- found version 1.2.1
+-- Looking for ignition-utils1 -- found version 1.4.0
+-- Searching for <ignition-physics5> component [heightmap]
+-- Looking for ignition-physics5-heightmap -- found version 5.1.0
+-- Searching for dependencies of ignition-physics5-heightmap
+-- Looking for ignition-common4 -- found version 4.5.0
+-- Searching for <ignition-physics5> component [mesh]
+-- Looking for ignition-physics5-mesh -- found version 5.1.0
+-- Searching for dependencies of ignition-physics5-mesh
+-- Looking for ignition-common4 -- found version 4.5.0
+-- Searching for <ignition-physics5> component [sdf]
+-- Looking for ignition-physics5-sdf -- found version 5.1.0
+-- Searching for dependencies of ignition-physics5-sdf
+-- Looking for sdformat12 -- found version 12.5.0
+-- Looking for ignition-sensors6 -- found version 6.5.0
+-- Searching for dependencies of ignition-sensors6
+-- Looking for ignition-math6 -- found version 6.11.0
+-- Looking for ignition-common4 -- found version 4.5.0
+-- Looking for ignition-transport11 -- found version 11.0.0
+-- Looking for ignition-rendering6 -- found version 6.4.0
+-- Looking for ignition-msgs8 -- found version 8.4.0
+-- Looking for sdformat12 -- found version 12.5.0
+-- Searching for <ignition-sensors6> component [air_pressure]
+-- Looking for ignition-sensors6-air_pressure -- found version 6.5.0
+-- Searching for dependencies of ignition-sensors6-air_pressure
+-- Searching for <ignition-sensors6> component [altimeter]
+-- Looking for ignition-sensors6-altimeter -- found version 6.5.0
+-- Searching for dependencies of ignition-sensors6-altimeter
+-- Searching for <ignition-sensors6> component [imu]
+-- Looking for ignition-sensors6-imu -- found version 6.5.0
+-- Searching for dependencies of ignition-sensors6-imu
+-- Searching for <ignition-sensors6> component [force_torque]
+-- Looking for ignition-sensors6-force_torque -- found version 6.5.0
+-- Searching for dependencies of ignition-sensors6-force_torque
+-- Searching for <ignition-sensors6> component [logical_camera]
+-- Looking for ignition-sensors6-logical_camera -- found version 6.5.0
+-- Searching for dependencies of ignition-sensors6-logical_camera
+-- Searching for <ignition-sensors6> component [magnetometer]
+-- Looking for ignition-sensors6-magnetometer -- found version 6.5.0
+-- Searching for dependencies of ignition-sensors6-magnetometer
+-- Searching for <ignition-sensors6> component [navsat]
+-- Looking for ignition-sensors6-navsat -- found version 6.5.0
+-- Searching for dependencies of ignition-sensors6-navsat
+-- Searching for <ignition-sensors6> component [rendering]
+-- Looking for ignition-sensors6-rendering -- found version 6.5.0
+-- Searching for dependencies of ignition-sensors6-rendering
+-- Searching for <ignition-sensors6> component [lidar]
+-- Looking for ignition-sensors6-lidar -- found version 6.5.0
+-- Searching for dependencies of ignition-sensors6-lidar
+-- Searching for <ignition-sensors6> component [gpu_lidar]
+-- Looking for ignition-sensors6-gpu_lidar -- found version 6.5.0
+-- Searching for dependencies of ignition-sensors6-gpu_lidar
+-- Searching for <ignition-sensors6> component [camera]
+-- Looking for ignition-sensors6-camera -- found version 6.5.0
+-- Searching for dependencies of ignition-sensors6-camera
+-- Searching for <ignition-sensors6> component [segmentation_camera]
+-- Looking for ignition-sensors6-segmentation_camera -- found version 6.5.0
+-- Searching for dependencies of ignition-sensors6-segmentation_camera
+-- Searching for <ignition-sensors6> component [depth_camera]
+-- Looking for ignition-sensors6-depth_camera -- found version 6.5.0
+-- Searching for dependencies of ignition-sensors6-depth_camera
+-- Searching for <ignition-sensors6> component [rgbd_camera]
+-- Looking for ignition-sensors6-rgbd_camera -- found version 6.5.0
+-- Searching for dependencies of ignition-sensors6-rgbd_camera
+-- Searching for <ignition-sensors6> component [thermal_camera]
+-- Looking for ignition-sensors6-thermal_camera -- found version 6.5.0
+-- Searching for dependencies of ignition-sensors6-thermal_camera
+-- Looking for ignition-rendering6 -- found version 6.4.0
+-- Looking for ignition-math6 -- found version 6.11.0
+-- Looking for ignition-utils1 -- found version 1.4.0
+-- Looking for ignition-common4 -- found version 4.5.0
+-- Looking for ignition-fuel_tools7 -- found version 7.0.0
+-- Looking for ignition-math6 -- found version 6.11.0
+-- Looking for ignition-msgs8 -- found version 8.4.0
+-- Looking for ignition-transport11 -- found version 11.0.0
+-- Looking for ignition-plugin1 -- found version 1.2.1
+-- Looking for ignition-rendering6 -- found version 6.4.0
+-- Looking for sdformat12 -- found version 12.5.0
+-- Found std_msgs: 2.2.4 (/opt/ros/galactic/share/std_msgs/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Found rosidl_adapter: 2.2.2 (/opt/ros/galactic/share/rosidl_adapter/cmake)
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+-- Found FastRTPS: /opt/ros/galactic/include  
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found python_cmake_module: 0.8.1 (/opt/ros/galactic/share/python_cmake_module/cmake)
+-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") 
+-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.8.so (found suitable version "3.8.10", minimum required is "3.5") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8
+-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.8.so
+-- Found PythonExtra: .so  
+-- Found ament_cmake_gtest: 1.1.5 (/opt/ros/galactic/share/ament_cmake_gtest/cmake)
+-- Found ament_cmake_pytest: 1.1.5 (/opt/ros/galactic/share/ament_cmake_pytest/cmake)
+-- Found ament_cmake_flake8: 0.10.7 (/opt/ros/galactic/share/ament_cmake_flake8/cmake)
+-- Found ament_cmake_pycodestyle: 0.10.7 (/opt/ros/galactic/share/ament_cmake_pycodestyle/cmake)
+-- Found gtest sources under '/opt/ros/galactic/src/gtest_vendor': C++ tests using 'Google Test' will be built
+-- Check if compiler accepts -pthread
+-- Check if compiler accepts -pthread - yes
+-- Found Threads: TRUE  
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/muhayy/mbzirc_ws/src/build/mbzirc_ign
+[35m[1mScanning dependencies of target ament_cmake_python_copy_mbzirc_ign[0m
+[35m[1mScanning dependencies of target gtest_main[0m
+[35m[1mScanning dependencies of target gtest[0m
+[35m[1mScanning dependencies of target Waves[0m
+[35m[1mScanning dependencies of target MulticopterControl[0m
+[  2%] [32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o[0m
+[  5%] [32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o[0m
+[  5%] Built target ament_cmake_python_copy_mbzirc_ign
+[35m[1mScanning dependencies of target ament_cmake_python_build_mbzirc_ign_egg[0m
+[  7%] [32mBuilding CXX object CMakeFiles/Waves.dir/src/Wavefield.cc.o[0m
+[ 10%] [32mBuilding CXX object CMakeFiles/MulticopterControl.dir/src/multicopter_control/Common.cc.o[0m
+[ 15%] [32mBuilding CXX object CMakeFiles/MulticopterControl.dir/src/multicopter_control/LeeVelocityController.cc.o[0m
+[ 15%] [32mBuilding CXX object CMakeFiles/MulticopterControl.dir/src/multicopter_control/MulticopterVelocityControl.cc.o[0m
+running egg_info
+creating mbzirc_ign.egg-info
+writing mbzirc_ign.egg-info/PKG-INFO
+writing dependency_links to mbzirc_ign.egg-info/dependency_links.txt
+writing top-level names to mbzirc_ign.egg-info/top_level.txt
+writing manifest file 'mbzirc_ign.egg-info/SOURCES.txt'
+reading manifest file 'mbzirc_ign.egg-info/SOURCES.txt'
+writing manifest file 'mbzirc_ign.egg-info/SOURCES.txt'
+[ 15%] Built target ament_cmake_python_build_mbzirc_ign_egg
+[ 18%] [32m[1mLinking CXX static library libgtest_main.a[0m
+[ 18%] Built target gtest_main
+[ 21%] [32m[1mLinking CXX static library libgtest.a[0m
+[ 21%] Built target gtest
+[35m[1mScanning dependencies of target test_spawn_usv_arm[0m
+[35m[1mScanning dependencies of target test_gripper[0m
+[35m[1mScanning dependencies of target test_spawn_uav_battery[0m
+[35m[1mScanning dependencies of target test_game_logic[0m
+[35m[1mScanning dependencies of target test_spawn_usv_maxspeed[0m
+[35m[1mScanning dependencies of target test_fixed_wing[0m
+[ 23%] [32mBuilding CXX object CMakeFiles/test_gripper.dir/test/test_gripper.cc.o[0m
+[ 26%] [32mBuilding CXX object CMakeFiles/test_spawn_usv_arm.dir/test/test_spawn_usv_arm.cc.o[0m
+[ 28%] [32mBuilding CXX object CMakeFiles/test_spawn_uav_battery.dir/test/test_spawn_uav_battery.cc.o[0m
+[ 31%] [32mBuilding CXX object CMakeFiles/test_spawn_usv_maxspeed.dir/test/test_spawn_usv_maxspeed.cc.o[0m
+[ 34%] [32mBuilding CXX object CMakeFiles/test_game_logic.dir/test/test_game_logic.cc.o[0m
+[ 36%] [32mBuilding CXX object CMakeFiles/test_fixed_wing.dir/test/test_fixed_wing.cc.o[0m
+[ 39%] [32m[1mLinking CXX shared library libWaves.so[0m
+[ 39%] Built target Waves
+[35m[1mScanning dependencies of target BaseStation[0m
+[35m[1mScanning dependencies of target Surface[0m
+[35m[1mScanning dependencies of target GameLogicPlugin[0m
+[ 42%] [32mBuilding CXX object CMakeFiles/BaseStation.dir/src/BaseStation.cc.o[0m
+[ 44%] [32mBuilding CXX object CMakeFiles/GameLogicPlugin.dir/src/GameLogicPlugin.cc.o[0m
+[ 47%] [32mBuilding CXX object CMakeFiles/Surface.dir/src/Surface.cc.o[0m
+[35m[1mScanning dependencies of target EntityDetector[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/EntityDetector.dir/src/EntityDetector.cc.o[0m
+[35m[1mScanning dependencies of target SimpleHydrodynamics[0m
+[ 52%] [32mBuilding CXX object CMakeFiles/SimpleHydrodynamics.dir/src/SimpleHydrodynamics.cc.o[0m
+[ 55%] [32m[1mLinking CXX executable test_spawn_usv_maxspeed[0m
+[ 57%] [32m[1mLinking CXX shared library libMulticopterControl.so[0m
+[ 60%] [32m[1mLinking CXX executable test_spawn_uav_battery[0m
+[ 60%] Built target test_spawn_usv_maxspeed
+[35m[1mScanning dependencies of target FixedWingController[0m
+[ 63%] [32mBuilding CXX object CMakeFiles/FixedWingController.dir/src/FixedWingController.cc.o[0m
+[ 63%] Built target test_spawn_uav_battery
+[35m[1mScanning dependencies of target SuctionGripper[0m
+[ 63%] Built target MulticopterControl
+[35m[1mScanning dependencies of target WaveVisual[0m
+[ 65%] [32mBuilding CXX object CMakeFiles/SuctionGripper.dir/src/SuctionGripper.cc.o[0m
+[ 68%] [32mBuilding CXX object CMakeFiles/WaveVisual.dir/src/WaveVisual.cc.o[0m
+[ 71%] [32m[1mLinking CXX executable test_spawn_usv_arm[0m
+[ 73%] [32m[1mLinking CXX executable test_game_logic[0m
+[ 76%] [32m[1mLinking CXX shared library libBaseStation.so[0m
+[ 76%] Built target test_spawn_usv_arm
+[ 76%] Built target test_game_logic
+[ 78%] [32m[1mLinking CXX shared library libSurface.so[0m
+[ 78%] Built target BaseStation
+[ 78%] Built target Surface
+[ 81%] [32m[1mLinking CXX shared library libEntityDetector.so[0m
+[ 84%] [32m[1mLinking CXX shared library libSimpleHydrodynamics.so[0m
+[ 84%] Built target SimpleHydrodynamics
+[ 84%] Built target EntityDetector
+[ 86%] [32m[1mLinking CXX executable test_fixed_wing[0m
+[ 86%] Built target test_fixed_wing
+[ 89%] [32m[1mLinking CXX shared library libGameLogicPlugin.so[0m
+[ 92%] [32m[1mLinking CXX shared library libFixedWingController.so[0m
+[ 92%] Built target FixedWingController
+[ 92%] Built target GameLogicPlugin
+[ 94%] [32m[1mLinking CXX shared library libWaveVisual.so[0m
+[ 94%] Built target WaveVisual
+[ 97%] [32m[1mLinking CXX executable test_gripper[0m
+[ 97%] Built target test_gripper
+[100%] [32m[1mLinking CXX shared library libSuctionGripper.so[0m
+[100%] Built target SuctionGripper
+-- Install configuration: ""
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/environment/resource_paths.dsv
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/environment/resource_paths.sh
+-- Installing: /home/muhayy/mbzirc_ws/src/install/lib/libWaves.so
+-- Installing: /home/muhayy/mbzirc_ws/src/install/lib/libBaseStation.so
+-- Set runtime path of "/home/muhayy/mbzirc_ws/src/install/lib/libBaseStation.so" to ""
+-- Installing: /home/muhayy/mbzirc_ws/src/install/lib/libFixedWingController.so
+-- Set runtime path of "/home/muhayy/mbzirc_ws/src/install/lib/libFixedWingController.so" to ""
+-- Installing: /home/muhayy/mbzirc_ws/src/install/lib/libGameLogicPlugin.so
+-- Set runtime path of "/home/muhayy/mbzirc_ws/src/install/lib/libGameLogicPlugin.so" to ""
+-- Installing: /home/muhayy/mbzirc_ws/src/install/lib/libEntityDetector.so
+-- Set runtime path of "/home/muhayy/mbzirc_ws/src/install/lib/libEntityDetector.so" to ""
+-- Installing: /home/muhayy/mbzirc_ws/src/install/lib/libSimpleHydrodynamics.so
+-- Set runtime path of "/home/muhayy/mbzirc_ws/src/install/lib/libSimpleHydrodynamics.so" to ""
+-- Installing: /home/muhayy/mbzirc_ws/src/install/lib/libSuctionGripper.so
+-- Set runtime path of "/home/muhayy/mbzirc_ws/src/install/lib/libSuctionGripper.so" to ""
+-- Installing: /home/muhayy/mbzirc_ws/src/install/lib/libSurface.so
+-- Set runtime path of "/home/muhayy/mbzirc_ws/src/install/lib/libSurface.so" to ""
+-- Installing: /home/muhayy/mbzirc_ws/src/install/lib/libWaveVisual.so
+-- Set runtime path of "/home/muhayy/mbzirc_ws/src/install/lib/libWaveVisual.so" to ""
+-- Installing: /home/muhayy/mbzirc_ws/src/install/lib/libMulticopterControl.so
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/environment/pythonpath.sh
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/environment/pythonpath.dsv
+-- Installing: /home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages//mbzirc_ign.egg-info
+-- Installing: /home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages//mbzirc_ign.egg-info/SOURCES.txt
+-- Installing: /home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages//mbzirc_ign.egg-info/PKG-INFO
+-- Installing: /home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages//mbzirc_ign.egg-info/top_level.txt
+-- Installing: /home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages//mbzirc_ign.egg-info/dependency_links.txt
+-- Installing: /home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages/mbzirc_ign
+-- Installing: /home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages/mbzirc_ign/__init__.py
+-- Installing: /home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages/mbzirc_ign/bridge.py
+-- Installing: /home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages/mbzirc_ign/test_model.py
+-- Installing: /home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages/mbzirc_ign/payload_bridges.py
+-- Installing: /home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages/mbzirc_ign/model.py
+-- Installing: /home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages/mbzirc_ign/bridges.py
+-- Installing: /home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages/mbzirc_ign/launch.py
+-- Installing: /home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages/mbzirc_ign/test_bridges.py
+Listing '/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages/mbzirc_ign'...
+Compiling '/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages/mbzirc_ign/__init__.py'...
+Compiling '/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages/mbzirc_ign/bridge.py'...
+Compiling '/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages/mbzirc_ign/bridges.py'...
+Compiling '/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages/mbzirc_ign/launch.py'...
+Compiling '/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages/mbzirc_ign/model.py'...
+Compiling '/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages/mbzirc_ign/payload_bridges.py'...
+Compiling '/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages/mbzirc_ign/test_bridges.py'...
+Compiling '/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages/mbzirc_ign/test_model.py'...
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/config
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/config/single_usv_with_arm_gripper_config.yaml
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/config/single_fw_uav_config.yaml
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/config/single_uav_with_gripper_config.yaml
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/config/single_usv_config.yaml
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/config/single_uav_config.yaml
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/config/coast
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/config/coast/usv.yaml
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/config/coast/quadrotor.yaml
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/config/coast/hexrotor.yaml
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/config/coast/config_team.yaml
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/worlds
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/worlds/empty_platform.sdf
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/worlds/simple_demo-original.sdf
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/worlds/test
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/worlds/test/simple_arm_demo.sdf
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/worlds/test/simple_demo_manip.sdf
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/worlds/test/suction_gripper.sdf
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/worlds/test/usv_max_speed.sdf
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/worlds/faster_than_realtime.sdf
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/worlds/coast.sdf
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/worlds/simple_demo.sdf
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/coast_waves
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/coast_waves/model.sdf
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/coast_waves/meshes
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/coast_waves/meshes/waterlow.dae
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/coast_waves/materials
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/coast_waves/materials/programs
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/coast_waves/materials/programs/GerstnerWaves_fs_330.glsl
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/coast_waves/materials/programs/GerstnerWaves_vs_330.glsl
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/coast_waves/materials/textures
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/coast_waves/materials/textures/wave_normals.dds
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/coast_waves/materials/textures/skybox_lowres.dds
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/coast_waves/model.config
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_usv_base
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_usv_base/model.sdf
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_usv_base/meshes
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_usv_base/meshes/USV.dae
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_usv_base/materials
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_usv_base/materials/textures
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_usv_base/materials/textures/USV_Roughness.jpg
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_usv_base/materials/textures/USV_Metalness.png
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_usv_base/materials/textures/USV_Albedo.jpg
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_usv_base/materials/textures/USV_Normal.jpg
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_usv_base/model.config
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/water_plane
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/water_plane/model.sdf
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/water_plane/materials
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/water_plane/materials/textures
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/water_plane/materials/textures/Water_Normal.jpg
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/water_plane/materials/textures/Water_Albedo.jpg
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/water_plane/materials/textures/skybox_lowres.dds
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/water_plane/model.config
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_oberon7_gripper
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_oberon7_gripper/meshes
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_oberon7_gripper/meshes/parallel_gripper
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_oberon7_gripper/meshes/parallel_gripper/visual
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_oberon7_gripper/meshes/parallel_gripper/visual/FingerTip.dae
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_oberon7_gripper/meshes/parallel_gripper/visual/Finger.dae
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_oberon7_gripper/meshes/parallel_gripper/visual/BaseGripper.dae
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_oberon7_gripper/model.config
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_oberon7_gripper/model.sdf.erb
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/wam-v
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/wam-v/meshes
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/wam-v/meshes/engine.dae
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/wam-v/meshes/WamV.png
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/wam-v/meshes/WAM-V-Base.dae
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/wam-v/meshes/propeller.dae
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/wam-v/model.sdf.erb
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_fixed_wing_base
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_fixed_wing_base/model.sdf
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_fixed_wing_base/meshes
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_fixed_wing_base/meshes/wing.dae
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_fixed_wing_base/materials
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_fixed_wing_base/materials/textures
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_fixed_wing_base/materials/textures/wing.png
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_fixed_wing_base/model.config
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_hexrotor
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_hexrotor/model.sdf.erb
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/dust_storm
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/dust_storm/model.sdf
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/dust_storm/materials
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/dust_storm/materials/textures
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/dust_storm/materials/textures/dust.png
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/dust_storm/materials/textures/dustcolors.png
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/dust_storm/model.config
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_hexrotor_base
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_hexrotor_base/model.sdf
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_hexrotor_base/meshes
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_hexrotor_base/meshes/neo11_propeller_cw.dae
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_hexrotor_base/meshes/led.dae
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_hexrotor_base/meshes/neo11_propeller_ccw.dae
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_hexrotor_base/meshes/led_lamp.dae
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_hexrotor_base/meshes/hexrotor.jpg
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_hexrotor_base/meshes/hexrotor.dae
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_hexrotor_base/materials
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_hexrotor_base/materials/textures
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_hexrotor_base/materials/textures/led.jpg
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_hexrotor_base/model.config
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/sensors
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/sensors/mbzirc_3d_lidar
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/sensors/mbzirc_3d_lidar/model.sdf
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/sensors/mbzirc_3d_lidar/model.config
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/sensors/mbzirc_planar_lidar
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/sensors/mbzirc_planar_lidar/model.sdf
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/sensors/mbzirc_planar_lidar/model.config
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/sensors/mbzirc_rgbd_camera
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/sensors/mbzirc_rgbd_camera/model.sdf
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/sensors/mbzirc_rgbd_camera/model.config
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/sensors/mbzirc_hd_camera
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/sensors/mbzirc_hd_camera/model.sdf
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/sensors/mbzirc_hd_camera/model.config
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/sensors/mbzirc_vga_camera
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/sensors/mbzirc_vga_camera/model.sdf
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/sensors/mbzirc_vga_camera/model.config
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/usv
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/usv/model.sdf.erb
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_quadrotor_base
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_quadrotor_base/model.sdf
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_quadrotor_base/meshes
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_quadrotor_base/meshes/propeller_ccw.dae
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_quadrotor_base/meshes/led.dae
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_quadrotor_base/meshes/led_lamp.dae
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_quadrotor_base/meshes/propeller_cw.dae
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_quadrotor_base/meshes/quadrotor.dae
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_quadrotor_base/meshes/quadrotor.jpg
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_quadrotor_base/materials
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_quadrotor_base/materials/textures
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_quadrotor_base/materials/textures/led.jpg
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_quadrotor_base/model.config
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/fog
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/fog/model.sdf
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/fog/materials
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/fog/materials/textures
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/fog/materials/textures/fogcolors.png
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/fog/materials/textures/fog.png
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/fog/model.config
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_oberon7_arm
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_oberon7_arm/meshes
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_oberon7_arm/meshes/serial_arm
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_oberon7_arm/meshes/serial_arm/visual
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_oberon7_arm/meshes/serial_arm/visual/Forearm.dae
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_oberon7_arm/meshes/serial_arm/visual/ShoulderLink.dae
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_oberon7_arm/meshes/serial_arm/visual/Wrist.dae
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_oberon7_arm/meshes/serial_arm/visual/ElbowLink.dae
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_oberon7_arm/meshes/serial_arm/visual/UpperArm.dae
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_oberon7_arm/meshes/serial_arm/visual/Base.dae
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_oberon7_arm/meshes/serial_arm/collision
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_oberon7_arm/meshes/serial_arm/collision/Base.stl
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_oberon7_arm/model.config
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_oberon7_arm/model.sdf.erb
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/static_arm
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/static_arm/model.sdf.erb
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_quadrotor
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_quadrotor/model.sdf.erb
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/waves
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/waves/model.sdf
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/waves/meshes
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/waves/meshes/mesh.dae
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/waves/materials
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/waves/materials/programs
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/waves/materials/programs/GerstnerWaves_fs_330.glsl
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/waves/materials/programs/GerstnerWaves_vs_330.glsl
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/waves/materials/textures
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/waves/materials/textures/wave_normals.dds
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/waves/materials/textures/skybox_lowres.dds
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/waves/model.config
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_suction_gripper
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_suction_gripper/model.config
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_suction_gripper/model.sdf.erb
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_fixed_wing
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_fixed_wing/model.sdf.erb
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/launch
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/launch/spawn_config.launch.py
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/launch/competition.launch.py
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/launch/spawn.launch.py
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/ament_index/resource_index/package_run_dependencies/mbzirc_ign
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/ament_index/resource_index/parent_prefix_path/mbzirc_ign
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/environment/ament_prefix_path.sh
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/environment/ament_prefix_path.dsv
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/environment/path.sh
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/environment/path.dsv
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/local_setup.bash
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/local_setup.sh
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/local_setup.zsh
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/local_setup.dsv
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/package.dsv
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/ament_index/resource_index/packages/mbzirc_ign
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/cmake/mbzirc_ignConfig.cmake
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/cmake/mbzirc_ignConfig-version.cmake
+-- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/package.xml

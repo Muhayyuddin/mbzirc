@@ -1,0 +1,114 @@
+[0.397s] Invoking command in '/home/muhayy/mbzirc_ws/src/build/explorer_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake /home/muhayy/mbzirc_ws/src/ros2_explorer/explorer_gazebo -DCMAKE_INSTALL_PREFIX=/home/muhayy/mbzirc_ws/src/install
+[0.537s] -- The C compiler identification is GNU 9.4.0
+[0.634s] -- The CXX compiler identification is GNU 9.4.0
+[0.641s] -- Check for working C compiler: /usr/bin/cc
+[0.845s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.846s] -- Detecting C compiler ABI info
+[1.153s] -- Detecting C compiler ABI info - done
+[1.170s] -- Detecting C compile features
+[1.171s] -- Detecting C compile features - done
+[1.174s] -- Check for working CXX compiler: /usr/bin/c++
+[1.585s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[1.587s] -- Detecting CXX compiler ABI info
+[2.112s] -- Detecting CXX compiler ABI info - done
+[2.132s] -- Detecting CXX compile features
+[2.133s] -- Detecting CXX compile features - done
+[2.136s] -- Found ament_cmake: 1.1.5 (/opt/ros/galactic/share/ament_cmake/cmake)
+[2.170s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[2.171s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[2.395s] -- Found ament_lint_auto: 0.10.7 (/opt/ros/galactic/share/ament_lint_auto/cmake)
+[2.708s] -- Added test 'copyright' to check source files copyright and LICENSE
+[2.728s] -- Added test 'flake8' to check Python code syntax and style conventions
+[2.740s] -- Added test 'lint_cmake' to check CMake code style
+[2.740s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[2.751s] -- Added test 'xmllint' to check XML markup files
+[2.761s] -- Configuring done
+[2.765s] -- Generating done
+[2.777s] -- Build files have been written to: /home/muhayy/mbzirc_ws/src/build/explorer_gazebo
+[2.802s] Invoked command in '/home/muhayy/mbzirc_ws/src/build/explorer_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake /home/muhayy/mbzirc_ws/src/ros2_explorer/explorer_gazebo -DCMAKE_INSTALL_PREFIX=/home/muhayy/mbzirc_ws/src/install
+[2.803s] Invoking command in '/home/muhayy/mbzirc_ws/src/build/explorer_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/muhayy/mbzirc_ws/src/build/explorer_gazebo -- -j12 -l12
+[3.762s] Invoked command in '/home/muhayy/mbzirc_ws/src/build/explorer_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/muhayy/mbzirc_ws/src/build/explorer_gazebo -- -j12 -l12
+[5.157s] Invoking command in '/home/muhayy/mbzirc_ws/src/build/explorer_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --install /home/muhayy/mbzirc_ws/src/build/explorer_gazebo
+[5.253s] -- Install configuration: ""
+[5.253s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//models
+[5.253s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//models/map3
+[5.253s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//models/map3/map3.sdf
+[5.253s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//models/map3/model.config
+[5.253s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//models/map1
+[5.253s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//models/map1/map1.sdf
+[5.253s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//models/map1/model.config
+[5.254s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//models/turtlebot3_burger
+[5.254s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//models/turtlebot3_burger/model-1_4.sdf
+[5.254s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//models/turtlebot3_burger/model.sdf
+[5.254s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//models/turtlebot3_burger/meshes
+[5.254s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//models/turtlebot3_burger/meshes/burger_base.dae
+[5.254s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//models/turtlebot3_burger/meshes/lds.dae
+[5.254s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//models/turtlebot3_burger/meshes/tire.dae
+[5.254s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//models/turtlebot3_burger/model.config
+[5.254s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//models/map11
+[5.254s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//models/map11/map11.sdf
+[5.255s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//models/map11/model.config
+[5.255s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//models/map8
+[5.255s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//models/map8/map8.sdf
+[5.255s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//models/map8/model.config
+[5.255s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//models/map5
+[5.255s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//models/map5/map5.sdf
+[5.255s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//models/map5/model.config
+[5.255s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//models/map10
+[5.255s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//models/map10/model.config
+[5.255s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//models/map10/map10.sdf
+[5.255s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//models/map9
+[5.256s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//models/map9/map9.sdf
+[5.256s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//models/map9/model.config
+[5.256s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//models/map4
+[5.256s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//models/map4/map4.sdf
+[5.256s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//models/map4/model.config
+[5.256s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//models/map7
+[5.256s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//models/map7/map7.sdf
+[5.262s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//models/map7/model.config
+[5.262s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//models/map6
+[5.262s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//models/map6/map6.sdf
+[5.262s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//models/map6/model.config
+[5.262s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//models/map2
+[5.262s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//models/map2/map2.sdf
+[5.262s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//models/map2/model.config
+[5.262s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//worlds
+[5.262s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//worlds/map10.world.xml
+[5.263s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//worlds/map1.world.xml
+[5.263s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//worlds/map6.world.xml
+[5.263s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//worlds/map3.world.xml
+[5.263s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//worlds/map2.world.xml
+[5.263s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//worlds/map7.world.xml
+[5.263s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//worlds/map4.world.xml
+[5.263s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//worlds/map5.world.xml
+[5.263s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//worlds/map8.world.xml
+[5.263s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//worlds/map9.world.xml
+[5.264s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//worlds/map11.world.xml
+[5.265s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//maps
+[5.265s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//maps/map8.csv
+[5.265s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//maps/map4.csv
+[5.269s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//maps/map9.csv
+[5.271s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//maps/map1.csv
+[5.271s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//maps/map10.csv
+[5.271s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//maps/map2.csv
+[5.272s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//maps/map11.csv
+[5.272s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//maps/map6.csv
+[5.272s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//maps/map7.csv
+[5.273s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//maps/map3.csv
+[5.273s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo//maps/map5.csv
+[5.274s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/ament_index/resource_index/package_run_dependencies/explorer_gazebo
+[5.274s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/ament_index/resource_index/parent_prefix_path/explorer_gazebo
+[5.274s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo/environment/ament_prefix_path.sh
+[5.274s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo/environment/ament_prefix_path.dsv
+[5.275s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo/environment/path.sh
+[5.276s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo/environment/path.dsv
+[5.276s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo/local_setup.bash
+[5.277s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo/local_setup.sh
+[5.277s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo/local_setup.zsh
+[5.277s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo/local_setup.dsv
+[5.277s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo/package.dsv
+[5.278s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/ament_index/resource_index/packages/explorer_gazebo
+[5.278s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo/cmake/explorer_gazeboConfig.cmake
+[5.278s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo/cmake/explorer_gazeboConfig-version.cmake
+[5.279s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/explorer_gazebo/package.xml
+[5.469s] Invoked command in '/home/muhayy/mbzirc_ws/src/build/explorer_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --install /home/muhayy/mbzirc_ws/src/build/explorer_gazebo

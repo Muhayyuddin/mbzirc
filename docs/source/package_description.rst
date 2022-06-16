@@ -1,4 +1,23 @@
 Packages description
 ====================
-This document will explain all the necessary nodes and the launch files and other commands that must be run in terminals inorder to launch the simulator for USV navigation.
+This document will explain all the necessary packages that are developed for USV navigation. 
 
+
+usv_description
+---------------
+
+
+custom_tf_broadcaster
+---------------------
+
+
+ros2_mapping
+------------
+
+
+navigation
+-----------
+
+
+usv_teleop
+----------

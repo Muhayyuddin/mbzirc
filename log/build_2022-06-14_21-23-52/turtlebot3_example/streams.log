@@ -1,0 +1,24 @@
+[2.025s] Invoking command in '/home/muhayy/mbzirc_ws/src/turtlebot3/turtlebot3_example': PYTHONPATH=/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/turtlebot3_example build --build-base /home/muhayy/mbzirc_ws/src/build/turtlebot3_example/build install --prefix /home/muhayy/mbzirc_ws/src/install --record /home/muhayy/mbzirc_ws/src/build/turtlebot3_example/install.log --single-version-externally-managed
+[2.362s] running egg_info
+[2.363s] writing ../../build/turtlebot3_example/turtlebot3_example.egg-info/PKG-INFO
+[2.363s] writing dependency_links to ../../build/turtlebot3_example/turtlebot3_example.egg-info/dependency_links.txt
+[2.363s] writing entry points to ../../build/turtlebot3_example/turtlebot3_example.egg-info/entry_points.txt
+[2.363s] writing requirements to ../../build/turtlebot3_example/turtlebot3_example.egg-info/requires.txt
+[2.364s] writing top-level names to ../../build/turtlebot3_example/turtlebot3_example.egg-info/top_level.txt
+[2.421s] reading manifest file '../../build/turtlebot3_example/turtlebot3_example.egg-info/SOURCES.txt'
+[2.421s] writing manifest file '../../build/turtlebot3_example/turtlebot3_example.egg-info/SOURCES.txt'
+[2.421s] running build
+[2.422s] running build_py
+[2.424s] running install
+[2.425s] running install_lib
+[2.428s] running install_data
+[2.429s] running install_egg_info
+[2.431s] removing '/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages/turtlebot3_example-2.1.4-py3.8.egg-info' (and everything under it)
+[2.432s] Copying ../../build/turtlebot3_example/turtlebot3_example.egg-info to /home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages/turtlebot3_example-2.1.4-py3.8.egg-info
+[2.433s] running install_scripts
+[2.460s] Installing turtlebot3_obstacle_detection script to /home/muhayy/mbzirc_ws/src/install/lib/turtlebot3_example
+[2.460s] Installing turtlebot3_patrol_client script to /home/muhayy/mbzirc_ws/src/install/lib/turtlebot3_example
+[2.461s] Installing turtlebot3_patrol_server script to /home/muhayy/mbzirc_ws/src/install/lib/turtlebot3_example
+[2.461s] Installing turtlebot3_position_control script to /home/muhayy/mbzirc_ws/src/install/lib/turtlebot3_example
+[2.461s] writing list of installed files to '/home/muhayy/mbzirc_ws/src/build/turtlebot3_example/install.log'
+[2.781s] Invoked command in '/home/muhayy/mbzirc_ws/src/turtlebot3/turtlebot3_example' returned '0': PYTHONPATH=/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/turtlebot3_example build --build-base /home/muhayy/mbzirc_ws/src/build/turtlebot3_example/build install --prefix /home/muhayy/mbzirc_ws/src/install --record /home/muhayy/mbzirc_ws/src/build/turtlebot3_example/install.log --single-version-externally-managed

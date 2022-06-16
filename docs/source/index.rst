@@ -11,9 +11,10 @@ Welcome to usv_navigation_docs's documentation!
 
 .. toctree::
    :maxdepth: 2
-   :caption: Basic Setup:
+   :caption: Documentation:
 
    navigation_theory
-   simulation_setup
    package_description
    simulation_tools
+   tips_and_tricks
+

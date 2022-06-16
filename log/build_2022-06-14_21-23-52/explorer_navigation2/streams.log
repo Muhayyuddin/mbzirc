@@ -1,0 +1,20 @@
+[1.959s] Invoking command in '/home/muhayy/mbzirc_ws/src/ros2_explorer/explorer_navigation2': PYTHONPATH=/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/explorer_navigation2 build --build-base /home/muhayy/mbzirc_ws/src/build/explorer_navigation2/build install --prefix /home/muhayy/mbzirc_ws/src/install --record /home/muhayy/mbzirc_ws/src/build/explorer_navigation2/install.log --single-version-externally-managed
+[2.225s] running egg_info
+[2.226s] writing ../../build/explorer_navigation2/explorer_navigation2.egg-info/PKG-INFO
+[2.226s] writing dependency_links to ../../build/explorer_navigation2/explorer_navigation2.egg-info/dependency_links.txt
+[2.226s] writing entry points to ../../build/explorer_navigation2/explorer_navigation2.egg-info/entry_points.txt
+[2.226s] writing requirements to ../../build/explorer_navigation2/explorer_navigation2.egg-info/requires.txt
+[2.227s] writing top-level names to ../../build/explorer_navigation2/explorer_navigation2.egg-info/top_level.txt
+[2.259s] reading manifest file '../../build/explorer_navigation2/explorer_navigation2.egg-info/SOURCES.txt'
+[2.260s] writing manifest file '../../build/explorer_navigation2/explorer_navigation2.egg-info/SOURCES.txt'
+[2.260s] running build
+[2.260s] running build_py
+[2.260s] running install
+[2.261s] running install_lib
+[2.262s] running install_data
+[2.263s] running install_egg_info
+[2.264s] removing '/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages/explorer_navigation2-0.0.0-py3.8.egg-info' (and everything under it)
+[2.265s] Copying ../../build/explorer_navigation2/explorer_navigation2.egg-info to /home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages/explorer_navigation2-0.0.0-py3.8.egg-info
+[2.266s] running install_scripts
+[2.281s] writing list of installed files to '/home/muhayy/mbzirc_ws/src/build/explorer_navigation2/install.log'
+[2.479s] Invoked command in '/home/muhayy/mbzirc_ws/src/ros2_explorer/explorer_navigation2' returned '0': PYTHONPATH=/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/explorer_navigation2 build --build-base /home/muhayy/mbzirc_ws/src/build/explorer_navigation2/build install --prefix /home/muhayy/mbzirc_ws/src/install --record /home/muhayy/mbzirc_ws/src/build/explorer_navigation2/install.log --single-version-externally-managed

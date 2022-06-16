@@ -1,0 +1,4 @@
+source;share/mbzirc_point_lidar/environment/ament_prefix_path.sh
+source;share/mbzirc_point_lidar/environment/path.sh
+source;share/mbzirc_point_lidar/environment/resource_paths.sh
+source;share/mbzirc_point_lidar/environment/resource_paths.dsv

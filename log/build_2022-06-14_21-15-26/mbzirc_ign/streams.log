@@ -1,0 +1,563 @@
+[0.014s] Invoking command in '/home/muhayy/mbzirc_ws/src/build/mbzirc_ign': AMENT_PREFIX_PATH=/home/muhayy/mbzirc_ws/src/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/muhayy/mbzirc_ws/src/install:/home/muhayy/mbzirc_ws/install:/opt/ros/galactic LD_LIBRARY_PATH=/home/muhayy/mbzirc_ws/src/install/lib:${LD_LIBRARY_PATH} PATH=/home/muhayy/mbzirc_ws/src/install/bin:${PATH} PYTHONPATH=/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake /home/muhayy/mbzirc_ws/src/mbzirc/mbzirc_ign -DCMAKE_INSTALL_PREFIX=/home/muhayy/mbzirc_ws/src/install
+[0.060s] -- The C compiler identification is GNU 9.4.0
+[0.109s] -- The CXX compiler identification is GNU 9.4.0
+[0.113s] -- Check for working C compiler: /usr/bin/cc
+[0.173s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.174s] -- Detecting C compiler ABI info
+[0.237s] -- Detecting C compiler ABI info - done
+[0.251s] -- Detecting C compile features
+[0.251s] -- Detecting C compile features - done
+[0.254s] -- Check for working CXX compiler: /usr/bin/c++
+[0.338s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.339s] -- Detecting CXX compiler ABI info
+[0.405s] -- Detecting CXX compiler ABI info - done
+[0.416s] -- Detecting CXX compile features
+[0.416s] -- Detecting CXX compile features - done
+[0.418s] -- Found ament_cmake: 1.1.5 (/opt/ros/galactic/share/ament_cmake/cmake)
+[0.440s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.440s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.512s] -- Looking for ignition-gazebo6 -- found version 6.9.0
+[0.517s] -- Searching for dependencies of ignition-gazebo6
+[0.519s] -- Looking for sdformat12 -- found version 12.5.0
+[0.520s] -- Searching for dependencies of sdformat12
+[0.523s] -- Checking for module 'tinyxml2'
+[0.536s] --   Found tinyxml2, version 6.2.0
+[0.582s] -- Looking for ignition-math6 -- found version 6.11.0
+[0.582s] -- Searching for dependencies of ignition-math6
+[0.585s] -- Looking for ignition-utils1 -- found version 1.4.0
+[0.585s] -- Searching for dependencies of ignition-utils1
+[0.595s] -- Looking for ignition-plugin1 -- found version 1.2.1
+[0.596s] -- Searching for dependencies of ignition-plugin1
+[0.598s] -- Searching for <ignition-plugin1> component [loader]
+[0.602s] -- Looking for ignition-plugin1-loader -- found version 1.2.1
+[0.603s] -- Searching for dependencies of ignition-plugin1-loader
+[0.604s] -- Searching for <ignition-plugin1> component [register]
+[0.607s] -- Looking for ignition-plugin1-register -- found version 1.2.1
+[0.607s] -- Searching for dependencies of ignition-plugin1-register
+[0.611s] -- Looking for ignition-transport11 -- found version 11.0.0
+[0.611s] -- Searching for dependencies of ignition-transport11
+[0.921s] -- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so;-lpthread (found suitable version "3.6.1", minimum required is "3") 
+[0.932s] -- Config-file not installed for ZeroMQ -- checking for pkg-config
+[0.935s] -- Checking for module 'libzmq >= 4'
+[0.950s] --   Found libzmq , version 4.3.2
+[0.989s] -- Found ZeroMQ: TRUE (Required is at least version "4") 
+[0.993s] -- Checking for module 'uuid'
+[1.007s] --   Found uuid, version 2.34.0
+[1.044s] -- Found UUID: TRUE  
+[1.044s] -- Looking for ignition-utils1 -- found version 1.4.0
+[1.045s] -- Searching for dependencies of ignition-utils1
+[1.045s] -- Searching for <ignition-utils1> component [cli]
+[1.047s] -- Looking for ignition-utils1-cli -- found version 1.4.0
+[1.047s] -- Searching for dependencies of ignition-utils1-cli
+[1.049s] -- Looking for ignition-msgs8 -- found version 8.4.0
+[1.050s] -- Searching for dependencies of ignition-msgs8
+[1.068s] -- Looking for ignition-math6 -- found version 6.11.0
+[1.076s] -- Searching for <ignition-transport11> component [log]
+[1.078s] -- Looking for ignition-transport11-log -- found version 11.0.0
+[1.078s] -- Searching for dependencies of ignition-transport11-log
+[1.079s] -- Looking for ignition-msgs8 -- found version 8.4.0
+[1.081s] -- Looking for ignition-common4 -- found version 4.5.0
+[1.082s] -- Searching for dependencies of ignition-common4
+[1.082s] -- Looking for dlfcn.h - found
+[1.083s] -- Looking for libdl - found
+[1.084s] -- Found DL: TRUE  
+[1.092s] -- Searching for <ignition-common4> component [profiler]
+[1.094s] -- Looking for ignition-common4-profiler -- found version 4.5.0
+[1.095s] -- Searching for dependencies of ignition-common4-profiler
+[1.095s] -- Searching for <ignition-common4> component [events]
+[1.097s] -- Looking for ignition-common4-events -- found version 4.5.0
+[1.098s] -- Searching for dependencies of ignition-common4-events
+[1.098s] -- Looking for ignition-math6 -- found version 6.11.0
+[1.099s] -- Searching for <ignition-common4> component [av]
+[1.101s] -- Looking for ignition-common4-av -- found version 4.5.0
+[1.101s] -- Searching for dependencies of ignition-common4-av
+[1.105s] -- Checking for module 'libswscale'
+[1.120s] --   Found libswscale, version 5.5.100
+[1.157s] -- Found SWSCALE: TRUE  
+[1.161s] -- Checking for module 'libavdevice >= 56.4.100'
+[1.175s] --   Found libavdevice , version 58.8.100
+[1.220s] -- Found AVDEVICE: TRUE (Required is at least version "56.4.100") 
+[1.224s] -- Checking for module 'libavformat'
+[1.240s] --   Found libavformat, version 58.29.100
+[1.285s] -- Found AVFORMAT: TRUE  
+[1.291s] -- Checking for module 'libavcodec'
+[1.310s] --   Found libavcodec, version 58.54.100
+[1.353s] -- Found AVCODEC: TRUE  
+[1.357s] -- Checking for module 'libavutil'
+[1.373s] --   Found libavutil, version 56.31.100
+[1.415s] -- Found AVUTIL: TRUE  
+[1.421s] -- Looking for ignition-fuel_tools7 -- found version 7.0.0
+[1.421s] -- Searching for dependencies of ignition-fuel_tools7
+[1.512s] -- Found CURL: /usr/lib/x86_64-linux-gnu/libcurl.so (found version "7.68.0")  
+[1.522s] -- Checking for module 'jsoncpp'
+[1.539s] --   Found jsoncpp, version 1.7.4
+[1.583s] -- Found JSONCPP: TRUE  
+[1.591s] -- Checking for module 'libzip'
+[1.610s] --   Found libzip, version 1.5.1
+[1.655s] -- Found ZIP: TRUE  
+[1.656s] -- Looking for ignition-common4 -- found version 4.5.0
+[1.656s] -- Looking for ignition-math6 -- found version 6.11.0
+[1.657s] -- Looking for ignition-msgs8 -- found version 8.4.0
+[1.664s] -- Looking for ignition-gui6 -- found version 6.4.0
+[1.664s] -- Searching for dependencies of ignition-gui6
+[1.698s] -- Looking for ignition-math6 -- found version 6.11.0
+[1.698s] -- Looking for ignition-common4 -- found version 4.5.0
+[1.699s] -- Looking for ignition-plugin1 -- found version 1.2.1
+[1.699s] -- Looking for ignition-transport11 -- found version 11.0.0
+[1.701s] -- Looking for ignition-rendering6 -- found version 6.4.0
+[1.701s] -- Searching for dependencies of ignition-rendering6
+[1.702s] -- Looking for ignition-math6 -- found version 6.11.0
+[1.702s] -- Searching for dependencies of ignition-math6
+[1.702s] -- Searching for <ignition-math6> component [eigen3]
+[1.704s] -- Looking for ignition-math6-eigen3 -- found version 6.11.0
+[1.705s] -- Searching for dependencies of ignition-math6-eigen3
+[1.709s] -- Looking for ignition-common4 -- found version 4.5.0
+[1.709s] -- Searching for dependencies of ignition-common4
+[1.709s] -- Looking for dlfcn.h - found
+[1.709s] -- Looking for libdl - found
+[1.718s] -- Searching for <ignition-common4> component [graphics]
+[1.720s] -- Looking for ignition-common4-graphics -- found version 4.5.0
+[1.720s] -- Searching for dependencies of ignition-common4-graphics
+[1.720s] -- Looking for ignition-math6 -- found version 6.11.0
+[1.721s] -- Looking for ignition-utils1 -- found version 1.4.0
+[1.722s] -- Searching for <ignition-common4> component [events]
+[1.723s] -- Looking for ignition-plugin1 -- found version 1.2.1
+[1.723s] -- Searching for dependencies of ignition-plugin1
+[1.723s] -- Searching for <ignition-plugin1> component [all]
+[1.725s] -- Looking for all libraries of ignition-plugin1 -- found version 1.2.1
+[1.726s] -- Looking for ignition-plugin1 -- found version 1.2.1
+[1.728s] -- Looking for ignition-msgs8 -- found version 8.4.0
+[1.758s] -- Looking for ignition-physics5 -- found version 5.1.0
+[1.759s] -- Searching for dependencies of ignition-physics5
+[1.759s] -- Looking for ignition-math6 -- found version 6.11.0
+[1.760s] -- Looking for ignition-plugin1 -- found version 1.2.1
+[1.760s] -- Looking for ignition-utils1 -- found version 1.4.0
+[1.763s] -- Searching for <ignition-physics5> component [heightmap]
+[1.766s] -- Looking for ignition-physics5-heightmap -- found version 5.1.0
+[1.766s] -- Searching for dependencies of ignition-physics5-heightmap
+[1.767s] -- Looking for ignition-common4 -- found version 4.5.0
+[1.768s] -- Searching for <ignition-physics5> component [mesh]
+[1.770s] -- Looking for ignition-physics5-mesh -- found version 5.1.0
+[1.771s] -- Searching for dependencies of ignition-physics5-mesh
+[1.771s] -- Looking for ignition-common4 -- found version 4.5.0
+[1.772s] -- Searching for <ignition-physics5> component [sdf]
+[1.775s] -- Looking for ignition-physics5-sdf -- found version 5.1.0
+[1.776s] -- Searching for dependencies of ignition-physics5-sdf
+[1.776s] -- Looking for sdformat12 -- found version 12.5.0
+[1.780s] -- Looking for ignition-sensors6 -- found version 6.5.0
+[1.781s] -- Searching for dependencies of ignition-sensors6
+[1.801s] -- Looking for ignition-math6 -- found version 6.11.0
+[1.801s] -- Looking for ignition-common4 -- found version 4.5.0
+[1.802s] -- Looking for ignition-transport11 -- found version 11.0.0
+[1.802s] -- Looking for ignition-rendering6 -- found version 6.4.0
+[1.803s] -- Looking for ignition-msgs8 -- found version 8.4.0
+[1.803s] -- Looking for sdformat12 -- found version 12.5.0
+[1.804s] -- Searching for <ignition-sensors6> component [air_pressure]
+[1.806s] -- Looking for ignition-sensors6-air_pressure -- found version 6.5.0
+[1.806s] -- Searching for dependencies of ignition-sensors6-air_pressure
+[1.807s] -- Searching for <ignition-sensors6> component [altimeter]
+[1.809s] -- Looking for ignition-sensors6-altimeter -- found version 6.5.0
+[1.810s] -- Searching for dependencies of ignition-sensors6-altimeter
+[1.811s] -- Searching for <ignition-sensors6> component [imu]
+[1.813s] -- Looking for ignition-sensors6-imu -- found version 6.5.0
+[1.813s] -- Searching for dependencies of ignition-sensors6-imu
+[1.814s] -- Searching for <ignition-sensors6> component [force_torque]
+[1.816s] -- Looking for ignition-sensors6-force_torque -- found version 6.5.0
+[1.816s] -- Searching for dependencies of ignition-sensors6-force_torque
+[1.817s] -- Searching for <ignition-sensors6> component [logical_camera]
+[1.819s] -- Looking for ignition-sensors6-logical_camera -- found version 6.5.0
+[1.819s] -- Searching for dependencies of ignition-sensors6-logical_camera
+[1.820s] -- Searching for <ignition-sensors6> component [magnetometer]
+[1.822s] -- Looking for ignition-sensors6-magnetometer -- found version 6.5.0
+[1.823s] -- Searching for dependencies of ignition-sensors6-magnetometer
+[1.824s] -- Searching for <ignition-sensors6> component [navsat]
+[1.826s] -- Looking for ignition-sensors6-navsat -- found version 6.5.0
+[1.826s] -- Searching for dependencies of ignition-sensors6-navsat
+[1.827s] -- Searching for <ignition-sensors6> component [rendering]
+[1.829s] -- Looking for ignition-sensors6-rendering -- found version 6.5.0
+[1.829s] -- Searching for dependencies of ignition-sensors6-rendering
+[1.830s] -- Searching for <ignition-sensors6> component [lidar]
+[1.832s] -- Looking for ignition-sensors6-lidar -- found version 6.5.0
+[1.833s] -- Searching for dependencies of ignition-sensors6-lidar
+[1.834s] -- Searching for <ignition-sensors6> component [gpu_lidar]
+[1.836s] -- Looking for ignition-sensors6-gpu_lidar -- found version 6.5.0
+[1.836s] -- Searching for dependencies of ignition-sensors6-gpu_lidar
+[1.837s] -- Searching for <ignition-sensors6> component [camera]
+[1.839s] -- Looking for ignition-sensors6-camera -- found version 6.5.0
+[1.839s] -- Searching for dependencies of ignition-sensors6-camera
+[1.840s] -- Searching for <ignition-sensors6> component [segmentation_camera]
+[1.842s] -- Looking for ignition-sensors6-segmentation_camera -- found version 6.5.0
+[1.843s] -- Searching for dependencies of ignition-sensors6-segmentation_camera
+[1.844s] -- Searching for <ignition-sensors6> component [depth_camera]
+[1.846s] -- Looking for ignition-sensors6-depth_camera -- found version 6.5.0
+[1.846s] -- Searching for dependencies of ignition-sensors6-depth_camera
+[1.847s] -- Searching for <ignition-sensors6> component [rgbd_camera]
+[1.849s] -- Looking for ignition-sensors6-rgbd_camera -- found version 6.5.0
+[1.849s] -- Searching for dependencies of ignition-sensors6-rgbd_camera
+[1.850s] -- Searching for <ignition-sensors6> component [thermal_camera]
+[1.852s] -- Looking for ignition-sensors6-thermal_camera -- found version 6.5.0
+[1.853s] -- Searching for dependencies of ignition-sensors6-thermal_camera
+[1.854s] -- Looking for ignition-rendering6 -- found version 6.4.0
+[1.854s] -- Looking for ignition-math6 -- found version 6.11.0
+[1.856s] -- Looking for ignition-utils1 -- found version 1.4.0
+[1.876s] -- Looking for ignition-common4 -- found version 4.5.0
+[1.876s] -- Looking for ignition-fuel_tools7 -- found version 7.0.0
+[1.877s] -- Looking for ignition-math6 -- found version 6.11.0
+[1.877s] -- Looking for ignition-msgs8 -- found version 8.4.0
+[1.877s] -- Looking for ignition-transport11 -- found version 11.0.0
+[1.878s] -- Looking for ignition-plugin1 -- found version 1.2.1
+[1.878s] -- Looking for ignition-rendering6 -- found version 6.4.0
+[1.879s] -- Looking for sdformat12 -- found version 12.5.0
+[1.880s] -- Found std_msgs: 2.2.4 (/opt/ros/galactic/share/std_msgs/cmake)
+[1.901s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.908s] -- Found rosidl_adapter: 2.2.2 (/opt/ros/galactic/share/rosidl_adapter/cmake)
+[1.983s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[2.007s] -- Found FastRTPS: /opt/ros/galactic/include  
+[2.080s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.198s] -- Found python_cmake_module: 0.8.1 (/opt/ros/galactic/share/python_cmake_module/cmake)
+[2.216s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") 
+[2.221s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.8.so (found suitable version "3.8.10", minimum required is "3.5") 
+[2.221s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[2.221s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8
+[2.221s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.8.so
+[2.240s] -- Found PythonExtra: .so  
+[2.241s] -- Found ament_cmake_gtest: 1.1.5 (/opt/ros/galactic/share/ament_cmake_gtest/cmake)
+[2.243s] -- Found ament_cmake_pytest: 1.1.5 (/opt/ros/galactic/share/ament_cmake_pytest/cmake)
+[2.245s] -- Found ament_cmake_flake8: 0.10.7 (/opt/ros/galactic/share/ament_cmake_flake8/cmake)
+[2.250s] -- Found ament_cmake_pycodestyle: 0.10.7 (/opt/ros/galactic/share/ament_cmake_pycodestyle/cmake)
+[2.257s] -- Found gtest sources under '/opt/ros/galactic/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[2.265s] -- Check if compiler accepts -pthread
+[2.333s] -- Check if compiler accepts -pthread - yes
+[2.334s] -- Found Threads: TRUE  
+[3.119s] -- Configuring done
+[3.190s] -- Generating done
+[3.193s] -- Build files have been written to: /home/muhayy/mbzirc_ws/src/build/mbzirc_ign
+[3.208s] Invoked command in '/home/muhayy/mbzirc_ws/src/build/mbzirc_ign' returned '0': AMENT_PREFIX_PATH=/home/muhayy/mbzirc_ws/src/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/muhayy/mbzirc_ws/src/install:/home/muhayy/mbzirc_ws/install:/opt/ros/galactic LD_LIBRARY_PATH=/home/muhayy/mbzirc_ws/src/install/lib:${LD_LIBRARY_PATH} PATH=/home/muhayy/mbzirc_ws/src/install/bin:${PATH} PYTHONPATH=/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake /home/muhayy/mbzirc_ws/src/mbzirc/mbzirc_ign -DCMAKE_INSTALL_PREFIX=/home/muhayy/mbzirc_ws/src/install
+[3.211s] Invoking command in '/home/muhayy/mbzirc_ws/src/build/mbzirc_ign': AMENT_PREFIX_PATH=/home/muhayy/mbzirc_ws/src/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/muhayy/mbzirc_ws/src/install:/home/muhayy/mbzirc_ws/install:/opt/ros/galactic LD_LIBRARY_PATH=/home/muhayy/mbzirc_ws/src/install/lib:${LD_LIBRARY_PATH} PATH=/home/muhayy/mbzirc_ws/src/install/bin:${PATH} PYTHONPATH=/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/muhayy/mbzirc_ws/src/build/mbzirc_ign -- -j12 -l12
+[3.249s] [35m[1mScanning dependencies of target ament_cmake_python_copy_mbzirc_ign[0m
+[3.249s] [35m[1mScanning dependencies of target gtest_main[0m
+[3.249s] [35m[1mScanning dependencies of target gtest[0m
+[3.249s] [35m[1mScanning dependencies of target Waves[0m
+[3.250s] [35m[1mScanning dependencies of target MulticopterControl[0m
+[3.262s] [  2%] [32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o[0m
+[3.262s] [  5%] [32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o[0m
+[3.266s] [  5%] Built target ament_cmake_python_copy_mbzirc_ign
+[3.275s] [35m[1mScanning dependencies of target ament_cmake_python_build_mbzirc_ign_egg[0m
+[3.314s] [  7%] [32mBuilding CXX object CMakeFiles/Waves.dir/src/Wavefield.cc.o[0m
+[3.364s] [ 10%] [32mBuilding CXX object CMakeFiles/MulticopterControl.dir/src/multicopter_control/Common.cc.o[0m
+[3.365s] [ 15%] [32mBuilding CXX object CMakeFiles/MulticopterControl.dir/src/multicopter_control/LeeVelocityController.cc.o[0m
+[3.365s] [ 15%] [32mBuilding CXX object CMakeFiles/MulticopterControl.dir/src/multicopter_control/MulticopterVelocityControl.cc.o[0m
+[3.600s] running egg_info
+[3.601s] creating mbzirc_ign.egg-info
+[3.602s] writing mbzirc_ign.egg-info/PKG-INFO
+[3.602s] writing dependency_links to mbzirc_ign.egg-info/dependency_links.txt
+[3.602s] writing top-level names to mbzirc_ign.egg-info/top_level.txt
+[3.604s] writing manifest file 'mbzirc_ign.egg-info/SOURCES.txt'
+[3.656s] reading manifest file 'mbzirc_ign.egg-info/SOURCES.txt'
+[3.656s] writing manifest file 'mbzirc_ign.egg-info/SOURCES.txt'
+[3.686s] [ 15%] Built target ament_cmake_python_build_mbzirc_ign_egg
+[3.954s] [ 18%] [32m[1mLinking CXX static library libgtest_main.a[0m
+[3.984s] [ 18%] Built target gtest_main
+[6.292s] [ 21%] [32m[1mLinking CXX static library libgtest.a[0m
+[6.340s] [ 21%] Built target gtest
+[6.350s] [35m[1mScanning dependencies of target test_spawn_usv_arm[0m
+[6.350s] [35m[1mScanning dependencies of target test_gripper[0m
+[6.353s] [35m[1mScanning dependencies of target test_spawn_uav_battery[0m
+[6.353s] [35m[1mScanning dependencies of target test_game_logic[0m
+[6.353s] [35m[1mScanning dependencies of target test_spawn_usv_maxspeed[0m
+[6.353s] [35m[1mScanning dependencies of target test_fixed_wing[0m
+[6.432s] [ 23%] [32mBuilding CXX object CMakeFiles/test_gripper.dir/test/test_gripper.cc.o[0m
+[6.441s] [ 26%] [32mBuilding CXX object CMakeFiles/test_spawn_usv_arm.dir/test/test_spawn_usv_arm.cc.o[0m
+[6.460s] [ 28%] [32mBuilding CXX object CMakeFiles/test_spawn_uav_battery.dir/test/test_spawn_uav_battery.cc.o[0m
+[6.466s] [ 31%] [32mBuilding CXX object CMakeFiles/test_spawn_usv_maxspeed.dir/test/test_spawn_usv_maxspeed.cc.o[0m
+[6.467s] [ 34%] [32mBuilding CXX object CMakeFiles/test_game_logic.dir/test/test_game_logic.cc.o[0m
+[6.476s] [ 36%] [32mBuilding CXX object CMakeFiles/test_fixed_wing.dir/test/test_fixed_wing.cc.o[0m
+[8.838s] [ 39%] [32m[1mLinking CXX shared library libWaves.so[0m
+[9.239s] [ 39%] Built target Waves
+[9.254s] [35m[1mScanning dependencies of target BaseStation[0m
+[9.255s] [35m[1mScanning dependencies of target Surface[0m
+[9.256s] [35m[1mScanning dependencies of target GameLogicPlugin[0m
+[9.364s] [ 42%] [32mBuilding CXX object CMakeFiles/BaseStation.dir/src/BaseStation.cc.o[0m
+[9.384s] [ 44%] [32mBuilding CXX object CMakeFiles/GameLogicPlugin.dir/src/GameLogicPlugin.cc.o[0m
+[9.424s] [ 47%] [32mBuilding CXX object CMakeFiles/Surface.dir/src/Surface.cc.o[0m
+[12.824s] [35m[1mScanning dependencies of target EntityDetector[0m
+[13.000s] [ 50%] [32mBuilding CXX object CMakeFiles/EntityDetector.dir/src/EntityDetector.cc.o[0m
+[15.594s] [35m[1mScanning dependencies of target SimpleHydrodynamics[0m
+[15.744s] [ 52%] [32mBuilding CXX object CMakeFiles/SimpleHydrodynamics.dir/src/SimpleHydrodynamics.cc.o[0m
+[16.481s] [ 55%] [32m[1mLinking CXX executable test_spawn_usv_maxspeed[0m
+[16.851s] [ 57%] [32m[1mLinking CXX shared library libMulticopterControl.so[0m
+[17.226s] [ 60%] [32m[1mLinking CXX executable test_spawn_uav_battery[0m
+[17.277s] [ 60%] Built target test_spawn_usv_maxspeed
+[17.298s] [35m[1mScanning dependencies of target FixedWingController[0m
+[17.460s] [ 63%] [32mBuilding CXX object CMakeFiles/FixedWingController.dir/src/FixedWingController.cc.o[0m
+[18.020s] [ 63%] Built target test_spawn_uav_battery
+[18.034s] [35m[1mScanning dependencies of target SuctionGripper[0m
+[18.071s] [ 63%] Built target MulticopterControl
+[18.085s] [35m[1mScanning dependencies of target WaveVisual[0m
+[18.141s] [ 65%] [32mBuilding CXX object CMakeFiles/SuctionGripper.dir/src/SuctionGripper.cc.o[0m
+[18.271s] [ 68%] [32mBuilding CXX object CMakeFiles/WaveVisual.dir/src/WaveVisual.cc.o[0m
+[18.939s] [ 71%] [32m[1mLinking CXX executable test_spawn_usv_arm[0m
+[19.228s] [ 73%] [32m[1mLinking CXX executable test_game_logic[0m
+[19.801s] [ 76%] [32m[1mLinking CXX shared library libBaseStation.so[0m
+[19.844s] [ 76%] Built target test_spawn_usv_arm
+[20.058s] [ 76%] Built target test_game_logic
+[20.179s] [ 78%] [32m[1mLinking CXX shared library libSurface.so[0m
+[20.340s] [ 78%] Built target BaseStation
+[20.759s] [ 78%] Built target Surface
+[23.598s] [ 81%] [32m[1mLinking CXX shared library libEntityDetector.so[0m
+[23.604s] [ 84%] [32m[1mLinking CXX shared library libSimpleHydrodynamics.so[0m
+[23.918s] [ 84%] Built target SimpleHydrodynamics
+[24.027s] [ 84%] Built target EntityDetector
+[25.627s] [ 86%] [32m[1mLinking CXX executable test_fixed_wing[0m
+[26.587s] [ 86%] Built target test_fixed_wing
+[26.992s] [ 89%] [32m[1mLinking CXX shared library libGameLogicPlugin.so[0m
+[27.164s] [ 92%] [32m[1mLinking CXX shared library libFixedWingController.so[0m
+[27.605s] [ 92%] Built target FixedWingController
+[27.606s] [ 92%] Built target GameLogicPlugin
+[27.842s] [ 94%] [32m[1mLinking CXX shared library libWaveVisual.so[0m
+[28.133s] [ 94%] Built target WaveVisual
+[28.142s] [ 97%] [32m[1mLinking CXX executable test_gripper[0m
+[28.792s] [ 97%] Built target test_gripper
+[33.208s] [100%] [32m[1mLinking CXX shared library libSuctionGripper.so[0m
+[33.779s] [100%] Built target SuctionGripper
+[33.788s] Invoked command in '/home/muhayy/mbzirc_ws/src/build/mbzirc_ign' returned '0': AMENT_PREFIX_PATH=/home/muhayy/mbzirc_ws/src/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/muhayy/mbzirc_ws/src/install:/home/muhayy/mbzirc_ws/install:/opt/ros/galactic LD_LIBRARY_PATH=/home/muhayy/mbzirc_ws/src/install/lib:${LD_LIBRARY_PATH} PATH=/home/muhayy/mbzirc_ws/src/install/bin:${PATH} PYTHONPATH=/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/muhayy/mbzirc_ws/src/build/mbzirc_ign -- -j12 -l12
+[33.839s] Invoking command in '/home/muhayy/mbzirc_ws/src/build/mbzirc_ign': AMENT_PREFIX_PATH=/home/muhayy/mbzirc_ws/src/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/muhayy/mbzirc_ws/src/install:/home/muhayy/mbzirc_ws/install:/opt/ros/galactic LD_LIBRARY_PATH=/home/muhayy/mbzirc_ws/src/install/lib:${LD_LIBRARY_PATH} PATH=/home/muhayy/mbzirc_ws/src/install/bin:${PATH} PYTHONPATH=/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/muhayy/mbzirc_ws/src/build/mbzirc_ign
+[33.846s] -- Install configuration: ""
+[33.847s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/environment/resource_paths.dsv
+[33.847s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/environment/resource_paths.sh
+[33.847s] -- Installing: /home/muhayy/mbzirc_ws/src/install/lib/libWaves.so
+[33.848s] -- Installing: /home/muhayy/mbzirc_ws/src/install/lib/libBaseStation.so
+[33.850s] -- Set runtime path of "/home/muhayy/mbzirc_ws/src/install/lib/libBaseStation.so" to ""
+[33.850s] -- Installing: /home/muhayy/mbzirc_ws/src/install/lib/libFixedWingController.so
+[33.853s] -- Set runtime path of "/home/muhayy/mbzirc_ws/src/install/lib/libFixedWingController.so" to ""
+[33.853s] -- Installing: /home/muhayy/mbzirc_ws/src/install/lib/libGameLogicPlugin.so
+[33.857s] -- Set runtime path of "/home/muhayy/mbzirc_ws/src/install/lib/libGameLogicPlugin.so" to ""
+[33.858s] -- Installing: /home/muhayy/mbzirc_ws/src/install/lib/libEntityDetector.so
+[33.860s] -- Set runtime path of "/home/muhayy/mbzirc_ws/src/install/lib/libEntityDetector.so" to ""
+[33.860s] -- Installing: /home/muhayy/mbzirc_ws/src/install/lib/libSimpleHydrodynamics.so
+[33.862s] -- Set runtime path of "/home/muhayy/mbzirc_ws/src/install/lib/libSimpleHydrodynamics.so" to ""
+[33.862s] -- Installing: /home/muhayy/mbzirc_ws/src/install/lib/libSuctionGripper.so
+[33.870s] -- Set runtime path of "/home/muhayy/mbzirc_ws/src/install/lib/libSuctionGripper.so" to ""
+[33.870s] -- Installing: /home/muhayy/mbzirc_ws/src/install/lib/libSurface.so
+[33.872s] -- Set runtime path of "/home/muhayy/mbzirc_ws/src/install/lib/libSurface.so" to ""
+[33.872s] -- Installing: /home/muhayy/mbzirc_ws/src/install/lib/libWaveVisual.so
+[33.874s] -- Set runtime path of "/home/muhayy/mbzirc_ws/src/install/lib/libWaveVisual.so" to ""
+[33.874s] -- Installing: /home/muhayy/mbzirc_ws/src/install/lib/libMulticopterControl.so
+[33.880s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/environment/pythonpath.sh
+[33.880s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/environment/pythonpath.dsv
+[33.880s] -- Installing: /home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages//mbzirc_ign.egg-info
+[33.880s] -- Installing: /home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages//mbzirc_ign.egg-info/SOURCES.txt
+[33.880s] -- Installing: /home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages//mbzirc_ign.egg-info/PKG-INFO
+[33.880s] -- Installing: /home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages//mbzirc_ign.egg-info/top_level.txt
+[33.880s] -- Installing: /home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages//mbzirc_ign.egg-info/dependency_links.txt
+[33.880s] -- Installing: /home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages/mbzirc_ign
+[33.880s] -- Installing: /home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages/mbzirc_ign/__init__.py
+[33.880s] -- Installing: /home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages/mbzirc_ign/bridge.py
+[33.881s] -- Installing: /home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages/mbzirc_ign/test_model.py
+[33.881s] -- Installing: /home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages/mbzirc_ign/payload_bridges.py
+[33.881s] -- Installing: /home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages/mbzirc_ign/model.py
+[33.881s] -- Installing: /home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages/mbzirc_ign/bridges.py
+[33.881s] -- Installing: /home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages/mbzirc_ign/launch.py
+[33.881s] -- Installing: /home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages/mbzirc_ign/test_bridges.py
+[33.915s] Listing '/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages/mbzirc_ign'...
+[33.915s] Compiling '/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages/mbzirc_ign/__init__.py'...
+[33.915s] Compiling '/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages/mbzirc_ign/bridge.py'...
+[33.915s] Compiling '/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages/mbzirc_ign/bridges.py'...
+[33.915s] Compiling '/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages/mbzirc_ign/launch.py'...
+[33.915s] Compiling '/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages/mbzirc_ign/model.py'...
+[33.915s] Compiling '/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages/mbzirc_ign/payload_bridges.py'...
+[33.916s] Compiling '/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages/mbzirc_ign/test_bridges.py'...
+[33.916s] Compiling '/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages/mbzirc_ign/test_model.py'...
+[33.918s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/config
+[33.918s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/config/single_usv_with_arm_gripper_config.yaml
+[33.921s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/config/single_fw_uav_config.yaml
+[33.921s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/config/single_uav_with_gripper_config.yaml
+[33.921s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/config/single_usv_config.yaml
+[33.922s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/config/single_uav_config.yaml
+[33.922s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/config/coast
+[33.922s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/config/coast/usv.yaml
+[33.922s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/config/coast/quadrotor.yaml
+[33.922s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/config/coast/hexrotor.yaml
+[33.922s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/config/coast/config_team.yaml
+[33.922s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/worlds
+[33.922s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/worlds/empty_platform.sdf
+[33.923s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/worlds/simple_demo-original.sdf
+[33.923s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/worlds/test
+[33.923s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/worlds/test/simple_arm_demo.sdf
+[33.923s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/worlds/test/simple_demo_manip.sdf
+[33.923s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/worlds/test/suction_gripper.sdf
+[33.923s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/worlds/test/usv_max_speed.sdf
+[33.923s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/worlds/faster_than_realtime.sdf
+[33.924s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/worlds/coast.sdf
+[33.924s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/worlds/simple_demo.sdf
+[33.924s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models
+[33.924s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/coast_waves
+[33.924s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/coast_waves/model.sdf
+[33.924s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/coast_waves/meshes
+[33.924s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/coast_waves/meshes/waterlow.dae
+[33.939s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/coast_waves/materials
+[33.939s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/coast_waves/materials/programs
+[33.939s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/coast_waves/materials/programs/GerstnerWaves_fs_330.glsl
+[33.939s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/coast_waves/materials/programs/GerstnerWaves_vs_330.glsl
+[33.939s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/coast_waves/materials/textures
+[33.939s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/coast_waves/materials/textures/wave_normals.dds
+[33.940s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/coast_waves/materials/textures/skybox_lowres.dds
+[33.941s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/coast_waves/model.config
+[33.941s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_usv_base
+[33.941s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_usv_base/model.sdf
+[33.942s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_usv_base/meshes
+[33.942s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_usv_base/meshes/USV.dae
+[33.947s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_usv_base/materials
+[33.947s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_usv_base/materials/textures
+[33.947s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_usv_base/materials/textures/USV_Roughness.jpg
+[33.948s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_usv_base/materials/textures/USV_Metalness.png
+[33.948s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_usv_base/materials/textures/USV_Albedo.jpg
+[33.949s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_usv_base/materials/textures/USV_Normal.jpg
+[33.952s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_usv_base/model.config
+[33.952s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/water_plane
+[33.952s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/water_plane/model.sdf
+[33.952s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/water_plane/materials
+[33.952s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/water_plane/materials/textures
+[33.952s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/water_plane/materials/textures/Water_Normal.jpg
+[33.952s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/water_plane/materials/textures/Water_Albedo.jpg
+[33.953s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/water_plane/materials/textures/skybox_lowres.dds
+[33.954s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/water_plane/model.config
+[33.954s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_oberon7_gripper
+[33.955s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_oberon7_gripper/meshes
+[33.955s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_oberon7_gripper/meshes/parallel_gripper
+[33.955s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_oberon7_gripper/meshes/parallel_gripper/visual
+[33.955s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_oberon7_gripper/meshes/parallel_gripper/visual/FingerTip.dae
+[33.955s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_oberon7_gripper/meshes/parallel_gripper/visual/Finger.dae
+[33.955s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_oberon7_gripper/meshes/parallel_gripper/visual/BaseGripper.dae
+[33.956s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_oberon7_gripper/model.config
+[33.956s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_oberon7_gripper/model.sdf.erb
+[33.957s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/wam-v
+[33.957s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/wam-v/meshes
+[33.957s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/wam-v/meshes/engine.dae
+[33.957s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/wam-v/meshes/WamV.png
+[33.960s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/wam-v/meshes/WAM-V-Base.dae
+[33.961s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/wam-v/meshes/propeller.dae
+[33.961s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/wam-v/model.sdf.erb
+[33.961s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_fixed_wing_base
+[33.961s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_fixed_wing_base/model.sdf
+[33.962s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_fixed_wing_base/meshes
+[33.962s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_fixed_wing_base/meshes/wing.dae
+[33.962s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_fixed_wing_base/materials
+[33.962s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_fixed_wing_base/materials/textures
+[33.962s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_fixed_wing_base/materials/textures/wing.png
+[33.963s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_fixed_wing_base/model.config
+[33.963s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_hexrotor
+[33.963s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_hexrotor/model.sdf.erb
+[33.963s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/dust_storm
+[33.963s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/dust_storm/model.sdf
+[33.963s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/dust_storm/materials
+[33.964s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/dust_storm/materials/textures
+[33.964s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/dust_storm/materials/textures/dust.png
+[33.964s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/dust_storm/materials/textures/dustcolors.png
+[33.964s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/dust_storm/model.config
+[33.964s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_hexrotor_base
+[33.964s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_hexrotor_base/model.sdf
+[33.965s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_hexrotor_base/meshes
+[33.965s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_hexrotor_base/meshes/neo11_propeller_cw.dae
+[33.966s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_hexrotor_base/meshes/led.dae
+[33.967s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_hexrotor_base/meshes/neo11_propeller_ccw.dae
+[33.969s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_hexrotor_base/meshes/led_lamp.dae
+[33.969s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_hexrotor_base/meshes/hexrotor.jpg
+[33.969s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_hexrotor_base/meshes/hexrotor.dae
+[33.970s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_hexrotor_base/materials
+[33.971s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_hexrotor_base/materials/textures
+[33.971s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_hexrotor_base/materials/textures/led.jpg
+[33.971s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_hexrotor_base/model.config
+[33.971s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/sensors
+[33.971s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/sensors/mbzirc_3d_lidar
+[33.971s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/sensors/mbzirc_3d_lidar/model.sdf
+[33.971s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/sensors/mbzirc_3d_lidar/model.config
+[33.971s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/sensors/mbzirc_planar_lidar
+[33.971s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/sensors/mbzirc_planar_lidar/model.sdf
+[33.971s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/sensors/mbzirc_planar_lidar/model.config
+[33.972s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/sensors/mbzirc_rgbd_camera
+[33.972s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/sensors/mbzirc_rgbd_camera/model.sdf
+[33.972s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/sensors/mbzirc_rgbd_camera/model.config
+[33.972s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/sensors/mbzirc_hd_camera
+[33.972s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/sensors/mbzirc_hd_camera/model.sdf
+[33.972s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/sensors/mbzirc_hd_camera/model.config
+[33.972s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/sensors/mbzirc_vga_camera
+[33.972s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/sensors/mbzirc_vga_camera/model.sdf
+[33.972s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/sensors/mbzirc_vga_camera/model.config
+[33.973s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/usv
+[33.973s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/usv/model.sdf.erb
+[33.973s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_quadrotor_base
+[33.973s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_quadrotor_base/model.sdf
+[33.973s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_quadrotor_base/meshes
+[33.973s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_quadrotor_base/meshes/propeller_ccw.dae
+[33.973s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_quadrotor_base/meshes/led.dae
+[33.974s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_quadrotor_base/meshes/led_lamp.dae
+[33.974s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_quadrotor_base/meshes/propeller_cw.dae
+[33.974s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_quadrotor_base/meshes/quadrotor.dae
+[33.975s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_quadrotor_base/meshes/quadrotor.jpg
+[33.975s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_quadrotor_base/materials
+[33.975s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_quadrotor_base/materials/textures
+[33.975s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_quadrotor_base/materials/textures/led.jpg
+[33.976s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_quadrotor_base/model.config
+[33.976s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/fog
+[33.976s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/fog/model.sdf
+[33.976s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/fog/materials
+[33.976s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/fog/materials/textures
+[33.976s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/fog/materials/textures/fogcolors.png
+[33.977s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/fog/materials/textures/fog.png
+[33.977s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/fog/model.config
+[33.977s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_oberon7_arm
+[33.977s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_oberon7_arm/meshes
+[33.977s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_oberon7_arm/meshes/serial_arm
+[33.977s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_oberon7_arm/meshes/serial_arm/visual
+[33.977s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_oberon7_arm/meshes/serial_arm/visual/Forearm.dae
+[33.978s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_oberon7_arm/meshes/serial_arm/visual/ShoulderLink.dae
+[33.978s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_oberon7_arm/meshes/serial_arm/visual/Wrist.dae
+[33.980s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_oberon7_arm/meshes/serial_arm/visual/ElbowLink.dae
+[33.981s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_oberon7_arm/meshes/serial_arm/visual/UpperArm.dae
+[33.982s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_oberon7_arm/meshes/serial_arm/visual/Base.dae
+[33.983s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_oberon7_arm/meshes/serial_arm/collision
+[33.983s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_oberon7_arm/meshes/serial_arm/collision/Base.stl
+[33.983s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_oberon7_arm/model.config
+[33.983s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_oberon7_arm/model.sdf.erb
+[33.983s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/static_arm
+[33.984s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/static_arm/model.sdf.erb
+[33.984s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_quadrotor
+[33.984s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_quadrotor/model.sdf.erb
+[33.984s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/waves
+[33.984s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/waves/model.sdf
+[33.984s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/waves/meshes
+[33.984s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/waves/meshes/mesh.dae
+[33.985s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/waves/materials
+[33.985s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/waves/materials/programs
+[33.985s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/waves/materials/programs/GerstnerWaves_fs_330.glsl
+[33.985s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/waves/materials/programs/GerstnerWaves_vs_330.glsl
+[33.986s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/waves/materials/textures
+[33.986s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/waves/materials/textures/wave_normals.dds
+[33.986s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/waves/materials/textures/skybox_lowres.dds
+[33.988s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/waves/model.config
+[33.988s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_suction_gripper
+[33.988s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_suction_gripper/model.config
+[33.988s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_suction_gripper/model.sdf.erb
+[33.988s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_fixed_wing
+[33.988s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models/mbzirc_fixed_wing/model.sdf.erb
+[33.988s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/launch
+[33.988s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/launch/spawn_config.launch.py
+[33.989s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/launch/competition.launch.py
+[33.989s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/launch/spawn.launch.py
+[33.989s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/ament_index/resource_index/package_run_dependencies/mbzirc_ign
+[33.989s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/ament_index/resource_index/parent_prefix_path/mbzirc_ign
+[33.989s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/environment/ament_prefix_path.sh
+[33.989s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/environment/ament_prefix_path.dsv
+[33.989s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/environment/path.sh
+[33.989s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/environment/path.dsv
+[33.989s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/local_setup.bash
+[33.989s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/local_setup.sh
+[33.990s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/local_setup.zsh
+[33.990s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/local_setup.dsv
+[33.990s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/package.dsv
+[33.990s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/ament_index/resource_index/packages/mbzirc_ign
+[33.990s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/cmake/mbzirc_ignConfig.cmake
+[33.990s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/cmake/mbzirc_ignConfig-version.cmake
+[33.990s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/package.xml
+[33.993s] Invoked command in '/home/muhayy/mbzirc_ws/src/build/mbzirc_ign' returned '0': AMENT_PREFIX_PATH=/home/muhayy/mbzirc_ws/src/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/muhayy/mbzirc_ws/src/install:/home/muhayy/mbzirc_ws/install:/opt/ros/galactic LD_LIBRARY_PATH=/home/muhayy/mbzirc_ws/src/install/lib:${LD_LIBRARY_PATH} PATH=/home/muhayy/mbzirc_ws/src/install/bin:${PATH} PYTHONPATH=/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/muhayy/mbzirc_ws/src/build/mbzirc_ign

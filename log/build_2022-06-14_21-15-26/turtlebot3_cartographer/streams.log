@@ -1,0 +1,49 @@
+[0.445s] Invoking command in '/home/muhayy/mbzirc_ws/src/build/turtlebot3_cartographer': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake /home/muhayy/mbzirc_ws/src/turtlebot3/turtlebot3_cartographer -DCMAKE_INSTALL_PREFIX=/home/muhayy/mbzirc_ws/src/install
+[1.338s] -- The C compiler identification is GNU 9.4.0
+[1.338s] -- The CXX compiler identification is GNU 9.4.0
+[1.338s] -- Check for working C compiler: /usr/bin/cc
+[1.338s] -- Check for working C compiler: /usr/bin/cc -- works
+[1.338s] -- Detecting C compiler ABI info
+[1.338s] -- Detecting C compiler ABI info - done
+[1.338s] -- Detecting C compile features
+[1.339s] -- Detecting C compile features - done
+[1.339s] -- Check for working CXX compiler: /usr/bin/c++
+[1.339s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[1.339s] -- Detecting CXX compiler ABI info
+[1.339s] -- Detecting CXX compiler ABI info - done
+[1.339s] -- Detecting CXX compile features
+[1.339s] -- Detecting CXX compile features - done
+[1.339s] -- Found ament_cmake: 1.1.5 (/opt/ros/galactic/share/ament_cmake/cmake)
+[1.339s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[1.339s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.364s] -- Configuring done
+[1.364s] -- Generating done
+[1.373s] -- Build files have been written to: /home/muhayy/mbzirc_ws/src/build/turtlebot3_cartographer
+[1.406s] Invoked command in '/home/muhayy/mbzirc_ws/src/build/turtlebot3_cartographer' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake /home/muhayy/mbzirc_ws/src/turtlebot3/turtlebot3_cartographer -DCMAKE_INSTALL_PREFIX=/home/muhayy/mbzirc_ws/src/install
+[1.411s] Invoking command in '/home/muhayy/mbzirc_ws/src/build/turtlebot3_cartographer': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/muhayy/mbzirc_ws/src/build/turtlebot3_cartographer -- -j12 -l12
+[1.543s] Invoked command in '/home/muhayy/mbzirc_ws/src/build/turtlebot3_cartographer' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/muhayy/mbzirc_ws/src/build/turtlebot3_cartographer -- -j12 -l12
+[1.661s] Invoking command in '/home/muhayy/mbzirc_ws/src/build/turtlebot3_cartographer': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --install /home/muhayy/mbzirc_ws/src/build/turtlebot3_cartographer
+[1.801s] -- Install configuration: ""
+[1.802s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/turtlebot3_cartographer/config
+[1.802s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/turtlebot3_cartographer/config/turtlebot3_lds_2d.lua
+[1.802s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/turtlebot3_cartographer/launch
+[1.802s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/turtlebot3_cartographer/launch/occupancy_grid.launch.py
+[1.802s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/turtlebot3_cartographer/launch/cartographer.launch.py
+[1.802s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/turtlebot3_cartographer/rviz
+[1.811s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/turtlebot3_cartographer/rviz/tb3_cartographer.rviz
+[1.811s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/ament_index/resource_index/package_run_dependencies/turtlebot3_cartographer
+[1.811s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/ament_index/resource_index/parent_prefix_path/turtlebot3_cartographer
+[1.811s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/turtlebot3_cartographer/environment/ament_prefix_path.sh
+[1.811s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/turtlebot3_cartographer/environment/ament_prefix_path.dsv
+[1.811s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/turtlebot3_cartographer/environment/path.sh
+[1.812s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/turtlebot3_cartographer/environment/path.dsv
+[1.812s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/turtlebot3_cartographer/local_setup.bash
+[1.812s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/turtlebot3_cartographer/local_setup.sh
+[1.812s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/turtlebot3_cartographer/local_setup.zsh
+[1.812s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/turtlebot3_cartographer/local_setup.dsv
+[1.812s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/turtlebot3_cartographer/package.dsv
+[1.812s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/ament_index/resource_index/packages/turtlebot3_cartographer
+[1.812s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/turtlebot3_cartographer/cmake/turtlebot3_cartographerConfig.cmake
+[1.812s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/turtlebot3_cartographer/cmake/turtlebot3_cartographerConfig-version.cmake
+[1.813s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/turtlebot3_cartographer/package.xml
+[1.851s] Invoked command in '/home/muhayy/mbzirc_ws/src/build/turtlebot3_cartographer' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --install /home/muhayy/mbzirc_ws/src/build/turtlebot3_cartographer

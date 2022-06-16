@@ -13,9 +13,9 @@ Load the world in Ignition. ::
 
     ros2 launch mbzirc_ros competition_local.launch.py ign_args:="-v 4 -r simple_demo.sdf"
 
-Spawn the USV with the Lidar sensor attached to the *slot0*. and 3d camera attached to *slot1* ::
+Spawn the USV with the Lidar sensor attached to the ``slot0``. and 3d camera attached to ``slot1`` ::
 
-    ros2 launch mbzirc_ign spawn.launch.py name:=usv world:=simple_demo model:=usv x:=-40 y:=0 z:=0.3 R:=0 P:=0 Y:=0 slot0:=mbzirc_planar_lidar slot2:=mbzirc_rgbd_camera 
+    ros2 launch mbzirc_ign spawn.launch.py name:=usv world:=simple_demo model:=usv x:=-40 y:=0 z:=0.3 R:=0 P:=0 Y:=0 slot1:=mbzirc_planar_lidar slot2:=mbzirc_rgbd_camera 
 
 .. note:: The command below is not needed if the usv is spawned with the above command, for custom sensor_msgs
           we need to call the ros-ign-bridge manually. 

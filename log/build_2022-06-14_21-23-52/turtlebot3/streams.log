@@ -1,0 +1,20 @@
+[0.322s] Invoking command in '/home/muhayy/mbzirc_ws/src/build/turtlebot3': AMENT_PREFIX_PATH=/home/muhayy/mbzirc_ws/src/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/muhayy/mbzirc_ws/src/install:/home/muhayy/mbzirc_ws/install:/opt/ros/galactic LD_LIBRARY_PATH=/home/muhayy/mbzirc_ws/src/install/lib:${LD_LIBRARY_PATH} PATH=/home/muhayy/mbzirc_ws/src/install/bin:${PATH} PYTHONPATH=/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/muhayy/mbzirc_ws/src/build/turtlebot3 -- -j12 -l12
+[0.409s] Invoked command in '/home/muhayy/mbzirc_ws/src/build/turtlebot3' returned '0': AMENT_PREFIX_PATH=/home/muhayy/mbzirc_ws/src/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/muhayy/mbzirc_ws/src/install:/home/muhayy/mbzirc_ws/install:/opt/ros/galactic LD_LIBRARY_PATH=/home/muhayy/mbzirc_ws/src/install/lib:${LD_LIBRARY_PATH} PATH=/home/muhayy/mbzirc_ws/src/install/bin:${PATH} PYTHONPATH=/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/muhayy/mbzirc_ws/src/build/turtlebot3 -- -j12 -l12
+[0.485s] Invoking command in '/home/muhayy/mbzirc_ws/src/build/turtlebot3': AMENT_PREFIX_PATH=/home/muhayy/mbzirc_ws/src/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/muhayy/mbzirc_ws/src/install:/home/muhayy/mbzirc_ws/install:/opt/ros/galactic LD_LIBRARY_PATH=/home/muhayy/mbzirc_ws/src/install/lib:${LD_LIBRARY_PATH} PATH=/home/muhayy/mbzirc_ws/src/install/bin:${PATH} PYTHONPATH=/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/muhayy/mbzirc_ws/src/build/turtlebot3
+[0.497s] -- Install configuration: ""
+[0.497s] -- Up-to-date: /home/muhayy/mbzirc_ws/src/install/share/ament_index/resource_index/package_run_dependencies/turtlebot3
+[0.498s] -- Up-to-date: /home/muhayy/mbzirc_ws/src/install/share/ament_index/resource_index/parent_prefix_path/turtlebot3
+[0.498s] -- Up-to-date: /home/muhayy/mbzirc_ws/src/install/share/turtlebot3/environment/ament_prefix_path.sh
+[0.499s] -- Up-to-date: /home/muhayy/mbzirc_ws/src/install/share/turtlebot3/environment/ament_prefix_path.dsv
+[0.499s] -- Up-to-date: /home/muhayy/mbzirc_ws/src/install/share/turtlebot3/environment/path.sh
+[0.500s] -- Up-to-date: /home/muhayy/mbzirc_ws/src/install/share/turtlebot3/environment/path.dsv
+[0.500s] -- Up-to-date: /home/muhayy/mbzirc_ws/src/install/share/turtlebot3/local_setup.bash
+[0.500s] -- Up-to-date: /home/muhayy/mbzirc_ws/src/install/share/turtlebot3/local_setup.sh
+[0.500s] -- Up-to-date: /home/muhayy/mbzirc_ws/src/install/share/turtlebot3/local_setup.zsh
+[0.501s] -- Up-to-date: /home/muhayy/mbzirc_ws/src/install/share/turtlebot3/local_setup.dsv
+[0.501s] -- Up-to-date: /home/muhayy/mbzirc_ws/src/install/share/turtlebot3/package.dsv
+[0.501s] -- Up-to-date: /home/muhayy/mbzirc_ws/src/install/share/ament_index/resource_index/packages/turtlebot3
+[0.502s] -- Up-to-date: /home/muhayy/mbzirc_ws/src/install/share/turtlebot3/cmake/turtlebot3Config.cmake
+[0.502s] -- Up-to-date: /home/muhayy/mbzirc_ws/src/install/share/turtlebot3/cmake/turtlebot3Config-version.cmake
+[0.503s] -- Up-to-date: /home/muhayy/mbzirc_ws/src/install/share/turtlebot3/package.xml
+[0.547s] Invoked command in '/home/muhayy/mbzirc_ws/src/build/turtlebot3' returned '0': AMENT_PREFIX_PATH=/home/muhayy/mbzirc_ws/src/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/muhayy/mbzirc_ws/src/install:/home/muhayy/mbzirc_ws/install:/opt/ros/galactic LD_LIBRARY_PATH=/home/muhayy/mbzirc_ws/src/install/lib:${LD_LIBRARY_PATH} PATH=/home/muhayy/mbzirc_ws/src/install/bin:${PATH} PYTHONPATH=/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/muhayy/mbzirc_ws/src/build/turtlebot3

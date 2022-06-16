@@ -1,0 +1,6 @@
+Invoking command in '/home/muhayy/mbzirc_ws/src/build/ros_ign_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake /home/muhayy/mbzirc_ws/src/ros_ign/ros_ign_gazebo -DCMAKE_INSTALL_PREFIX=/home/muhayy/mbzirc_ws/src/install
+Invoked command in '/home/muhayy/mbzirc_ws/src/build/ros_ign_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake /home/muhayy/mbzirc_ws/src/ros_ign/ros_ign_gazebo -DCMAKE_INSTALL_PREFIX=/home/muhayy/mbzirc_ws/src/install
+Invoking command in '/home/muhayy/mbzirc_ws/src/build/ros_ign_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/muhayy/mbzirc_ws/src/build/ros_ign_gazebo -- -j12 -l12
+Invoked command in '/home/muhayy/mbzirc_ws/src/build/ros_ign_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/muhayy/mbzirc_ws/src/build/ros_ign_gazebo -- -j12 -l12
+Invoking command in '/home/muhayy/mbzirc_ws/src/build/ros_ign_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --install /home/muhayy/mbzirc_ws/src/build/ros_ign_gazebo
+Invoked command in '/home/muhayy/mbzirc_ws/src/build/ros_ign_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --install /home/muhayy/mbzirc_ws/src/build/ros_ign_gazebo

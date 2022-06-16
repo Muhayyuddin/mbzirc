@@ -1,0 +1,21 @@
+[1.353s] Invoking command in '/home/muhayy/mbzirc_ws/src/usv_teleop': PYTHONPATH=/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/usv_teleop build --build-base /home/muhayy/mbzirc_ws/src/build/usv_teleop/build install --prefix /home/muhayy/mbzirc_ws/src/install --record /home/muhayy/mbzirc_ws/src/build/usv_teleop/install.log --single-version-externally-managed
+[1.644s] running egg_info
+[1.645s] writing ../build/usv_teleop/usv_teleop.egg-info/PKG-INFO
+[1.645s] writing dependency_links to ../build/usv_teleop/usv_teleop.egg-info/dependency_links.txt
+[1.645s] writing entry points to ../build/usv_teleop/usv_teleop.egg-info/entry_points.txt
+[1.645s] writing requirements to ../build/usv_teleop/usv_teleop.egg-info/requires.txt
+[1.645s] writing top-level names to ../build/usv_teleop/usv_teleop.egg-info/top_level.txt
+[1.699s] reading manifest file '../build/usv_teleop/usv_teleop.egg-info/SOURCES.txt'
+[1.700s] writing manifest file '../build/usv_teleop/usv_teleop.egg-info/SOURCES.txt'
+[1.700s] running build
+[1.700s] running build_py
+[1.700s] running install
+[1.702s] running install_lib
+[1.703s] running install_data
+[1.704s] running install_egg_info
+[1.710s] removing '/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages/usv_teleop-0.0.0-py3.8.egg-info' (and everything under it)
+[1.711s] Copying ../build/usv_teleop/usv_teleop.egg-info to /home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages/usv_teleop-0.0.0-py3.8.egg-info
+[1.711s] running install_scripts
+[1.726s] Installing teleop script to /home/muhayy/mbzirc_ws/src/install/lib/usv_teleop
+[1.727s] writing list of installed files to '/home/muhayy/mbzirc_ws/src/build/usv_teleop/install.log'
+[1.747s] Invoked command in '/home/muhayy/mbzirc_ws/src/usv_teleop' returned '0': PYTHONPATH=/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/usv_teleop build --build-base /home/muhayy/mbzirc_ws/src/build/usv_teleop/build install --prefix /home/muhayy/mbzirc_ws/src/install --record /home/muhayy/mbzirc_ws/src/build/usv_teleop/install.log --single-version-externally-managed

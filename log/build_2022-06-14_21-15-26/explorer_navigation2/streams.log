@@ -1,0 +1,39 @@
+[4.491s] Invoking command in '/home/muhayy/mbzirc_ws/src/ros2_explorer/explorer_navigation2': PYTHONPATH=/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/explorer_navigation2 build --build-base /home/muhayy/mbzirc_ws/src/build/explorer_navigation2/build install --prefix /home/muhayy/mbzirc_ws/src/install --record /home/muhayy/mbzirc_ws/src/build/explorer_navigation2/install.log --single-version-externally-managed
+[5.805s] running egg_info
+[5.807s] creating ../../build/explorer_navigation2/explorer_navigation2.egg-info
+[5.812s] writing ../../build/explorer_navigation2/explorer_navigation2.egg-info/PKG-INFO
+[5.813s] writing dependency_links to ../../build/explorer_navigation2/explorer_navigation2.egg-info/dependency_links.txt
+[5.814s] writing entry points to ../../build/explorer_navigation2/explorer_navigation2.egg-info/entry_points.txt
+[5.814s] writing requirements to ../../build/explorer_navigation2/explorer_navigation2.egg-info/requires.txt
+[5.823s] writing top-level names to ../../build/explorer_navigation2/explorer_navigation2.egg-info/top_level.txt
+[5.826s] writing manifest file '../../build/explorer_navigation2/explorer_navigation2.egg-info/SOURCES.txt'
+[6.028s] reading manifest file '../../build/explorer_navigation2/explorer_navigation2.egg-info/SOURCES.txt'
+[6.030s] writing manifest file '../../build/explorer_navigation2/explorer_navigation2.egg-info/SOURCES.txt'
+[6.031s] running build
+[6.031s] running build_py
+[6.031s] creating /home/muhayy/mbzirc_ws/src/build/explorer_navigation2/build
+[6.032s] creating /home/muhayy/mbzirc_ws/src/build/explorer_navigation2/build/lib
+[6.032s] creating /home/muhayy/mbzirc_ws/src/build/explorer_navigation2/build/lib/explorer_navigation2
+[6.032s] copying explorer_navigation2/__init__.py -> /home/muhayy/mbzirc_ws/src/build/explorer_navigation2/build/lib/explorer_navigation2
+[6.033s] running install
+[6.034s] running install_lib
+[6.037s] creating /home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages/explorer_navigation2
+[6.038s] copying /home/muhayy/mbzirc_ws/src/build/explorer_navigation2/build/lib/explorer_navigation2/__init__.py -> /home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages/explorer_navigation2
+[6.040s] byte-compiling /home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages/explorer_navigation2/__init__.py to __init__.cpython-38.pyc
+[6.043s] running install_data
+[6.045s] copying resource/explorer_navigation2 -> /home/muhayy/mbzirc_ws/src/install/share/ament_index/resource_index/packages
+[6.046s] copying package.xml -> /home/muhayy/mbzirc_ws/src/install/share/explorer_navigation2
+[6.046s] creating /home/muhayy/mbzirc_ws/src/install/share/explorer_navigation2/launch
+[6.047s] copying launch/nav.launch.py -> /home/muhayy/mbzirc_ws/src/install/share/explorer_navigation2/launch
+[6.047s] creating /home/muhayy/mbzirc_ws/src/install/share/explorer_navigation2/rviz
+[6.048s] copying rviz/nav2.rviz -> /home/muhayy/mbzirc_ws/src/install/share/explorer_navigation2/rviz
+[6.049s] creating /home/muhayy/mbzirc_ws/src/install/share/explorer_navigation2/param
+[6.049s] copying param/burger.yaml -> /home/muhayy/mbzirc_ws/src/install/share/explorer_navigation2/param
+[6.058s] creating /home/muhayy/mbzirc_ws/src/install/share/explorer_navigation2/behavior_trees
+[6.058s] copying behavior_trees/navigate_through_poses_w_replanning_and_recovery.xml -> /home/muhayy/mbzirc_ws/src/install/share/explorer_navigation2/behavior_trees
+[6.066s] copying behavior_trees/navigate_w_replanning_and_recovery.xml -> /home/muhayy/mbzirc_ws/src/install/share/explorer_navigation2/behavior_trees
+[6.067s] running install_egg_info
+[6.070s] Copying ../../build/explorer_navigation2/explorer_navigation2.egg-info to /home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages/explorer_navigation2-0.0.0-py3.8.egg-info
+[6.072s] running install_scripts
+[6.130s] writing list of installed files to '/home/muhayy/mbzirc_ws/src/build/explorer_navigation2/install.log'
+[6.214s] Invoked command in '/home/muhayy/mbzirc_ws/src/ros2_explorer/explorer_navigation2' returned '0': PYTHONPATH=/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/explorer_navigation2 build --build-base /home/muhayy/mbzirc_ws/src/build/explorer_navigation2/build install --prefix /home/muhayy/mbzirc_ws/src/install --record /home/muhayy/mbzirc_ws/src/build/explorer_navigation2/install.log --single-version-externally-managed

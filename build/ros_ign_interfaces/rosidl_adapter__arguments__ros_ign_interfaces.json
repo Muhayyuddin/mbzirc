@@ -1,0 +1,22 @@
+{
+  "package_name": "ros_ign_interfaces",
+  "non_idl_tuples": [
+    "/home/muhayy/mbzirc_ws/src/ros_ign/ros_ign_interfaces:msg/Contact.msg",
+    "/home/muhayy/mbzirc_ws/src/ros_ign/ros_ign_interfaces:msg/Contacts.msg",
+    "/home/muhayy/mbzirc_ws/src/ros_ign/ros_ign_interfaces:msg/Dataframe.msg",
+    "/home/muhayy/mbzirc_ws/src/ros_ign/ros_ign_interfaces:msg/Entity.msg",
+    "/home/muhayy/mbzirc_ws/src/ros_ign/ros_ign_interfaces:msg/EntityFactory.msg",
+    "/home/muhayy/mbzirc_ws/src/ros_ign/ros_ign_interfaces:msg/GuiCamera.msg",
+    "/home/muhayy/mbzirc_ws/src/ros_ign/ros_ign_interfaces:msg/JointWrench.msg",
+    "/home/muhayy/mbzirc_ws/src/ros_ign/ros_ign_interfaces:msg/Light.msg",
+    "/home/muhayy/mbzirc_ws/src/ros_ign/ros_ign_interfaces:msg/StringVec.msg",
+    "/home/muhayy/mbzirc_ws/src/ros_ign/ros_ign_interfaces:msg/TrackVisual.msg",
+    "/home/muhayy/mbzirc_ws/src/ros_ign/ros_ign_interfaces:msg/VideoRecord.msg",
+    "/home/muhayy/mbzirc_ws/src/ros_ign/ros_ign_interfaces:msg/WorldControl.msg",
+    "/home/muhayy/mbzirc_ws/src/ros_ign/ros_ign_interfaces:msg/WorldReset.msg",
+    "/home/muhayy/mbzirc_ws/src/ros_ign/ros_ign_interfaces:srv/ControlWorld.srv",
+    "/home/muhayy/mbzirc_ws/src/ros_ign/ros_ign_interfaces:srv/DeleteEntity.srv",
+    "/home/muhayy/mbzirc_ws/src/ros_ign/ros_ign_interfaces:srv/SetEntityPose.srv",
+    "/home/muhayy/mbzirc_ws/src/ros_ign/ros_ign_interfaces:srv/SpawnEntity.srv"
+  ]
+}

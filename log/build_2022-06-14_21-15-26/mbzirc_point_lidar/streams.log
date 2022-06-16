@@ -1,0 +1,44 @@
+[0.023s] Invoking command in '/home/muhayy/mbzirc_ws/src/build/mbzirc_point_lidar': AMENT_PREFIX_PATH=/home/muhayy/mbzirc_ws/src/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/muhayy/mbzirc_ws/src/install:/home/muhayy/mbzirc_ws/install:/opt/ros/galactic IGN_GAZEBO_RESOURCE_PATH=/home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models:/home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/worlds:${IGN_GAZEBO_RESOURCE_PATH} IGN_GAZEBO_SYSTEM_PLUGIN_PATH=/home/muhayy/mbzirc_ws/src/install/lib:${IGN_GAZEBO_SYSTEM_PLUGIN_PATH} LD_LIBRARY_PATH=/home/muhayy/mbzirc_ws/src/install/lib:${LD_LIBRARY_PATH} PATH=/home/muhayy/mbzirc_ws/src/install/bin:${PATH} PYTHONPATH=/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake /home/muhayy/mbzirc_ws/src/mbzirc/mbzirc_custom/mbzirc_point_lidar -DCMAKE_INSTALL_PREFIX=/home/muhayy/mbzirc_ws/src/install
+[0.071s] -- The C compiler identification is GNU 9.4.0
+[0.119s] -- The CXX compiler identification is GNU 9.4.0
+[0.123s] -- Check for working C compiler: /usr/bin/cc
+[0.180s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.181s] -- Detecting C compiler ABI info
+[0.237s] -- Detecting C compiler ABI info - done
+[0.250s] -- Detecting C compile features
+[0.250s] -- Detecting C compile features - done
+[0.254s] -- Check for working CXX compiler: /usr/bin/c++
+[0.326s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.327s] -- Detecting CXX compiler ABI info
+[0.397s] -- Detecting CXX compiler ABI info - done
+[0.416s] -- Detecting CXX compile features
+[0.416s] -- Detecting CXX compile features - done
+[0.419s] -- Found ament_cmake: 1.1.5 (/opt/ros/galactic/share/ament_cmake/cmake)
+[0.444s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.444s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.578s] -- Configuring done
+[0.580s] -- Generating done
+[0.581s] -- Build files have been written to: /home/muhayy/mbzirc_ws/src/build/mbzirc_point_lidar
+[0.584s] Invoked command in '/home/muhayy/mbzirc_ws/src/build/mbzirc_point_lidar' returned '0': AMENT_PREFIX_PATH=/home/muhayy/mbzirc_ws/src/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/muhayy/mbzirc_ws/src/install:/home/muhayy/mbzirc_ws/install:/opt/ros/galactic IGN_GAZEBO_RESOURCE_PATH=/home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models:/home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/worlds:${IGN_GAZEBO_RESOURCE_PATH} IGN_GAZEBO_SYSTEM_PLUGIN_PATH=/home/muhayy/mbzirc_ws/src/install/lib:${IGN_GAZEBO_SYSTEM_PLUGIN_PATH} LD_LIBRARY_PATH=/home/muhayy/mbzirc_ws/src/install/lib:${LD_LIBRARY_PATH} PATH=/home/muhayy/mbzirc_ws/src/install/bin:${PATH} PYTHONPATH=/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake /home/muhayy/mbzirc_ws/src/mbzirc/mbzirc_custom/mbzirc_point_lidar -DCMAKE_INSTALL_PREFIX=/home/muhayy/mbzirc_ws/src/install
+[0.587s] Invoking command in '/home/muhayy/mbzirc_ws/src/build/mbzirc_point_lidar': AMENT_PREFIX_PATH=/home/muhayy/mbzirc_ws/src/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/muhayy/mbzirc_ws/src/install:/home/muhayy/mbzirc_ws/install:/opt/ros/galactic IGN_GAZEBO_RESOURCE_PATH=/home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models:/home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/worlds:${IGN_GAZEBO_RESOURCE_PATH} IGN_GAZEBO_SYSTEM_PLUGIN_PATH=/home/muhayy/mbzirc_ws/src/install/lib:${IGN_GAZEBO_SYSTEM_PLUGIN_PATH} LD_LIBRARY_PATH=/home/muhayy/mbzirc_ws/src/install/lib:${LD_LIBRARY_PATH} PATH=/home/muhayy/mbzirc_ws/src/install/bin:${PATH} PYTHONPATH=/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/muhayy/mbzirc_ws/src/build/mbzirc_point_lidar -- -j12 -l12
+[0.623s] Invoked command in '/home/muhayy/mbzirc_ws/src/build/mbzirc_point_lidar' returned '0': AMENT_PREFIX_PATH=/home/muhayy/mbzirc_ws/src/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/muhayy/mbzirc_ws/src/install:/home/muhayy/mbzirc_ws/install:/opt/ros/galactic IGN_GAZEBO_RESOURCE_PATH=/home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models:/home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/worlds:${IGN_GAZEBO_RESOURCE_PATH} IGN_GAZEBO_SYSTEM_PLUGIN_PATH=/home/muhayy/mbzirc_ws/src/install/lib:${IGN_GAZEBO_SYSTEM_PLUGIN_PATH} LD_LIBRARY_PATH=/home/muhayy/mbzirc_ws/src/install/lib:${LD_LIBRARY_PATH} PATH=/home/muhayy/mbzirc_ws/src/install/bin:${PATH} PYTHONPATH=/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/muhayy/mbzirc_ws/src/build/mbzirc_point_lidar -- -j12 -l12
+[0.646s] Invoking command in '/home/muhayy/mbzirc_ws/src/build/mbzirc_point_lidar': AMENT_PREFIX_PATH=/home/muhayy/mbzirc_ws/src/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/muhayy/mbzirc_ws/src/install:/home/muhayy/mbzirc_ws/install:/opt/ros/galactic IGN_GAZEBO_RESOURCE_PATH=/home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models:/home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/worlds:${IGN_GAZEBO_RESOURCE_PATH} IGN_GAZEBO_SYSTEM_PLUGIN_PATH=/home/muhayy/mbzirc_ws/src/install/lib:${IGN_GAZEBO_SYSTEM_PLUGIN_PATH} LD_LIBRARY_PATH=/home/muhayy/mbzirc_ws/src/install/lib:${LD_LIBRARY_PATH} PATH=/home/muhayy/mbzirc_ws/src/install/bin:${PATH} PYTHONPATH=/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/muhayy/mbzirc_ws/src/build/mbzirc_point_lidar
+[0.654s] -- Install configuration: ""
+[0.654s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_point_lidar/environment/resource_paths.dsv
+[0.655s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_point_lidar/environment/resource_paths.sh
+[0.655s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/ament_index/resource_index/package_run_dependencies/mbzirc_point_lidar
+[0.655s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/ament_index/resource_index/parent_prefix_path/mbzirc_point_lidar
+[0.655s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_point_lidar/environment/ament_prefix_path.sh
+[0.656s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_point_lidar/environment/ament_prefix_path.dsv
+[0.657s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_point_lidar/environment/path.sh
+[0.657s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_point_lidar/environment/path.dsv
+[0.658s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_point_lidar/local_setup.bash
+[0.658s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_point_lidar/local_setup.sh
+[0.658s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_point_lidar/local_setup.zsh
+[0.658s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_point_lidar/local_setup.dsv
+[0.659s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_point_lidar/package.dsv
+[0.659s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/ament_index/resource_index/packages/mbzirc_point_lidar
+[0.659s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_point_lidar/cmake/mbzirc_point_lidarConfig.cmake
+[0.660s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_point_lidar/cmake/mbzirc_point_lidarConfig-version.cmake
+[0.660s] -- Installing: /home/muhayy/mbzirc_ws/src/install/share/mbzirc_point_lidar/package.xml
+[0.677s] Invoked command in '/home/muhayy/mbzirc_ws/src/build/mbzirc_point_lidar' returned '0': AMENT_PREFIX_PATH=/home/muhayy/mbzirc_ws/src/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/muhayy/mbzirc_ws/src/install:/home/muhayy/mbzirc_ws/install:/opt/ros/galactic IGN_GAZEBO_RESOURCE_PATH=/home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/models:/home/muhayy/mbzirc_ws/src/install/share/mbzirc_ign/worlds:${IGN_GAZEBO_RESOURCE_PATH} IGN_GAZEBO_SYSTEM_PLUGIN_PATH=/home/muhayy/mbzirc_ws/src/install/lib:${IGN_GAZEBO_SYSTEM_PLUGIN_PATH} LD_LIBRARY_PATH=/home/muhayy/mbzirc_ws/src/install/lib:${LD_LIBRARY_PATH} PATH=/home/muhayy/mbzirc_ws/src/install/bin:${PATH} PYTHONPATH=/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/muhayy/mbzirc_ws/src/build/mbzirc_point_lidar

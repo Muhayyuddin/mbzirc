@@ -1,0 +1,21 @@
+[1.983s] Invoking command in '/home/muhayy/mbzirc_ws/src/turtlebot3/turtlebot3_teleop': PYTHONPATH=/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/turtlebot3_teleop build --build-base /home/muhayy/mbzirc_ws/src/build/turtlebot3_teleop/build install --prefix /home/muhayy/mbzirc_ws/src/install --record /home/muhayy/mbzirc_ws/src/build/turtlebot3_teleop/install.log --single-version-externally-managed
+[2.305s] running egg_info
+[2.305s] writing ../../build/turtlebot3_teleop/turtlebot3_teleop.egg-info/PKG-INFO
+[2.305s] writing dependency_links to ../../build/turtlebot3_teleop/turtlebot3_teleop.egg-info/dependency_links.txt
+[2.305s] writing entry points to ../../build/turtlebot3_teleop/turtlebot3_teleop.egg-info/entry_points.txt
+[2.305s] writing requirements to ../../build/turtlebot3_teleop/turtlebot3_teleop.egg-info/requires.txt
+[2.305s] writing top-level names to ../../build/turtlebot3_teleop/turtlebot3_teleop.egg-info/top_level.txt
+[2.358s] reading manifest file '../../build/turtlebot3_teleop/turtlebot3_teleop.egg-info/SOURCES.txt'
+[2.358s] writing manifest file '../../build/turtlebot3_teleop/turtlebot3_teleop.egg-info/SOURCES.txt'
+[2.358s] running build
+[2.358s] running build_py
+[2.359s] running install
+[2.360s] running install_lib
+[2.362s] running install_data
+[2.363s] running install_egg_info
+[2.365s] removing '/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages/turtlebot3_teleop-2.1.4-py3.8.egg-info' (and everything under it)
+[2.365s] Copying ../../build/turtlebot3_teleop/turtlebot3_teleop.egg-info to /home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages/turtlebot3_teleop-2.1.4-py3.8.egg-info
+[2.367s] running install_scripts
+[2.391s] Installing teleop_keyboard script to /home/muhayy/mbzirc_ws/src/install/lib/turtlebot3_teleop
+[2.392s] writing list of installed files to '/home/muhayy/mbzirc_ws/src/build/turtlebot3_teleop/install.log'
+[2.731s] Invoked command in '/home/muhayy/mbzirc_ws/src/turtlebot3/turtlebot3_teleop' returned '0': PYTHONPATH=/home/muhayy/mbzirc_ws/src/install/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/turtlebot3_teleop build --build-base /home/muhayy/mbzirc_ws/src/build/turtlebot3_teleop/build install --prefix /home/muhayy/mbzirc_ws/src/install --record /home/muhayy/mbzirc_ws/src/build/turtlebot3_teleop/install.log --single-version-externally-managed

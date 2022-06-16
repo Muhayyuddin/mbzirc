@@ -1,0 +1,4 @@
+source;share/mbzirc_point_lidar/local_setup.bash
+source;share/mbzirc_point_lidar/local_setup.dsv
+source;share/mbzirc_point_lidar/local_setup.sh
+source;share/mbzirc_point_lidar/local_setup.zsh

@@ -44,6 +44,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Simulation Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="package_description.html">Packages description</a></li>
 <li class="toctree-l1"><a class="reference internal" href="simulation_tools.html">Simulation Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simulation_tools.html#slam-tool-box">Slam-tool-box</a></li>
 </ul>
 
         </div>
@@ -85,8 +86,8 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ros2</span> <span class="n">launch</span> <span class="n">mbzirc_ros</span> <span class="n">competition_local</span><span class="o">.</span><span class="n">launch</span><span class="o">.</span><span class="n">py</span> <span class="n">ign_args</span><span class="o">:=</span><span class="s2">&quot;-v 4 -r simple_demo.sdf&quot;</span>
 </pre></div>
 </div>
-<p>Spawn the USV with the Lidar sensor attached to the <em>slot0</em>. and 3d camera attached to <em>slot1</em></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ros2</span> <span class="n">launch</span> <span class="n">mbzirc_ign</span> <span class="n">spawn</span><span class="o">.</span><span class="n">launch</span><span class="o">.</span><span class="n">py</span> <span class="n">name</span><span class="o">:=</span><span class="n">usv</span> <span class="n">world</span><span class="o">:=</span><span class="n">simple_demo</span> <span class="n">model</span><span class="o">:=</span><span class="n">usv</span> <span class="n">x</span><span class="o">:=-</span><span class="mi">40</span> <span class="n">y</span><span class="o">:=</span><span class="mi">0</span> <span class="n">z</span><span class="o">:=</span><span class="mf">0.3</span> <span class="n">R</span><span class="o">:=</span><span class="mi">0</span> <span class="n">P</span><span class="o">:=</span><span class="mi">0</span> <span class="n">Y</span><span class="o">:=</span><span class="mi">0</span> <span class="n">slot0</span><span class="o">:=</span><span class="n">mbzirc_planar_lidar</span> <span class="n">slot2</span><span class="o">:=</span><span class="n">mbzirc_rgbd_camera</span>
+<p>Spawn the USV with the Lidar sensor attached to the <code class="docutils literal notranslate"><span class="pre">slot0</span></code>. and 3d camera attached to <code class="docutils literal notranslate"><span class="pre">slot1</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ros2</span> <span class="n">launch</span> <span class="n">mbzirc_ign</span> <span class="n">spawn</span><span class="o">.</span><span class="n">launch</span><span class="o">.</span><span class="n">py</span> <span class="n">name</span><span class="o">:=</span><span class="n">usv</span> <span class="n">world</span><span class="o">:=</span><span class="n">simple_demo</span> <span class="n">model</span><span class="o">:=</span><span class="n">usv</span> <span class="n">x</span><span class="o">:=-</span><span class="mi">40</span> <span class="n">y</span><span class="o">:=</span><span class="mi">0</span> <span class="n">z</span><span class="o">:=</span><span class="mf">0.3</span> <span class="n">R</span><span class="o">:=</span><span class="mi">0</span> <span class="n">P</span><span class="o">:=</span><span class="mi">0</span> <span class="n">Y</span><span class="o">:=</span><span class="mi">0</span> <span class="n">slot1</span><span class="o">:=</span><span class="n">mbzirc_planar_lidar</span> <span class="n">slot2</span><span class="o">:=</span><span class="n">mbzirc_rgbd_camera</span>
 </pre></div>
 </div>
 <div class="admonition note">
