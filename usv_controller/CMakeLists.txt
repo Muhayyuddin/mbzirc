@@ -9,12 +9,17 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
+find_package(usv_msgs REQUIRED)
+find_package(sensor_msgs REQUIRED)
+find_package(tf2_ros REQUIRED)
+
+
 # uncomment the following section in order to fill in
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
 
 add_executable(controller src/controller.cpp)
-ament_target_dependencies(controller rclcpp std_msgs)
+ament_target_dependencies(controller rclcpp sensor_msgs std_msgs usv_msgs tf2_ros)
 
 add_executable(controller_listner src/controller_listner.cpp)
 ament_target_dependencies(controller_listner rclcpp std_msgs)
