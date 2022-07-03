@@ -22,6 +22,7 @@ setup(
         'console_scripts': [
                 'pid_controller = usv_control.usv_pid_control:main',
                 'yaw_control = usv_control.yaw_controller:main',
+                'position_control = usv_control.position_control:main',
                 'twist_publisher = usv_control.twist_publisher:main',
         ],
     },

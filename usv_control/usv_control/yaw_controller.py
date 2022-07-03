@@ -31,9 +31,10 @@ class Heading_Control(Node):
         Class constructor to set up the node
         """
         super().__init__('heading_control')
-        self.Kp=25.0
-        self.Ki=0.001
-        self.Kd=25.0
+        self.Kp=55.0
+        self.Ki=0.005
+        self.Kd=55.0
+        self.yaw=0.0
         self.pid = Pid(self.Kp,self.Ki,self.Kd)
         self.pid.set_setpoint(-pi/2)
         self.pid.set_inputisangle(True,pi)
@@ -45,26 +46,35 @@ class Heading_Control(Node):
         self.debugmsg = PidControlDiagnose()
         self.lasttime = None
         # For diagnosing/tuning PID
-        self.publisher = self.create_publisher(Float64,'yaw_cmd',10)
         self.left_publisher = self.create_publisher(Float64, '/usv/left/thrust/cmd_thrust', 10)
         self.right_publisher = self.create_publisher(Float64,'/usv/right/thrust/cmd_thrust', 10)
-    
+        self.timer_period = 0.25  # seconds
+        self.timer = self.create_timer(self.timer_period, self.callback)
         self.pubdebug = self.create_publisher(PidControlDiagnose,"pid_debug",10)
         # Setup subscribers
-        self.create_subscription(Imu,'/usv/imu/data',self.callback,5000)
+        self.create_subscription(Imu,'/usv/imu/data',self.imu_callback,50)
         self.create_subscription(Float64,"set_setpoint",self.set_setpoint,10)
         
     def set_setpoint(self,msg):
         self.pid.set_setpoint(msg.data)
 
-    def callback(self,msg):
+    def imu_callback(self,msg):
         # Get quaternion from Imu message
-        q = (msg.orientation.x,
-             msg.orientation.y,
-             msg.orientation.z,
-             msg.orientation.w)
+        # q = (msg.orientation.x,
+        #      msg.orientation.y,
+        #      msg.orientation.z,
+        #      msg.orientation.w)
         euler = self.euler_from_quaternion(msg.orientation.x,msg.orientation.y,msg.orientation.z,msg.orientation.w)
-        yaw = euler[2]
+        self.yaw = euler[2]
+
+    def callback(self):
+        # Get quaternion from Imu message
+        # q = (msg.orientation.x,
+        #      msg.orientation.y,
+        #      msg.orientation.z,
+        #      msg.orientation.w)
+        # euler = self.euler_from_quaternion(msg.orientation.x,msg.orientation.y,msg.orientation.z,msg.orientation.w)
+        # yaw = euler[2]
         now = self.get_clock().now().to_msg().sec
 
         if self.lasttime is None:
@@ -73,9 +83,9 @@ class Heading_Control(Node):
         dt = now-self.lasttime
         self.lasttime = now
         print("dt: %f"%dt)
-        print("yaw value is : %f"%yaw)
+        print("yaw value is : %f"%self.yaw)
 
-        out = self.pid.execute(dt,yaw)
+        out = self.pid.execute(dt,self.yaw)
         torque = out[0]
         left = Float64()
         right = Float64()
