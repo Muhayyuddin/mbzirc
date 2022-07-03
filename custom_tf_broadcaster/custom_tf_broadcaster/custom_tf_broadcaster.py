@@ -59,7 +59,7 @@ class FrameListener(Node):
     # Create subscriber to receive usv pose in world frame
     self.usv_pose = self.create_subscription(TFMessage, '/usv/pose_static', self.odometry, 10)
     self.odom_pub = self.create_publisher(Odometry, '/usv/odom' ,10)
-
+    self.index = 14 # 8 for simple usv 14 for arm usv
     # Create publisher(s)  
     self.br = TransformBroadcaster(self)
     self.odom = Odometry()
@@ -68,23 +68,23 @@ class FrameListener(Node):
       t = TransformStamped()
       # Read message content and assign it to
       # corresponding tf variables
-      t.header.stamp = msg.transforms[8].header.stamp
+      t.header.stamp = msg.transforms[self.index].header.stamp
       t.header.frame_id = 'odom'
       t.child_frame_id = 'usv'
 
       # Turtle only exists in 2D, thus we get x and y translation
       # coordinates from the message and set the z coordinate to 0
-      t.transform.translation.x = msg.transforms[8].transform.translation.x
-      t.transform.translation.y = msg.transforms[8].transform.translation.y
+      t.transform.translation.x = msg.transforms[self.index].transform.translation.x
+      t.transform.translation.y = msg.transforms[self.index].transform.translation.y
       t.transform.translation.z = 0.0
 
       # For the same reason, turtle can only rotate around one axis
       # and this why we set rotation in x and y to 0 and obtain
       # rotation in z axis from the message
-      t.transform.rotation.x = msg.transforms[8].transform.rotation.x
-      t.transform.rotation.y = msg.transforms[8].transform.rotation.y
-      t.transform.rotation.z = msg.transforms[8].transform.rotation.z
-      t.transform.rotation.w = msg.transforms[8].transform.rotation.w
+      t.transform.rotation.x = msg.transforms[self.index].transform.rotation.x
+      t.transform.rotation.y = msg.transforms[self.index].transform.rotation.y
+      t.transform.rotation.z = msg.transforms[self.index].transform.rotation.z
+      t.transform.rotation.w = msg.transforms[self.index].transform.rotation.w
 
       # Send the transformation
       self.br.sendTransform(t)
@@ -93,13 +93,13 @@ class FrameListener(Node):
       self.odom.header.frame_id = "odom"
 
       # set the position
-      self.odom.pose.pose.position.x = msg.transforms[8].transform.translation.x
-      self.odom.pose.pose.position.y = msg.transforms[8].transform.translation.y
+      self.odom.pose.pose.position.x = msg.transforms[self.index].transform.translation.x
+      self.odom.pose.pose.position.y = msg.transforms[self.index].transform.translation.y
       self.odom.pose.pose.position.z = 0.0
-      self.odom.pose.pose.orientation.x = msg.transforms[8].transform.rotation.x
-      self.odom.pose.pose.orientation.y = msg.transforms[8].transform.rotation.y
-      self.odom.pose.pose.orientation.z = msg.transforms[8].transform.rotation.z
-      self.odom.pose.pose.orientation.w = msg.transforms[8].transform.rotation.w
+      self.odom.pose.pose.orientation.x = msg.transforms[self.index].transform.rotation.x
+      self.odom.pose.pose.orientation.y = msg.transforms[self.index].transform.rotation.y
+      self.odom.pose.pose.orientation.z = msg.transforms[self.index].transform.rotation.z
+      self.odom.pose.pose.orientation.w = msg.transforms[self.index].transform.rotation.w
 
       # todo
       # set the velocity

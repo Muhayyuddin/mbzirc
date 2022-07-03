@@ -189,12 +189,12 @@ def main(args=None):
   # velKi = rospy.get_param('~velKi',0.0)
   
   yawKp = 40.0
-  yawKd = 20.0
-  yawKi = 0.7
+  yawKd = 50.0
+  yawKi = 10.0
 
-  velKp = 70.0
-  velKd = 10.0
-  velKi = 1.0
+  velKp = 60.0
+  velKd = 100.0
+  velKi = 20.0
   # Create the node
   pid_control = USV_PID_Control()
   # Set initial gains from parameters

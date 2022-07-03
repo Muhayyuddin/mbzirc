@@ -3,43 +3,56 @@
 Example of using the pypid module for heading control of a USV.
 '''
 # Python
+import imp
 import sys
 from math import pi
-
+from turtle import left
+import rclpy
+from rclpy.node import Node
 # ROS
-import rospy
-import tf
 #from dynamic_reconfigure.server import Server
 #from kingfisher_control.cfg import YawDynamicConfig
-
-#from kingfisher_control.msg import PidDiagnose
-
+import math
 from geometry_msgs.msg import Vector3
 from std_msgs.msg import Float64
 #from kingfisher_msgs.msg import Drive
 from sensor_msgs.msg import Imu
-
+from usv_msgs.msg import PidControlDiagnose
 # BSB
-import pypid
+from tf2_ros import TransformBroadcaster
+from nav_msgs.msg import Odometry
+ 
+from usv_pid.pypid import Pid
 
 
-class Node():
+class Heading_Control(Node):
     def __init__(self):
-        Kp=0.0
-        Ki=0.0
-        Kd=0.1
-        self.pid = pypid.Pid(Kp,Ki,Kd)
+        """
+        Class constructor to set up the node
+        """
+        super().__init__('heading_control')
+        self.Kp=25.0
+        self.Ki=0.001
+        self.Kd=25.0
+        self.pid = Pid(self.Kp,self.Ki,self.Kd)
         self.pid.set_setpoint(-pi/2)
         self.pid.set_inputisangle(True,pi)
         self.pid.set_derivfeedback(True)  # D term in feedback look
         fc = 50;  # cutoff freq in hz
         wc = fc*(2.0*pi)  # cutoff freq. in rad/s
         self.pid.set_derivfilter(1,wc)
-        self.drivemsg = None
-        self.publisher = None
+        self.yaw_cmd = Float64()
+        self.debugmsg = PidControlDiagnose()
         self.lasttime = None
         # For diagnosing/tuning PID
-        self.pubdebug = None
+        self.publisher = self.create_publisher(Float64,'yaw_cmd',10)
+        self.left_publisher = self.create_publisher(Float64, '/usv/left/thrust/cmd_thrust', 10)
+        self.right_publisher = self.create_publisher(Float64,'/usv/right/thrust/cmd_thrust', 10)
+    
+        self.pubdebug = self.create_publisher(PidControlDiagnose,"pid_debug",10)
+        # Setup subscribers
+        self.create_subscription(Imu,'/usv/imu/data',self.callback,5000)
+        self.create_subscription(Float64,"set_setpoint",self.set_setpoint,10)
         
     def set_setpoint(self,msg):
         self.pid.set_setpoint(msg.data)
@@ -50,90 +63,108 @@ class Node():
              msg.orientation.y,
              msg.orientation.z,
              msg.orientation.w)
-        euler = tf.transformations.euler_from_quaternion(q)
+        euler = self.euler_from_quaternion(msg.orientation.x,msg.orientation.y,msg.orientation.z,msg.orientation.w)
         yaw = euler[2]
-        now = rospy.get_time()
+        now = self.get_clock().now().to_msg().sec
+
         if self.lasttime is None:
             self.lasttime = now
             return
         dt = now-self.lasttime
         self.lasttime = now
-        #print("dt: %.6f"%dt)
+        print("dt: %f"%dt)
+        print("yaw value is : %f"%yaw)
+
         out = self.pid.execute(dt,yaw)
         torque = out[0]
-        self.drivemsg.left=-1*torque
-        self.drivemsg.right=torque
-        self.publisher.publish(self.drivemsg)
+        left = Float64()
+        right = Float64()
+        # self.drivemsg.left=-1*torque
+        # self.drivemsg.right=torque
+        left.data = -1*torque
+        right.data = torque
+        self.yaw_cmd = torque
+        self.left_publisher.publish(left)
+        self.right_publisher.publish(right)
+        #print("torque : %f"%torque)
 
         if not (self.pubdebug is None):
-            self.debugmsg.PID = out[0]
-            self.debugmsg.P = out[1]
-            self.debugmsg.I = out[2]
-            self.debugmsg.D = out[3]
-            self.debugmsg.Error = out[4]
-            self.debugmsg.Setpoint = out[5]
-            self.debugmsg.Derivative= out[6]
-            self.debugmsg.Integral = out[7]
+            self.debugmsg.pid = out[0]
+            self.debugmsg.p = out[1]
+            self.debugmsg.i = out[2]
+            self.debugmsg.d = out[3]
+            self.debugmsg.error = out[4]
+            self.debugmsg.setpoint = out[5]
+            self.debugmsg.derivative= out[6]
+            self.debugmsg.integrals = out[7]
             self.pubdebug.publish(self.debugmsg)
 
+    def euler_from_quaternion(self, x, y, z, w):
+        """
+        Convert a quaternion into euler angles (roll, pitch, yaw)
+        roll is rotation around x in radians (counterclockwise)
+        pitch is rotation around y in radians (counterclockwise)
+        yaw is rotation around z in radians (counterclockwise)
+        """
+        t0 = +2.0 * (w * x + y * z)
+        t1 = +1.0 - 2.0 * (x * x + y * y)
+        roll_x = math.atan2(t0, t1)
+        
+        t2 = +2.0 * (w * y - z * x)
+        t2 = +1.0 if t2 > +1.0 else t2
+        t2 = -1.0 if t2 < -1.0 else t2
+        pitch_y = math.asin(t2)
+        
+        t3 = +2.0 * (w * z + x * y)
+        t4 = +1.0 - 2.0 * (y * y + z * z)
+        yaw_z = math.atan2(t3, t4)
+        
+        return roll_x, pitch_y, yaw_z # in radians
 
-
-    def dynamic_callback(self,config,level):
-        #rospy.loginfo("""Reconfigure Request: {int_param}, {double_param},\ 
-        #  {str_param}, {bool_param}, {size}""".format(**config))
-        rospy.loginfo("Reconfigure request...")
-        #print config.keys()
-        #print config['Kp']
-        self.pid.Kp = config['Kp']
-        self.pid.Ki = config['Ki']
-        self.pid.Kd = config['Kd']
-        return config
+    # def dynamic_callback(self,config,level):
+    #     #rospy.loginfo("""Reconfigure Request: {int_param}, {double_param},\ 
+    #     #  {str_param}, {bool_param}, {size}""".format(**config))
+    #     rospy.loginfo("Reconfigure request...")
+    #     #print config.keys()
+    #     #print config['Kp']
+    #     self.pid.Kp = config['Kp']
+    #     self.pid.Ki = config['Ki']
+    #     self.pid.Kd = config['Kd']
+    #     return config
         
 
-if __name__ == '__main__':
-    
-    rospy.init_node('kingfisher_yaw_pid', anonymous=True)
+def main(args=None):    
+    rclpy.init(args=args)
     
     # ROS Parameters
-    in_topic = rospy.get_param('~input_topic','imu')
-    out_topic = rospy.get_param('~output_topic','cmd_drive')
-    Kp = rospy.get_param('~Kp',1.0)
-    Kd = rospy.get_param('~Kd',0.0)
-    Ki = rospy.get_param('~Ki',0.0)
+    # in_topic = rospy.get_param('~input_topic','imu')
+    # out_topic = rospy.get_param('~output_topic','cmd_drive')
+    # Kp = rospy.get_param('~Kp',1.0)
+    # Kd = rospy.get_param('~Kd',0.0)
+    # Ki = rospy.get_param('~Ki',0.0)
     
     # Initiate node object - creates PID object
-    node=Node()
+    heading_control=Heading_Control()
     
     # Set initial gains from parameters
-    node.pid.Kp = Kp
-    node.pid.Kd = Kd
-    node.pid.Ki = Ki
+    # heading_control.pid.Kp = 40.0
+    # heading_control.pid.Kd = 15.0
+    # heading_control.pid.Ki = 0.5
 
     # Setup outbound message
-    #node.drivemsg = Drive()
 
     #in_topic = "kingfisher_rpy"
     #in_type = Vector3
-
-    in_type = Imu
-    
-
-    # Setup publisher
-    #rospy.loginfo("Subscribing to %s"%
-    #              (in_topic))
-    #rospy.loginfo("Publishing to %s"%
-    #              (out_topic))
-    #node.publisher = rospy.Publisher(out_topic,Drive,queue_size=10)
-    #node.pubdebug = rospy.Publisher("pid_debug",PidDiagnose,queue_size=10)
-    #node.debugmsg = PidDiagnose()
-    # Setup subscribers
-    #rospy.Subscriber(in_topic,in_type,node.callback)
-    rospy.Subscriber("set_setpoint",Float64,node.set_setpoint)
-    
     # Dynamic configure
-    srv = Server(YawDynamicConfig, node.dynamic_callback)
+    #srv = Server(YawDynamicConfig, node.dynamic_callback)
 
     try:
-        rospy.spin()
-    except rospy.ROSInterruptException:
+        rclpy.spin(heading_control)
+    except KeyboardInterrupt:
         pass
+  
+    # Shutdown the ROS client library for Python
+    rclpy.shutdown()
+  
+if __name__ == '__main__':
+  main()

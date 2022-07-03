@@ -29,7 +29,11 @@ def generate_launch_description():
         package='slam_toolbox',
         executable='async_slam_toolbox_node',
         name='slam_toolbox',
-        output='screen')
+        output='screen',
+        remappings=[
+            ("/tf", "tf"),
+            ("/tf_static", "tf_static")
+        ])
 
     ld = LaunchDescription()
 

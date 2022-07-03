@@ -25,7 +25,11 @@ def generate_launch_description():
             parameters=[{'use_sim_time':True},
                         {'autostart': True},
                         {'node_names':['map_server']}
-                        ]
-        )
+                        ],
+            remappings=[
+            ("/tf", "tf"),
+            ("/tf_static", "tf_static")
+        ])
+        
 
    ])
