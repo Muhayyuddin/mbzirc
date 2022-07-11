@@ -169,9 +169,9 @@ def main(args=None):
 #   yawKd = 50.0
 #   yawKi = 10.0
 
-  velKp = 5.0
-  velKd = 2.0
-  velKi = 0.1
+  velKp = 0.7
+  velKd = 0.7
+  velKi = 0.3
   # Create the node
   pid_position_control = PositionControl()
   # Set initial gains from parameters

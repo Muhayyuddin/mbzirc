@@ -20,6 +20,7 @@ from std_msgs.msg import Float64
 from std_msgs.msg import Float32
 from nav_msgs.msg import Odometry
 from sensor_msgs.msg import Imu
+from usv_msgs.msg import SpeedCourse
 # From this package
 from usv_pid.pypid import Pid
 
@@ -65,22 +66,25 @@ class USV_PID_Control(Node):
     # Setup publisher
     self.left_publisher = self.create_publisher(Float64, '/usv/left/thrust/cmd_thrust', 10)
     self.right_publisher = self.create_publisher(Float64,'/usv/right/thrust/cmd_thrust', 10)
-    
+    self.right_torque = self.create_publisher(Float64, '/usv/left/thrust/joint/cmd_pos', 10)
+    self.left_torque = self.create_publisher(Float64, 'usv/right/thrust/joint/cmd_pos', 10)
+
     # node.ypubdebug = rospy.Publisher("yaw_pid_debug",PidDiagnose,queue_size=10)
     # node.vpubdebug = rospy.Publisher("vel_pid_debug",PidDiagnose,queue_size=10)
     # node.ydebugmsg = PidDiagnose()
     # node.vdebugmsg = PidDiagnose()
 
     # Setup subscribers
-    self.s1 = self.create_subscription(Odometry,'odom',self.odom_callback,10)
-    self.s2 = self.create_subscription(Twist,"/cmd_vel",self.twist_callback,10)
+    self.s1 = self.create_subscription(Odometry,'/usv/odom',self.odom_callback,10)
+    #self.s2 = self.create_subscription(Twist,"cmd_vel",self.twist_callback,10)
+    self.sub = self.create_subscription(SpeedCourse,"speed_heading", self.nav_callback,10)
 
     print('all set')
 
 
-  def twist_callback(self, msg):
-    self.ypid.set_setpoint(msg.angular.z)
-    self.vpid.set_setpoint(msg.linear.x)
+  def nav_callback(self, msg):
+    self.ypid.set_setpoint(msg.course)
+    self.vpid.set_setpoint(msg.speed)
 
   def odom_callback(self,msg):
     # Yaw Control
@@ -121,10 +125,18 @@ class USV_PID_Control(Node):
     self.drivemsg.right=torque + thrust
     self.publisher.publish(self.drivemsg)
     '''
-    self.left_cmd.data = (-1.0*torque + thrust)
-    self.right_cmd.data = (torque + thrust)
+    self.left_cmd.data = ( thrust)
+    self.right_cmd.data = ( thrust)
     print(self.left_cmd.data )
     print(self.right_cmd.data )
+    l_tau = Float64()
+    r_tau = Float64()
+    l_tau.data = -1.0*torque
+    r_tau.data = torque
+
+    self.right_torque.publish(l_tau)
+    self.left_torque.publish(r_tau)
+
     self.left_publisher.publish(self.left_cmd)
     self.right_publisher.publish(self.right_cmd)
 
@@ -187,21 +199,13 @@ def main(args=None):
   # velKd = rospy.get_param('~velKd',0.0)
   # velKi = rospy.get_param('~velKi',0.0)
   
-  # yawKp = 40.0
-  # yawKd = 40.0
-  # yawKi = 0.5
-
-  # velKp = 60.0
-  # velKd = 0.0
-  # velKi = 20.0
-
   yawKp = 40.0
   yawKd = 40.0
   yawKi = 0.0
 
-  velKp = 50.0
+  velKp = 60.0
   velKd = 0.0
-  velKi = 50.0
+  velKi = 20.0
   # Create the node
   pid_control = USV_PID_Control()
   # Set initial gains from parameters

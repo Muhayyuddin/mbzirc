@@ -10,7 +10,7 @@ class TwistPublisher(Node):
 
     def __init__(self):
         super().__init__('twistpublisher')
-        self.timer_period = 2  # seconds
+        self.timer_period = 0.1  # seconds
         self.timer = self.create_timer(self.timer_period, self.callback)
         self.twist_publisher = self.create_publisher(Twist,'cmd_vel',10)
         self.declare_parameter('my_parameter', 0.0)

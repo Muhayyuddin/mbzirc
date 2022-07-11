@@ -206,7 +206,7 @@
     <visual name="usv/base_visual">
       <origin xyz="0 0 0" rpy="0      0      1.57079"/>
       <geometry>
-              <mesh filename="package://two_wheeled_robot/meshes/USV.dae" scale="10 10 10"/>
+              <mesh filename="package://usv_description/meshes/USV.dae" scale="10 10 10"/>
       </geometry>
     </visual>
   </link>

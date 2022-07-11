@@ -9,19 +9,30 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
+find_package(usv_msgs REQUIRED)
+find_package(sensor_msgs REQUIRED)
+find_package(tf2_ros REQUIRED)
+find_package(geometry_msgs REQUIRED)
+find_package(nav_msgs REQUIRED)
+
+
 # uncomment the following section in order to fill in
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
 
 add_executable(controller src/controller.cpp)
-ament_target_dependencies(controller rclcpp std_msgs)
+ament_target_dependencies(controller rclcpp geometry_msgs sensor_msgs std_msgs usv_msgs tf2_ros)
 
 add_executable(controller_listner src/controller_listner.cpp)
 ament_target_dependencies(controller_listner rclcpp std_msgs)
 
+add_executable(los_guidance src/los_guidance.cpp)
+ament_target_dependencies(los_guidance rclcpp geometry_msgs sensor_msgs std_msgs usv_msgs tf2_ros nav_msgs)
+
 install(TARGETS
   controller
   controller_listner
+  los_guidance
   DESTINATION lib/${PROJECT_NAME})
 
 if(BUILD_TESTING)
