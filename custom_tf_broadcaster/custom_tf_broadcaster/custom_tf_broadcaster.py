@@ -89,7 +89,7 @@ class FrameListener(Node):
       # Send the transformation
       self.br.sendTransform(t)
 
-      self.odom.header.stamp = msg.transforms[8].header.stamp
+      self.odom.header.stamp = msg.transforms[self.index].header.stamp
       self.odom.header.frame_id = "odom"
 
       # set the position

@@ -65,44 +65,32 @@ class USV_PID_Control(Node):
     # Setup publisher
     self.left_publisher = self.create_publisher(Float64, '/usv/left/thrust/cmd_thrust', 10)
     self.right_publisher = self.create_publisher(Float64,'/usv/right/thrust/cmd_thrust', 10)
-    
+    self.timer_period = 0.1  # seconds
+    self.timer = self.create_timer(self.timer_period, self.callback)
     # node.ypubdebug = rospy.Publisher("yaw_pid_debug",PidDiagnose,queue_size=10)
     # node.vpubdebug = rospy.Publisher("vel_pid_debug",PidDiagnose,queue_size=10)
     # node.ydebugmsg = PidDiagnose()
     # node.vdebugmsg = PidDiagnose()
 
     # Setup subscribers
-    self.s1 = self.create_subscription(Odometry,'odom',self.odom_callback,10)
+    self.s1 = self.create_subscription(Odometry,'/usv/odom',self.odom_callback,10)
     self.s2 = self.create_subscription(Twist,"/cmd_vel",self.twist_callback,10)
-
+    self.dt = 0.0
+    self.dyaw = 0.0
+    self.dx = 0.0
     print('all set')
 
-
-  def twist_callback(self, msg):
-    self.ypid.set_setpoint(msg.angular.z)
-    self.vpid.set_setpoint(msg.linear.x)
-
-  def odom_callback(self,msg):
-    # Yaw Control
-    print("in odom callback")
-    dyaw = msg.twist.twist.angular.z # measured rate (process variable)
-    now = self.get_clock().now()
-    if self.lasttime is None:
-      self.lasttime = now
-      return
-    dt = now.to_msg().sec-self.lasttime.to_msg().sec
-    self.lasttime = now
+  def callback(self):
     # print("dt: %.6f"%dt)
-    if dt < 1.0e-6:
-      self.get_logger().info('USV Control dt too small "%f"'%dt)
+    if self.dt < 1.0e-6:
+      self.get_logger().info('USV Control dt too small "%f"'%self.dt)
       return
           
-    yout = self.ypid.execute(dt,dyaw)
+    yout = self.ypid.execute(self.dt,self.dyaw)
     torque = yout[0]
 
     # Velocity control
-    dx = msg.twist.twist.linear.x
-    vout = self.vpid.execute(dt,dx)
+    vout = self.vpid.execute(self.dt,self.dx)
     thrust = vout[0]
 
     # I believe drive messages are scaled to -1.0 to 1.0
@@ -149,6 +137,24 @@ class USV_PID_Control(Node):
         self.vdebugmsg.Integral = vout[7]
         self.vpubdebug.publish(self.vdebugmsg)
 
+  def twist_callback(self, msg):
+    self.ypid.set_setpoint(msg.angular.z)
+    self.vpid.set_setpoint(msg.linear.x)
+
+  def odom_callback(self,msg):
+    # Yaw Control
+    print("in odom callback")
+    self.dyaw = msg.twist.twist.angular.z # measured rate (process variable)
+    now = self.get_clock().now()
+    if self.lasttime is None:
+      self.lasttime = now
+      return
+    self.dt = now.to_msg().sec-self.lasttime.to_msg().sec
+    self.lasttime = now
+    self.dx = msg.twist.twist.linear.x
+
+    
+
   # def dynamic_callback(self,config,level):
   #     # rospy.loginfo("""Reconfigure Request: {int_param}, {double_param},\ 
   #     #  {str_param}, {bool_param}, {size}""".format(**config))
@@ -179,29 +185,22 @@ def main(args=None):
   # Initialize the rclpy library
   rclpy.init(args=args)
   # ROS Parameters
-  # yawKp = rospy.get_param('~yawKp',0.0)
-  # yawKd = rospy.get_param('~yawKd',0.0)
-  # yawKi = rospy.get_param('~yawKi',0.0)
-
-  # velKp = rospy.get_param('~velKp',0.0)
-  # velKd = rospy.get_param('~velKd',0.0)
-  # velKi = rospy.get_param('~velKi',0.0)
   
-  # yawKp = 40.0
-  # yawKd = 40.0
-  # yawKi = 0.5
-
-  # velKp = 60.0
-  # velKd = 0.0
-  # velKi = 20.0
-
   yawKp = 40.0
   yawKd = 40.0
-  yawKi = 0.0
+  yawKi = 0.5
 
-  velKp = 50.0
+  velKp = 60.0
   velKd = 0.0
-  velKi = 50.0
+  velKi = 20.0
+
+  # yawKp = 2.0
+  # yawKd = 1.0
+  # yawKi = 0.0
+
+  # velKp = 0.7
+  # velKd = 0.0
+  # velKi = 0.30
   # Create the node
   pid_control = USV_PID_Control()
   # Set initial gains from parameters

@@ -46,9 +46,9 @@ public:
 
         // generate straight line segment
         int increment = 0;
-        for (int i{0}; i < 5; ++i)
+        for (int i{0}; i < 20; ++i)
         {
-            increment += 10;
+            increment += 2;
 
             geometry_msgs::msg::PoseStamped point;
             point.header.stamp = this->get_clock()->now();
@@ -141,6 +141,8 @@ void followPath(double x, double y, double psi)
     // Path tangential angle
     double gamma_p = tf2::getYaw(pose_d.pose.orientation);
 
+
+
     // Cross-track error
     double y_e = -(x - pose_d.pose.position.x) * std::sin(gamma_p) +
                  (y - pose_d.pose.position.y) * std::cos(gamma_p);
@@ -214,10 +216,10 @@ std::shared_ptr<tf2_ros::TransformListener> tfListener = std::make_shared<tf2_ro
 rclcpp::Subscription<nav_msgs::msg::Odometry>::SharedPtr subodom;
 
 // lookahead distance
-double DELTA = 0.5;
+double DELTA = 2.0;
 
 // time-varying lookahead distance
-double delta_max = 4.0;
+double delta_max = 2.0;
 double delta_min = 1.0;
 double delta_k = 1.0;
 

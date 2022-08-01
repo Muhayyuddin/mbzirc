@@ -40,6 +40,8 @@ def generate_launch_description():
         executable="static_transform_publisher",
         output="screen" ,
         arguments=["-40", "0.0", "0.3", "0", "0", "0", "odom", "usv"]
+        #arguments=["-1450", "-16.5", "0.3", "0", "0", "0", "odom", "usv"]
+
     )
     static_transformation1_node = launch_ros.actions.Node(
         package="tf2_ros",

@@ -12,262 +12,269 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+from math import atan2
 import rclpy
 from rclpy.node import Node
+from sensor_msgs.msg import Imu
 
 from std_msgs.msg import String, Float64
 from sensor_msgs.msg import LaserScan
-from geometry_msgs.msg import Twist
+from geometry_msgs.msg import Twist, Pose2D, Transform
 from nav_msgs.msg import Odometry
-
+import math
 from numpy import sqrt, pi, arccos, arctan, radians
-# to move the Propeller
-#ros2 topic pub --once /usv/left/thrust/cmd_thrust std_msgs/msg/Float64 'data: 15'
-#ros2 topic pub --once /usv/right/thrust/cmd_thrust std_msgs/msg/Float64 'data: 15'
+import numpy as np
+from tf2_ros import TransformBroadcaster
+from tf2_ros import TransformException
+from tf2_ros.buffer import Buffer
+from tf2_ros.transform_listener import TransformListener
+np.set_printoptions(precision=3, suppress=True)  # neat printing
+from transforms3d.euler import euler2mat, mat2euler
+from transforms3d.affines import compose, decompose
+import sys
+from transforms3d.axangles import axangle2mat
 
-#to move the thrushter
-#ros2 topic pub --once /usv/left/thrust/joint/cmd_pos std_msgs/msg/Float64 'data: -1'
-#ros2 topic pub --once /usv/right/thrust/joint/cmd_pos std_msgs/msg/Float64 'data: 1'
+from geometry_msgs.msg import TransformStamped
+
+import rclpy
+from rclpy.node import Node
+
+from tf2_ros.static_transform_broadcaster import StaticTransformBroadcaster
+
+import tf_transformations
 
 
-#commands
-#ros2 launch mbzirc_ros competition_local.launch.py ign_args:="-v 4 -r simple_demo.sdf
-#ros2 run py_pubsub talker
 
-# coordinates
-# Vessel-A: 25 25 0.3 0 0.0 -1.0
-# Vessel-B: -20 20 0.3 0 0.0 -1.0
-# Vessel-C: 10 -25 0.3 0 0.0 -1.0
-# Vessel-D: -35 15 0.3 0 0.0 -1.0
-# Vessel-E: 20 -50 0.3 0 0.0 -1.0
-# Vessel-F: -45 10 0.3 0 0.0 -1.0
-# Vessel-G: -28 -10 0.3 0 0.0 -1.0
-
-# USV:  -10, 28, 0.3, 0, 0, 0
-class MinimalPublisher(Node):
+class USVNavigation(Node):
 
     def __init__(self):
-        super().__init__('minimal_publisher')
-        #global circle
-        #object1 = Twist()
-
-        self.vesselA = [25.0, 25.0, 0.3]
-        self.vesselB = [-20.0, 20.0, 0.3]
-        self.vesselC = [10.0, -25.0, 0.3]
-        self.vesselD = [-35.0, 15.0, 0.3]
-        self.vesselE = [20.0, -50.0, 0.3]
-        self.vesselF = [-45.0, 10.0, 0.3]
-        self.vesselG = [-28.0, -10.0, 0.3]
-
-        self.usv = [-30.0, 38.0, 0.3]
-
-        self.publisher_ = self.create_publisher(Float64, '/usv/left/thrust/cmd_thrust', 10)
-        self.publisher2_ = self.create_publisher(Float64, '/usv/right/thrust/cmd_thrust', 10)
-
-        self.publisher3_ = self.create_publisher(Float64, '/usv/left/thrust/joint/cmd_pos', 10)
-        self.publisher4_ = self.create_publisher(Float64, 'usv/right/thrust/joint/cmd_pos', 10)
-
-        self.distA = sqrt((self.vesselA[0] - self.usv[0])**2 + (self.vesselA[1] - self.usv[1])**2 + (self.vesselA[2] - self.usv[2])**2)
-        self.distB = sqrt((self.vesselB[0] - self.usv[0])**2 + (self.vesselB[1] - self.usv[1])**2 + (self.vesselB[2] - self.usv[2])**2)
-        self.distC = sqrt((self.vesselC[0] - self.usv[0])**2 + (self.vesselC[1] - self.usv[1])**2 + (self.vesselC[2] - self.usv[2])**2)
-        self.distD = sqrt((self.vesselD[0] - self.usv[0])**2 + (self.vesselD[1] - self.usv[1])**2 + (self.vesselD[2] - self.usv[2])**2)
-        self.distE = sqrt((self.vesselE[0] - self.usv[0])**2 + (self.vesselE[1] - self.usv[1])**2 + (self.vesselE[2] - self.usv[2])**2)
-        self.distF = sqrt((self.vesselF[0] - self.usv[0])**2 + (self.vesselF[1] - self.usv[1])**2 + (self.vesselF[2] - self.usv[2])**2)
-        self.distG = sqrt((self.vesselG[0] - self.usv[0])**2 + (self.vesselG[1] - self.usv[1])**2 + (self.vesselG[2] - self.usv[2])**2)
-
-        th = 17 # distance threshold
-
-        self.m = 0
-        if self.vesselA[0] - self.usv[0] != 0:
-            self.m = (self.vesselA[1] - self.usv[1])/ (self.vesselA[0] - self.usv[0])
-        else:
-            self.m = (self.vesselA[1] - self.usv[1])
-
-        print('Simple Environment Controller')
-        print('Slope: ', self.m)
-
-        #self.publisher_ = self.create_publisher("/cmd_vel", Twist, 10)
-
-        #self.subscription = self.create_subscription(
-        #    "/scan",
-        #    LaserScan,
-        #    self.listener_callback)
-
-        #self.subscription = self.create_subscription(
-        #    "/odom",
-        #    Odometry,
-        #    self.odometry)
-
-        timer_period = 2.0  # seconds
+        super().__init__('usv_navigation')
+ 
+        self.target_vessel_pose = [10.0, 20.0, -1.0]
+        self.usv_current_pose = [-40.0, 0.0, 0.0] #for simple env
+        # self.usv_current_pose = [-1450.0, -16.6, 0.3]
+        # self.target_vessel_pose = [0.0, -100.0, 0.3]
+        self.target_vessel = TransformStamped()
+        self.goal_pose = TransformStamped()
+        self._tf_publisher = StaticTransformBroadcaster(self)
+        self._tf_publisher2 = StaticTransformBroadcaster(self)
+        self.goal_broadcaster = TransformBroadcaster(self)
+        self.tf_buffer = Buffer()
+        self.tf_listener = TransformListener(self.tf_buffer, self)
+        #self.make_transforms()
+        self.compute_goalpose()
+        self.twist = Twist()
+        self.twist.angular.z = 0.0
+        self.twist.linear.x = 0.0
+        self.publish_twist = self.create_publisher(Twist,"cmd_vel",  10)
+        
+        self.create_subscription(Imu,'/usv/imu/data',self.imu_callback,50)
+        self.create_subscription(Pose2D,'/target_vessel_pose',self.target_pose_callback,50)
+        #self.create_subscription(LaserScan,'/usv/slot0/scan',self.laser_callback,50)
+        self.create_subscription(Odometry, '/usv/odom', self.odom_callback,50)
+        timer_period = 1.0  # seconds
         self.timer = self.create_timer(timer_period, self.timer_callback)
-        self.i = 0
-        self.angleChanged = False
-        self.finalThrust = False
-        #self.subscription  # prevent unused variable warning
+        self.yaw = 0.0
+        self.target_yaw = 0.0
+        self.heading = False
+        self.surge = False
+        self.dist_threshold = 10.0 # meters
+        self.yaw_threshold = 0.2 # radian
+        self.angle = 0.0
+        self.dacceleration_distance = 20
 
-    def odometry(self, msg):
-        print(msg.pose.pose)
+    def target_pose_callback (self,msg):
+        self.target_vessel_pose[0]=msg.x
+        self.target_vessel_pose[1]=msg.y
+        self.target_vessel_pose[2]=msg.theta
+        #self.make_transforms()
+        self.compute_goalpose()
+        print('not working yet')
+    
+
+    def imu_callback(self,msg):
+        # Get quaternion from Imu message
+        euler = self.euler_from_quaternion(msg.orientation.x,
+                                           msg.orientation.y,
+                                           msg.orientation.z,
+                                           msg.orientation.w)
+        self.yaw = euler[2]
+
+    def odom_callback(self, msg):
+        self.usv_current_pose[0] = msg.pose.pose.position.x
+        self.usv_current_pose[1] = msg.pose.pose.position.y
+        #print(msg)
 
     def timer_callback(self):
-        msg = Float64()
-        msg2 = Float64()
-        msg3 = Float64()
-        msg4 = Float64()
-        self.distA = sqrt((self.vesselA[0] - self.usv[0])**2 + (self.vesselA[1] - self.usv[1])**2 + (self.vesselA[2] - self.usv[2])**2)
-        self.distB = sqrt((self.vesselB[0] - self.usv[0])**2 + (self.vesselB[1] - self.usv[1])**2 + (self.vesselB[2] - self.usv[2])**2)
-        self.distC = sqrt((self.vesselC[0] - self.usv[0])**2 + (self.vesselC[1] - self.usv[1])**2 + (self.vesselC[2] - self.usv[2])**2)
-        self.distD = sqrt((self.vesselD[0] - self.usv[0])**2 + (self.vesselD[1] - self.usv[1])**2 + (self.vesselD[2] - self.usv[2])**2)
-        self.distE = sqrt((self.vesselE[0] - self.usv[0])**2 + (self.vesselE[1] - self.usv[1])**2 + (self.vesselE[2] - self.usv[2])**2)
-        self.distF = sqrt((self.vesselF[0] - self.usv[0])**2 + (self.vesselF[1] - self.usv[1])**2 + (self.vesselF[2] - self.usv[2])**2)
-        self.distG = sqrt((self.vesselG[0] - self.usv[0])**2 + (self.vesselG[1] - self.usv[1])**2 + (self.vesselG[2] - self.usv[2])**2)
 
-        th = 5 # distance threshold
+        self.dist_to_goal = sqrt((self.target_vessel_pose[0] - self.usv_current_pose[0])**2 + 
+                                 (self.target_vessel_pose[1] - self.usv_current_pose[1])**2)
 
-        self.m = 0
-        print(self.usv)
-        if self.vesselA[0] - self.usv[0] != 0:
-            self.m = (self.vesselA[1] - self.usv[1])/ (self.vesselA[0] - self.usv[0])
+        if self.dist_to_goal < self.dist_threshold :
+            print('USV is already near to the target, enable visual servoing ')
+            #self.twist.angular.z = 0.0
+            self.twist.linear.x = 0.0
+            self.publish_twist.publish(self.twist)
+            return
         else:
-            self.m = (self.vesselA[1] - self.usv[1])
+            self.angle = self.get_target_yaw()
+            print('yaw: ', self.yaw)
+            print('position: ', self.usv_current_pose)
 
-        print('Slope: ', self.m)
+            self.twist.angular.z = self.angle
+            self.twist.linear.x = 0.0
 
-        if self.distA >= th: #and self.distB >= th and self.distC >= th and self.distD >= th and self.distE >= th and self.distF >= th and self.distG >= th:
-            x = self.usv[0] + 1.5
-            x0 = self.usv[0]
-            y0 = self.usv[1]
-            y = self.m*(x-x0) + y0
-
-            self.usv = [x, y, 0.3]
-
-            #print("Slope: ", self.m)
-
-            #y = y % 360.0
-            #y = (y + 360.0) % 360.0
-
-            #if y > 180.0:
-            #    y = y - 360.0
-
-
-#            print('Rotation Angle: ', angle)
-
-            #angle = angle * (pi/180)
-            #y = y * (pi/180)
-
-            if x != 0:
-                angle = arctan(radians(y/x))
+            if(abs(abs(self.yaw)-abs(self.angle))<0.1):
+                self.heading = True
+                #print('heading is set start moving')
             else:
-                angle = 0.0
-            #angle = angle * (pi/180)
+                self.heading = False
 
-            print('Radian Angle: ', angle)
-            print('Distance-A: ', self.distA)
+            if self.heading :
+                if self.dist_to_goal <= self.dacceleration_distance:
+                    self.twist.linear.x = min(((self.dist_to_goal/20.0)*2),2)
+                    print('approaching goal distance and velocity are ', self.dist_to_goal, self.twist.linear.x)
+                else:    
+                    self.twist.linear.x = 2.0
 
-            if y > 0:
-                msg.data = 150.0# speed
-                msg2.data = angle # direction
+            self.publish_twist.publish(self.twist)
 
-                msg3.data = 150.0
-                msg4.data = angle
+    def get_target_yaw(self):
 
-                if self.angleChanged == True:
-                    self.publisher2_.publish(msg3)
-                    self.publisher4_.publish(msg4)
-                    self.angleChanged = False
-                else:
-                    #msg2.data = y+radians(-1)
-                    self.publisher_.publish(msg)
-                    self.publisher3_.publish(msg2)
+        self.Y =  self.usv_current_pose[1] - self.target_vessel_pose[1] 
+        self.X =  self.usv_current_pose[0] - self.target_vessel_pose[0] 
+        self.target_yaw =atan2(self.Y,self.X)
+        angle = 0.0
+        
+        if self.target_yaw < 0 :
+            angle = math.pi + self.target_yaw
+        else:
+            angle = self.target_yaw - math.pi
+  
+        return angle 
 
-                    self.angleChanged = True
-            else:
-                msg.data = 0.0# speed
-                msg2.data = 0.0 # direction
-
-                msg3.data = 0.0
-                msg4.data = 0.0
-
-                self.publisher_.publish(msg)
-                self.publisher3_.publish(msg2)
-                self.publisher2_.publish(msg3)
-                self.publisher4_.publish(msg4)
-
-        elif self.distA < th:
-            print('Too close to A: ', self.distA)
-            x1 = self.vesselA[0]
-            y1 = self.vesselA[1]
-            z1 = self.vesselA[2]
-
-            x2 = self.usv[0]
-            y2 = self.usv[1]
-            z2 = self.usv[2]
-
-            v1 = x2-x1
-            v2 = y2-y1
-            v3 = 0
-
-            VP = [v1, v2, 0]
-            V = [v1, v2, v3]
-
-            magV = sqrt(V[0]*V[0]+V[1]*V[1]+V[2]*V[2])
-            magVP = sqrt(VP[0]*VP[0]+VP[1]*VP[1]+VP[2]*VP[2])
-
-            dot = V[0]*VP[0] + V[1] * VP[1] + V[2] * VP[2]
-
-            yaw = arccos(radians(dot/(magV*magVP)))
-
-            if self.finalThrust == False:
-                msg.data = 75.0# speed
-                msg2.data = -yaw # direction
-
-                #msg3.data = 150.0
-                #msg4.data = -yaw
-                self.finalThrust = True
-            else:
-                msg.data = 0.0# speed
-                msg2.data = -yaw # direction
-
-                msg3.data = 0.0
-                msg4.data = -yaw
-
-            self.publisher_.publish(msg)
-            self.publisher3_.publish(msg2)
-            self.publisher2_.publish(msg3)
-            self.publisher4_.publish(msg4)
+    
 
 
-        #if self.i % 2 == 0:
-        #    msg.data = 150.0#'Hello World: %d' % self.i
-        #    msg2.data = -1.0
-        #    self.publisher_.publish(msg)
-        #    self.publisher3_.publish(msg2)
-        #else:
-        #    msg.data = 150.0#'Hello World: %d' % self.i
-        #    msg2.data = 1.0
-        #    self.publisher2_.publish(msg)
-        #    self.publisher4_.publish(msg2)
+    def laser_callback(self, msg):
+        #print(len(msg.ranges))
 
-        #self.get_logger().info('Publishing: "%s"' % str(msg.data))
-        self.i += 1
-
-    def listener_callback(self, msg):
-        print('Front: ',msg[0])
-        print('Left: ', msg[90])
-        print('Right: ', msg[270])
-        print('Back: ', msg[180])
+         print('Front: ',msg.ranges[0])
+         print('Front: ', msg.ranges[5])
+         print('Front: ', msg.ranges[10])
+         print('Back: ', msg.ranges[180])
         #self.get_logger().info('I heard: "%s"' % msg.data)
+    def compute_goalpose (self):
+        target_position = [self.target_vessel_pose[0], self.target_vessel_pose[1], 0.0] # translations
+        target_rotation = axangle2mat([0.0, 0.0, 1.0], self.target_vessel_pose[2])
+        Z = [1.0, 1.0, 1.0] # zooms
+        T1 = compose(target_position, target_rotation, Z)
+
+        goal_offset_position = [0.0, 6.0, 0.0]
+        goal_offset_rotation = [[1, 0, 0], [0, 1, 0], [0, 0, 1]]
+        T2 = compose(goal_offset_position, goal_offset_rotation, Z)
+        goal_pose = np.matmul(T1,T2)
+        print(goal_pose)
+
+    def make_transforms(self):
+        self.target_vessel.header.stamp = self.get_clock().now().to_msg()
+        self.target_vessel.header.frame_id = 'map'
+        self.target_vessel.child_frame_id = 'target_vessel'
+        self.target_vessel.transform.translation.x = self.target_vessel_pose[0]
+        self.target_vessel.transform.translation.y = self.target_vessel_pose[1]
+        self.target_vessel.transform.translation.z = 0.0
+        quat = tf_transformations.quaternion_from_euler(0.0, 0.0, self.target_vessel_pose[2])
+        self.target_vessel.transform.rotation.x = quat[0]
+        self.target_vessel.transform.rotation.y = quat[1]
+        self.target_vessel.transform.rotation.z = quat[2]
+        self.target_vessel.transform.rotation.w = quat[3]
+        self._tf_publisher.sendTransform(self.target_vessel)
+
+
+        # self.target_vessel.header.stamp = self.get_clock().now().to_msg()
+        # self.target_vessel.header.frame_id = 'odom'
+        # self.target_vessel.child_frame_id = 'target_vessel'
+        # self.target_vessel.transform.translation.x = 0.0
+        # self.target_vessel.transform.translation.y = 6.0
+        # self.target_vessel.transform.translation.z = 0.0
+        # quat = tf_transformations.quaternion_from_euler(0.0, 0.0, 0.0)
+        # self.target_vessel.transform.rotation.x = quat[0]
+        # self.target_vessel.transform.rotation.y = quat[1]
+        # self.target_vessel.transform.rotation.z = quat[2]
+        # self.target_vessel.transform.rotation.w = quat[3]
+        # self._tf_publisher.sendTransform(self.target_vessel)
+
+        t = TransformStamped()
+        t.header.stamp = self.get_clock().now().to_msg()
+        t.header.frame_id = 'target_vessel'
+        t.child_frame_id = 'usv_goal_pose'
+        t.transform.translation.x = 0.0
+        t.transform.translation.y = 6.0
+        t.transform.translation.z = 0.0
+        quat = tf_transformations.quaternion_from_euler(0.0, 0.0, 0.0)
+
+        t.transform.rotation.x = quat[0]
+        t.transform.rotation.y = quat[1]
+        t.transform.rotation.z = quat[2]
+        t.transform.rotation.w = quat[3]
+        self.goal_broadcaster.sendTransform(t)
+        print("computed goal position is ", self.goal_pose.transform.translation.x, self.goal_pose.transform.translation.y )
+
+
+
+
+    def euler_from_quaternion(self, x, y, z, w):
+        """
+        Convert a quaternion into euler angles (roll, pitch, yaw)
+        roll is rotation around x in radians (counterclockwise)
+        pitch is rotation around y in radians (counterclockwise)
+        yaw is rotation around z in radians (counterclockwise)
+        """
+        t0 = +2.0 * (w * x + y * z)
+        t1 = +1.0 - 2.0 * (x * x + y * y)
+        roll_x = math.atan2(t0, t1)
+        
+        t2 = +2.0 * (w * y - z * x)
+        t2 = +1.0 if t2 > +1.0 else t2
+        t2 = -1.0 if t2 < -1.0 else t2
+        pitch_y = math.asin(t2)
+        
+        t3 = +2.0 * (w * z + x * y)
+        t4 = +1.0 - 2.0 * (y * y + z * z)
+        yaw_z = math.atan2(t3, t4)
+        
+        return roll_x, pitch_y, yaw_z 
+
+    def get_quaternion_from_euler(self, roll, pitch, yaw):
+        """
+        Convert an Euler angle to a quaternion.
+        
+        Input
+            :param roll: The roll (rotation around x-axis) angle in radians.
+            :param pitch: The pitch (rotation around y-axis) angle in radians.
+            :param yaw: The yaw (rotation around z-axis) angle in radians.
+        
+        Output
+            :return qx, qy, qz, qw: The orientation in quaternion [x,y,z,w] format
+        """
+        qx = np.sin(roll/2) * np.cos(pitch/2) * np.cos(yaw/2) - np.cos(roll/2) * np.sin(pitch/2) * np.sin(yaw/2)
+        qy = np.cos(roll/2) * np.sin(pitch/2) * np.cos(yaw/2) + np.sin(roll/2) * np.cos(pitch/2) * np.sin(yaw/2)
+        qz = np.cos(roll/2) * np.cos(pitch/2) * np.sin(yaw/2) - np.sin(roll/2) * np.sin(pitch/2) * np.cos(yaw/2)
+        qw = np.cos(roll/2) * np.cos(pitch/2) * np.cos(yaw/2) + np.sin(roll/2) * np.sin(pitch/2) * np.sin(yaw/2)
+        
+        return [qx, qy, qz, qw]
 
 def main(args=None):
     rclpy.init(args=args)
 
-    minimal_publisher = MinimalPublisher()
+    usv_navigation = USVNavigation()
 
-    rclpy.spin(minimal_publisher)
+    rclpy.spin(usv_navigation)
 
     # Destroy the node explicitly
     # (optional - otherwise it will be done automatically
     # when the garbage collector destroys the node object)
-    minimal_publisher.destroy_node()
+    usv_navigation.destroy_node()
     rclpy.shutdown()
 
 

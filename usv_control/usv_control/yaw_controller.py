@@ -17,6 +17,8 @@ from geometry_msgs.msg import Vector3
 from std_msgs.msg import Float64
 #from kingfisher_msgs.msg import Drive
 from sensor_msgs.msg import Imu
+from geometry_msgs.msg import Twist
+
 from usv_msgs.msg import PidControlDiagnose
 # BSB
 from tf2_ros import TransformBroadcaster
@@ -53,10 +55,14 @@ class Heading_Control(Node):
         self.pubdebug = self.create_publisher(PidControlDiagnose,"pid_debug",10)
         # Setup subscribers
         self.create_subscription(Imu,'/usv/imu/data',self.imu_callback,50)
-        self.create_subscription(Float64,"set_setpoint",self.set_setpoint,10)
+        self.create_subscription(Twist,"cmd_vel",self.twist_calback,10)
+        #self.create_subscription(Float64,"set_point",self.set_setpoint,10)
+
         
     def set_setpoint(self,msg):
         self.pid.set_setpoint(msg.data)
+    def twist_calback(self,msg):
+        self.pid.set_setpoint(msg.angular.z)
 
     def imu_callback(self,msg):
         # Get quaternion from Imu message
