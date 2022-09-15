@@ -61,6 +61,7 @@ class Heading_Control(Node):
         
     def set_setpoint(self,msg):
         self.pid.set_setpoint(msg.data)
+        
     def twist_calback(self,msg):
         self.pid.set_setpoint(msg.angular.z)
 

@@ -1,32 +1,12 @@
 #!/usr/bin/env python3 
- 
-"""
-Description:
-Publish the coordinate transformation between the map frame
-and the base_link frame.
-The output is [x,y,yaw]. yaw is -pi to pi
--------
-Subscription Topics:
-/tf - geometry_msgs/TransformStamped[]
--------
-Publishing Topics:
-/map_to_base_link_pose2d – std_msgs/Float64MultiArray
--------
-Author: Addison Sears-Collins
-Website: AutomaticAddison.com
-Date: November 25, 2021
-"""
+
  
 # Import the ROS client library for Python 
 import rclpy 
  
 # Enables the use of rclpy's Node class
 from rclpy.node import Node   
-# Handle float64 arrays
-from std_msgs.msg import Float64MultiArray 
-
 from tf2_msgs.msg import TFMessage
-
 from geometry_msgs.msg import Transform
 from nav_msgs.msg import Odometry
 
@@ -39,24 +19,14 @@ import math
  
  
 class FrameListener(Node):
-  """
-  Subclass of the Node class.
-  The class listens to coordinate transformations and 
-  publishes the 2D pose at a specific time interval.
-  """
+
   def __init__(self):
     """
     Class constructor to set up the node
     """
-    
     # Initiate the Node class's constructor and give it a name
     super().__init__('usv2dpose')
  
-    
- 
-    #self.tf_buffer = Buffer()
-    #self.tf_listener = TransformListener(self.tf_buffer, self)
-    # Create subscriber to receive usv pose in world frame
     self.usv_pose = self.create_subscription(TFMessage, '/usv/pose_static', self.odometry, 10)
     self.odom_pub = self.create_publisher(Odometry, '/usv/odom' ,10)
     self.index = 14 # 8 for simple usv 14 for arm usv
